@@ -1,0 +1,56 @@
+.wrapper {
+  background-color: #392cb2;
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  overflow: hidden;
+  text-align: center;
+  display: flex;
+  align-items: center;
+
+  .ng-colombia-2018-logo {
+    position: absolute;
+    width: 200px;
+    left: calc(50% - 100px);
+    top: 10px;
+    color: #ffffff;
+    font-family: 'Poppins';
+
+    p {
+      margin: 12px 0 0;
+      font-size: 20px;
+      font-weight: 600;
+
+      &.text {
+        letter-spacing: 0.16em;
+        margin-top: 4px;
+      }
+
+      &.year {
+        font-size: 44px;
+        line-height: 31px;
+        display: flex;
+        justify-content: center;
+        letter-spacing: 0.08em;
+        
+        span {
+          font-size: 31px;
+          line-height: 24px;
+          border-bottom: 3px solid #FFF;
+          letter-spacing: -1px;
+        }
+      }
+    }
+    
+    img {
+      align-self: flex-start;
+      width: 60px;
+    }
+  }
+
+  img.angular {
+    max-width: 100%;
+  }
+}

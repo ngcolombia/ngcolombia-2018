@@ -9,10 +9,10 @@
       "urls": [
         "./favicon.ico",
         "./index.html",
-        "./inline.db797d6720d41d761356.bundle.js",
-        "./main.fffe227f943592062cc2.bundle.js",
+        "./inline.080d8ccd520a9de81a2b.bundle.js",
+        "./main.82aac9f2e431005c79d1.bundle.js",
         "./polyfills.f20484b2fa4642e0dca8.bundle.js",
-        "./styles.df84f1fd6fccd789ce78.bundle.css"
+        "./styles.086bdddecbb27316908a.bundle.css"
       ],
       "patterns": []
     },
@@ -20,7 +20,13 @@
       "name": "assets",
       "installMode": "lazy",
       "updateMode": "prefetch",
-      "urls": [],
+      "urls": [
+        "./assets/img/angular.png",
+        "./assets/img/logo-ng-footer.svg",
+        "./assets/img/logo-ng-header.svg",
+        "./assets/img/logo_yuxi_footer.svg",
+        "./assets/js/wall.js"
+      ],
       "patterns": []
     }
   ],
@@ -51,11 +57,16 @@
     }
   ],
   "hashTable": {
-    "./inline.db797d6720d41d761356.bundle.js": "d32dd9e842ae9a0935df890d7c95fc010f9b1d8f",
-    "./main.fffe227f943592062cc2.bundle.js": "09bedac18e8b598ce092eef735f6e1ce40cabebd",
+    "./inline.080d8ccd520a9de81a2b.bundle.js": "d71f094e03a8d355a402d9657c84501c95908bc5",
+    "./assets/img/angular.png": "c91f2e146d3a7b946998c4a8df882f67c12e6f9b",
+    "./main.82aac9f2e431005c79d1.bundle.js": "b537055bf8e63d118f13313b402e5e022b8fdf28",
+    "./assets/img/logo-ng-footer.svg": "5764b9d38232264821bdc62d12b8783ba0e9a95f",
     "./polyfills.f20484b2fa4642e0dca8.bundle.js": "0b0af365e031b7cbba789493d311e94192720c68",
-    "./styles.df84f1fd6fccd789ce78.bundle.css": "4de65bb58263af06c23985c7d4c301d09f204769",
+    "./assets/img/logo-ng-header.svg": "ddad3c3c8b8a45577b33447a0a237b350fedaaea",
+    "./styles.086bdddecbb27316908a.bundle.css": "d9275d36778f2114e90475aa204feb1da2dcf5f2",
+    "./assets/img/logo_yuxi_footer.svg": "87d4143e691146a2e3b026714b47846dc0ffbe01",
     "./favicon.ico": "84161b857f5c547e3699ddfbffc6d8d737542e01",
-    "./index.html": "f6f7359fac4cf792a285df0cf9b0c68253f0dc3f"
+    "./assets/js/wall.js": "12e38cf677e4e5284052df3e837c4cb73c56dc26",
+    "./index.html": "8751bcc3aa8f022816dfc45c557f6e2bba6fb7ca"
   }
 }

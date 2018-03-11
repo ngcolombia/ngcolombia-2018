@@ -1,0 +1,54 @@
+.wrapper {
+  background-color: #211056;
+    position: relative;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    height: 100%;
+    
+    .middle-container {
+      display: flex;
+      flex-direction: row;
+      flex-grow: 1;
+      align-items: flex-end;
+      
+      .big-text {
+        flex-grow: 2;
+        text-align: left;
+        font-size: 110px;
+        font-weight: bold;
+        color: #ffffff;
+        line-height: 107px;
+        font-family: 'Poppins';
+        padding-left: 30px;
+      }
+      
+      .sign-text {
+        flex-grow: 1;
+        display: flex;
+        justify-content: flex-end;
+        text-align: right;
+        padding-right: 10px;
+        line-height: 1.95em;
+        color: #ffffff;
+        font-weight: 200;
+      }
+    }
+  }
+
+  ::ng-deep{
+    .mat-form-field-label.mat-input-placeholder.mat-form-field-placeholder {
+      color: #b36dfc;
+      text-align: right;
+      font-family: Muli;
+      letter-spacing: 0.05em;
+      font-weight: 200;
+    }
+    .mat-form-field-underline{
+      background-color: #0a5afe;
+    }
+}

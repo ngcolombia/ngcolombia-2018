@@ -1,5 +1,6 @@
 <!doctype html>
 <html lang="en">
+
 <head>
   <meta charset="utf-8">
   <title>NG-Colombia</title>
@@ -7,11 +8,12 @@
 
   <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
   <link rel="icon" type="image/x-icon" href="favicon.ico">
-  <link href="https://fonts.googleapis.com/css?family=Muli:200,400,800|Poppins:200,400,700" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css?family=Muli:200,400,800|Poppins:200,400,600,700|Roboto:200,400,800" rel="stylesheet">
   <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
   <meta name="twitter:card" content="summary" />
   <meta name="twitter:site" content="@angularcolombia" />
-  <meta name="twitter:image" content="https://raw.githubusercontent.com/angular-medellin/ng-colombia/master/src/assets/img/ngcolombia-logo.png" />
+  <meta name="twitter:image" content="https://raw.githubusercontent.com/angular-medellin/ng-colombia/master/src/assets/img/ngcolombia-logo.png"
+  />
   <meta property="og:site_name" content="Angular Colombia" />
   <meta property="og:title" content="Angular Colombia" />
   <meta property="og:description" content="🌟 Second Latam Angular Conference carried out in Medellín Colombia 🌟" />
@@ -20,7 +22,13 @@
   <meta property="og:type" content="website" />
   <script type="text/javascript" async src="https://platform.twitter.com/widgets.js"></script>
 </head>
+
 <body>
   <app-root></app-root>
 </body>
+<!-- <script type="text/javascript" async src="./assets/js/wall.js"></script> -->
+<script src="https://cdn.jsdelivr.net/npm/wall.js"></script>
+<script>
+  var wall = new Wall('#wrapper'); 
+</script>
 </html>

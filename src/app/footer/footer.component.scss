@@ -1,0 +1,31 @@
+.wrapper  {
+  background-color: #392cb2;
+  width: 100%;
+  text-align: center;
+  
+  .logos {
+    margin-top: 30px;
+    width: 100%;
+    display: flex;
+    justify-content: center; 
+
+    .divider {
+      width: 2px;
+      margin: 20px 20px 10px;
+      background-color: #fff;
+      height: 80px; 
+    }
+  
+    img {
+      max-height: 100px;
+      margin: 10px 30px;
+    }
+  }
+
+  .copyright {
+    margin: 20px 0 10px;;
+    color: #fff;
+    font-weight: 200;
+    font-size: 0.8em;
+  }
+}
