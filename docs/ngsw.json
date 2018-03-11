@@ -9,8 +9,8 @@
       "urls": [
         "./favicon.ico",
         "./index.html",
-        "./inline.080d8ccd520a9de81a2b.bundle.js",
-        "./main.82aac9f2e431005c79d1.bundle.js",
+        "./inline.4b15dba0cc1e3587d7a1.bundle.js",
+        "./main.26527381a4f2f9627485.bundle.js",
         "./polyfills.f20484b2fa4642e0dca8.bundle.js",
         "./styles.086bdddecbb27316908a.bundle.css"
       ],
@@ -57,9 +57,9 @@
     }
   ],
   "hashTable": {
-    "./inline.080d8ccd520a9de81a2b.bundle.js": "d71f094e03a8d355a402d9657c84501c95908bc5",
-    "./assets/img/angular.png": "c91f2e146d3a7b946998c4a8df882f67c12e6f9b",
-    "./main.82aac9f2e431005c79d1.bundle.js": "b537055bf8e63d118f13313b402e5e022b8fdf28",
+    "./inline.4b15dba0cc1e3587d7a1.bundle.js": "e40a5bc83807e620e2bccca337005de6c7a0ed20",
+    "./assets/img/angular.png": "b1f9dce841637a0118f7f906d4fd6ba668de44fb",
+    "./main.26527381a4f2f9627485.bundle.js": "480c0221292b54119601c32f197b760032fcfbd3",
     "./assets/img/logo-ng-footer.svg": "5764b9d38232264821bdc62d12b8783ba0e9a95f",
     "./polyfills.f20484b2fa4642e0dca8.bundle.js": "0b0af365e031b7cbba789493d311e94192720c68",
     "./assets/img/logo-ng-header.svg": "ddad3c3c8b8a45577b33447a0a237b350fedaaea",
@@ -67,6 +67,6 @@
     "./assets/img/logo_yuxi_footer.svg": "87d4143e691146a2e3b026714b47846dc0ffbe01",
     "./favicon.ico": "84161b857f5c547e3699ddfbffc6d8d737542e01",
     "./assets/js/wall.js": "12e38cf677e4e5284052df3e837c4cb73c56dc26",
-    "./index.html": "8751bcc3aa8f022816dfc45c557f6e2bba6fb7ca"
+    "./index.html": "b173f15cabfd9a154988236210c24ebfa935f4a7"
   }
 }

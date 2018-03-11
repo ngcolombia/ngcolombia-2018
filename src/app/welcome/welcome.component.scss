@@ -1,14 +1,10 @@
 .wrapper {
   background-color: #392cb2;
-  position: absolute;
-  top: 0;
-  left: 0;
-  right: 0;
-  bottom: 0;
-  overflow: hidden;
   text-align: center;
   display: flex;
   align-items: center;
+  width: 100vw;
+  height: 100vh;
 
   .ng-colombia-2018-logo {
     position: absolute;
@@ -51,6 +47,12 @@
   }
 
   img.angular {
-    max-width: 100%;
+    max-height: 230px;
+    margin: 0 auto;
+    max-width: 80%;
+  }
+
+  @media (orientation: landscape) and (max-height: 450px) {
+    height: 150vh;
   }
 }

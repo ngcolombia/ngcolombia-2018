@@ -1,38 +1,79 @@
 .wrapper {
   background-color: #FFF;
-    position: absolute;
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    overflow: hidden;
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  .middle-container{
     display: flex;
-    align-items: center;
+    flex-direction: row;
+    flex-wrap: wrap;
+    align-content: center;
+    justify-content: flex-end;
+    margin: 10%;
     
+    .big-text {
+      text-align: right;
+      font-weight: bold;
+      color: #211056;
+      font-size: 21vw;
+      line-height: 21vw;
+    }
+
+    .text {
+      text-align: left;
+      line-height: 1.95em;
+      margin-top: 4vh;
+    }
+  }
+
+  br.desktop { 
+    display: none;
+  }
+      
+  @media (min-width: 600px) {
     .middle-container {
       display: flex;
-      flex-direction: row;
       flex-grow: 1;
       align-items: flex-end;
+      flex-wrap: nowrap;
+      margin: auto;
       
       .big-text {
         flex-grow: 2;
-        text-align: right;
-        font-size: 110px;
-        font-weight: bold;
-        color: #211056;
-        line-height: 107px;
-        font-family: 'Poppins';
         padding-right: 30px;
+        font-size: 110px;
+        line-height: 107px;
       }
       
       .text {
         flex-grow: 1;
         display: flex;
         justify-content: flex-start;
-        text-align: left;
         padding-left: 10px;
-        line-height: 1.95em;
       }
     }
+
+    br.mobile { 
+      display: none;
+    }
+
+    br.desktop { 
+      display: initial;
+    }
+  }
+
+  @media (orientation: landscape) and (max-height: 450px) {
+    height: auto;
+
+    .middle-container {
+      .big-text {
+        font-size: 16vw;
+        line-height: 16vw;
+      }
+    }
+  }
+  
 }

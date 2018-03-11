@@ -1,54 +1,106 @@
 .wrapper {
   background-color: #211056;
-    position: relative;
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    overflow: hidden;
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+
+  .middle-container{
     display: flex;
-    align-items: center;
-    height: 100%;
+    flex-direction: row;
+    flex-wrap: wrap;
+    align-content: center;
+    justify-content: center;
+    margin: 10%;
+
+    .big-text {
+      text-align: left;
+      font-weight: bold;
+      color: #ffffff;
+      font-size: 21vw;
+      line-height: 21vw;
+      order: -1;
+    }
     
+    .signup {
+      text-align: center;
+      font-weight: 200;
+      color: #ffffff;
+      line-height: 1.95em;
+      margin-top: 4vh;
+      justify-content: center;
+      
+      p.text {
+        text-align: right;
+      }
+    }
+  }
+  
+  br.desktop { 
+    display: none;
+  }
+  
+  @media (min-width: 600px) {
     .middle-container {
       display: flex;
       flex-direction: row;
       flex-grow: 1;
       align-items: flex-end;
+      margin: auto;
       
       .big-text {
         flex-grow: 2;
-        text-align: left;
         font-size: 110px;
-        font-weight: bold;
-        color: #ffffff;
         line-height: 107px;
-        font-family: 'Poppins';
         padding-left: 30px;
+        order: initial;
       }
       
-      .sign-text {
+      .signup {
         flex-grow: 1;
         display: flex;
         justify-content: flex-end;
-        text-align: right;
         padding-right: 10px;
-        line-height: 1.95em;
-        color: #ffffff;
-        font-weight: 200;
+        text-align: right;
       }
+    }
+
+    br.mobile { 
+      display: none;
+    }
+
+    br.desktop { 
+      display: initial;
     }
   }
 
-  ::ng-deep{
-    .mat-form-field-label.mat-input-placeholder.mat-form-field-placeholder {
-      color: #b36dfc;
+  @media (orientation: landscape) and (max-height: 450px) {
+    height: auto;
+
+    .middle-container {
+      .big-text {
+        font-size: 16vw;
+        line-height: 16vw;
+      }
+    }
+  }
+}
+
+::ng-deep{
+  .mat-form-field-label.mat-input-placeholder.mat-form-field-placeholder {
+    color: #b36dfc;
+    text-align: center;
+    font-family: Muli;
+    letter-spacing: 0.05em;
+    font-weight: 200;
+    
+    @media (min-width: 600px) {
       text-align: right;
-      font-family: Muli;
-      letter-spacing: 0.05em;
-      font-weight: 200;
     }
-    .mat-form-field-underline{
-      background-color: #0a5afe;
-    }
+  }
+  .mat-form-field-underline{
+    background-color: #0a5afe;
+  }
 }
