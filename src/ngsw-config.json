@@ -6,7 +6,8 @@
     "resources": {
       "files": [
         "/favicon.ico",
-        "/index.html"
+        "/index.html",
+        "/assets/js/wall.js"
       ],
       "versionedFiles": [
         "/*.bundle.css",
@@ -22,31 +23,6 @@
       "files": [
         "/assets/**"
       ]
-    }
-  }],
-  "dataGroups": [{
-    "name": "api-freshness",
-    "urls": [
-      "/new"
-    ],
-    "cacheConfig": {
-      "maxSize": 100,
-      "maxAge": "1h",
-      "timeout": "10s",
-      "strategy": "freshness"
-    }
-  }, {
-    "name": "api-performance",
-    "urls": [
-      "/",
-      "/jobs",
-      "/show",
-      "/ask"
-    ],
-    "cacheConfig": {
-      "maxSize": 100,
-      "maxAge": "1d",
-      "strategy": "performance"
     }
   }]
 }
