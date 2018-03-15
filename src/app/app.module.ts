@@ -12,6 +12,7 @@ import { NewsletterSignupComponent } from './newsletter-signup/newsletter-signup
 import { FooterComponent } from './footer/footer.component';
 
 import { environment } from '../environments/environment';
+import { ToggleSliderComponent } from './welcome/toggle-slider/toggle-slider.component';
 
 
 @NgModule({
@@ -20,7 +21,8 @@ import { environment } from '../environments/environment';
     CallForPapersComponent,
     WelcomeComponent,
     NewsletterSignupComponent,
-    FooterComponent
+    FooterComponent,
+    ToggleSliderComponent
   ],
   imports: [
     BrowserModule,
