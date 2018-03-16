@@ -1,7 +1,10 @@
 .wrapper {
   background-color: #FFF;
-  width: 100vw;
-  height: 100vh;
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -17,28 +20,35 @@
 
     .circle{
       position: absolute;
+
+      &.desktop{
+        display: none;
+      }
     }
 
     img.first-circle {
-      top: -54%;
-      left: 44%;
+      top: -5%;
+      left: 36%;
+      width: 77px;
     }
 
     img.second-circle {
-      top: 37%;
-      left: 50%;
+      top: 23%;
+      left: 49%;
+      width: 35px;
     }
 
     img.third-circle {
-      top: 30%;
-      left: 39%;
+      top: 17%;
+      left: 7%;
+      width: 18px;
     }
    
     .big-text {
       text-align: right;
       font-weight: bold;
       color: #211056;
-      font-size: 21vw;
+      font-size: 20.6vw;
       line-height: 21vw;
       position: relative;
       letter-spacing: 0.01em;
@@ -58,12 +68,47 @@
   }
       
   @media (min-width: 600px) {
+    width: 100vw;
+    height: 100vh;
+    position: relative;
+    top: initial;
+    left: initial;
+    right: initial;
+    bottom: initial;
+
     .middle-container {
       display: flex;
       flex-grow: 1;
       align-items: flex-end;
       flex-wrap: nowrap;
       margin: auto;
+
+      .circle{
+        &.mobile {
+          display: none;
+        }
+        &.desktop {
+          display: initial;
+        }
+      }
+
+      img.first-circle {
+        top: -54%;
+        left: 44%;
+        width: initial;
+      }
+  
+      img.second-circle {
+        top: 37%;
+        left: 50%;
+        width: initial;
+      }
+  
+      img.third-circle {
+        top: 30%;
+        left: 39%;
+        width: initial;
+      }
       
       .big-text {
         flex-grow: 2;
