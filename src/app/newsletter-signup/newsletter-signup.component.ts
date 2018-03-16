@@ -1,5 +1,6 @@
 import { Component, OnInit, ViewChildren, QueryList, AfterViewInit, HostListener, ElementRef, ViewChild } from '@angular/core';
 import { Observable } from "rxjs/Rx";
+import { ParallaxHoverDirective } from "./../shared/directives/parallax-hover.directive";
 import { ParallaxBigBangDirective } from "./../shared/directives/parallax-bigbang.directive";
 import { MatSnackBar } from '@angular/material';
 
@@ -16,10 +17,9 @@ export class NewsletterSignupComponent implements OnInit, AfterViewInit {
   arrayOfElements: any;
   clicksCount = 0;
 
+  @ViewChildren(ParallaxHoverDirective) eeActivators: QueryList<any>;
   @ViewChildren(ParallaxBigBangDirective) children: QueryList<any>;
-
-  @ViewChild('ee') eeActivator: ElementRef;
-
+  @ViewChild('input') emailInput: ElementRef;
 
   constructor(public snackBar: MatSnackBar) { }
 
@@ -27,12 +27,20 @@ export class NewsletterSignupComponent implements OnInit, AfterViewInit {
   }
 
   ngAfterViewInit() {
-    this.arrayOfElements = this.children.toArray();
-    this.eeActivator.nativeElement.addEventListener("click", () => this.countClicks());
+    this.arrayOfElements = this.eeActivators.toArray();
+    this.eeActivators.forEach((item) => {
+      let el = item.element.nativeElement;
+      el.addEventListener("click", () => this.countClicks() );
+    });  
+
+    this.emailInput.nativeElement.addEventListener('keyup',()=>this.validateInput());
   }
 
   countClicks(): void {
     this.clicksCount += 1;
+    this.snackBar.open(`${5-this.clicksCount}`, '', {
+      duration: 500,
+    });
     if (this.clicksCount == 5) {
       this.enableBigBang();
     }
@@ -60,9 +68,17 @@ export class NewsletterSignupComponent implements OnInit, AfterViewInit {
   }
 
   restoreElements() {
-    this.arrayOfElements.forEach((item) => {
+    this.children.toArray().forEach((item) => {
       item.element.nativeElement.style.transform = "translate(0px,0px) rotate(0deg)";
     });
+  }
+
+  validateInput() {
+    if (this.emailInput.nativeElement.value.indexOf('ng-madness')!= -1) {
+      this.enableBigBang();
+      this.emailInput.nativeElement.value = '';
+    };
+    
   }
 
 }

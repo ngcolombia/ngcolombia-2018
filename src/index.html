@@ -7,6 +7,7 @@
   <base href="/">
 
   <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+  <meta http-equiv="ScreenOrientation" content="autoRotate:disabled">
   <link rel="icon" type="image/x-icon" href="favicon.ico">
   <link rel="manifest" href="./manifest.json">
   <link href="https://fonts.googleapis.com/css?family=Muli:200,400,800|Poppins:200,400,600,700|Roboto:200,400,800" rel="stylesheet">
@@ -31,16 +32,17 @@
 <!-- <script type="text/javascript" async src="./assets/js/wall.js"></script> -->
 <script src="https://cdn.jsdelivr.net/npm/wall.js"></script>
 <script>
+  var config = {
+    sectionAnimateDuration: 0.8 // every section now move 3 seconds 
+  }
   var wall = new Wall('#wrapper');
-  window.addEventListener('resize', () => {
-    wall = new Wall('#wrapper');
-  });
 </script>
 
 <noscript>
-  <div style = "text-align: center">
+  <div style="text-align: center">
     <img src="./assets/img/icon/BADGE6.png" alt="ng-colombia">
     <h2>Para disfrutar el contenido de NgColombia por favor activa Javascript en tu navegador</h2>
   </div>
 </noscript>
+
 </html>

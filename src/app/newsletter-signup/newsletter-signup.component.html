@@ -1,15 +1,19 @@
 <div class="wrapper parallax-box">
   <div class="middle-container">
-    <img parallaxAnimated [resetRotation]="pbb" pbb [pbbEnabled]="pbb" src="assets/img/nl-fourth-circle.png" alt="" class="fourth-circle circle">
-    <img parallaxAnimated [resetRotation]="pbb" pbb [pbbEnabled]="pbb" src="assets/img/nl-third-circle.png" alt="" class="third-circle circle">
-    <img parallaxAnimated [resetRotation]="pbb" pbb [pbbEnabled]="pbb" src="assets/img/nl-second-circle.png" alt="" class="second-circle circle">
-    <img parallaxAnimated #ee [resetRotation]="pbb" pbb [pbbEnabled]="pbb" src="assets/img/nl-first-circle.png" alt="" class="first-circle circle">
+    <img parallaxAnimated [resetRotation]="pbb" pbb [pbbEnabled]="pbb" src="assets/img/nl-fourth-circle.png" alt="" class="fourth-circle circle desktop">
+    <img parallaxAnimated [resetRotation]="pbb" pbb [pbbEnabled]="pbb" src="assets/img/nl-third-circle.png" alt="" class="third-circle circle desktop">
+    <img parallaxAnimated [resetRotation]="pbb" pbb [pbbEnabled]="pbb" src="assets/img/nl-second-circle.png" alt="" class="second-circle circle desktop">
+    <img parallaxAnimated [resetRotation]="pbb" pbb [pbbEnabled]="pbb" src="assets/img/nl-first-circle.png" alt="" class="first-circle circle desktop">
+    <img src="assets/img/nl-fourth-circle-mb.png" alt="" class="fourth-circle circle mobile">
+    <img src="assets/img/nl-third-circle-mb.png" alt="" class="third-circle circle mobile">
+    <img src="assets/img/nl-second-circle-mb.png" alt="" class="second-circle circle mobile">
+    <img src="assets/img/nl-first-circle-mb.png" alt="" class="first-circle circle mobile">
     <div class="signup">
       <div class="container">
         <p class="text"  pbb [pbbEnabled]="pbb">Sign up to our newslatter <br class="mobile">and be <br class="desktop">the first to know <br class="mobile">about dates for <br class="desktop">tickets <br class="mobile">releasing and more!</p>
         <p>
         <mat-form-field  pbb [pbbEnabled]="pbb">
-          <input matInput placeholder="E-mail address" type="text">
+          <input #input matInput placeholder="E-mail address" type="text">
         </mat-form-field>
       </p>
       <p>
