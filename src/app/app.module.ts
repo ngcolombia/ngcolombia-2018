@@ -23,7 +23,7 @@ import { ParallaxHoverDirective } from './shared/directives/parallax-hover.direc
     WelcomeComponent,
     NewsletterSignupComponent,
     FooterComponent,
-    ToggleSliderComponent
+    ToggleSliderComponent,
     ParallaxHoverDirective
   ],
   imports: [

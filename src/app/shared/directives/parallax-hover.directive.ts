@@ -10,7 +10,7 @@ export class ParallaxHoverDirective implements OnInit, AfterViewInit {
   viewPortHeight: number;
   elementOffset: { x: number, y: number };
   rotation = 0;
-  delta = 9; //con massDelta
+  delta = 4; //con massDelta
   // delta = 12;
   bounceCounter = 0;
 
@@ -43,9 +43,9 @@ export class ParallaxHoverDirective implements OnInit, AfterViewInit {
       this.rotation += 0.6;
       const massDelta = this.element.nativeElement.offsetHeight*0.05;
       const xTranslation = Math.round(offsetX * this.element.nativeElement.offsetLeft / (this.delta * massDelta));
-      const yTranslation = Math.round(offsetY * this.element.nativeElement.offsetLeft / (this.delta * massDelta));
+      const yTranslation = Math.round(offsetY * this.element.nativeElement.offsetTop / (this.delta * massDelta));
       // const xTranslation = Math.round(offsetX * this.element.nativeElement.offsetLeft / this.delta);
-      // const yTranslation = Math.round(offsetY * this.element.nativeElement.offsetLeft / this.delta);
+      // const yTranslation = Math.round(offsetY * this.element.nativeElement.offsetTop / this.delta);
       const transform = `translate(${xTranslation}px,${yTranslation}px) rotate(${this.rotation}deg)`;
       this.element.nativeElement.style.transform = transform;
       this.bounceCounter = 1;
