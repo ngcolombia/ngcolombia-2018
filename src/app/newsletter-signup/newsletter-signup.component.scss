@@ -22,6 +22,9 @@
       font-size: 21vw;
       line-height: 21vw;
       order: -1;
+      position: relative;
+      letter-spacing: 0.01em;
+      word-spacing: 0.08em;
     }
     
     .signup {
@@ -31,6 +34,7 @@
       line-height: 1.95em;
       margin-top: 4vh;
       justify-content: center;
+      position: relative;
       
       p.text {
         text-align: right;
@@ -49,6 +53,29 @@
       flex-grow: 1;
       align-items: flex-end;
       margin: auto;
+      position: relative;
+      z-index: 1;
+
+      .circle {
+        position: absolute;
+      }
+
+      img.first-circle {
+        top: -56%;
+        left: 58%;
+      }
+      img.second-circle {
+        top: 25%;
+        left: 68%;
+      } 
+      img.third-circle {
+        top: 36%;
+        left: 55%;
+      }
+      img.fourth-circle {
+        top: 95%;
+      left: 39%;
+      }
       
       .big-text {
         flex-grow: 2;

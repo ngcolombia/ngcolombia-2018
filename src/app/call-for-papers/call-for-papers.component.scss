@@ -15,25 +15,23 @@
     margin: 10%;
     position: relative;
 
-    img.first-circle.animated {
+    .circle{
       position: absolute;
+    }
+
+    img.first-circle {
       top: -54%;
       left: 44%;
-      transition: transform 0.8s ease-out;
     }
 
-    img.second-circle.animated {
-      position: absolute;
+    img.second-circle {
       top: 37%;
       left: 50%;
-      transition: transform 0.8s ease-out;
     }
 
-    img.third-circle.animated {
-      position: absolute;
-      top: 29%;
-      left: 38%;
-      transition: transform 0.8s ease-out;
+    img.third-circle {
+      top: 30%;
+      left: 39%;
     }
    
     .big-text {
@@ -43,12 +41,15 @@
       font-size: 21vw;
       line-height: 21vw;
       position: relative;
+      letter-spacing: 0.01em;
+      word-spacing: 0.08em;
     }
 
     .text {
       text-align: left;
       line-height: 1.95em;
       margin-top: 4vh;
+      position: relative;
     }
   }
 
