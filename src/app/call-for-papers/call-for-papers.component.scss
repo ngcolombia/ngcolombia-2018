@@ -13,19 +13,43 @@
     align-content: center;
     justify-content: flex-end;
     margin: 10%;
-    
+    position: relative;
+
+    .circle{
+      position: absolute;
+    }
+
+    img.first-circle {
+      top: -54%;
+      left: 44%;
+    }
+
+    img.second-circle {
+      top: 37%;
+      left: 50%;
+    }
+
+    img.third-circle {
+      top: 30%;
+      left: 39%;
+    }
+   
     .big-text {
       text-align: right;
       font-weight: bold;
       color: #211056;
       font-size: 21vw;
       line-height: 21vw;
+      position: relative;
+      letter-spacing: 0.01em;
+      word-spacing: 0.08em;
     }
 
     .text {
       text-align: left;
       line-height: 1.95em;
       margin-top: 4vh;
+      position: relative;
     }
   }
 

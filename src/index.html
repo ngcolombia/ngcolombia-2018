@@ -32,6 +32,9 @@
 <script src="https://cdn.jsdelivr.net/npm/wall.js"></script>
 <script>
   var wall = new Wall('#wrapper');
+  window.addEventListener('resize', () => {
+    wall = new Wall('#wrapper');
+  });
 </script>
 
 <noscript>
