@@ -1,19 +1,23 @@
 .wrapper {
-  background-color: #392cb2;
   text-align: center;
   display: flex;
   align-items: center;
   width: 100vw;
   height: 100vh;
+  background: transparent;
+  background: -moz-linear-gradient(65deg, #341b6f 59%, #781991 100%);
+  background: -webkit-linear-gradient(65deg, #341b6f 59%,#781991 100%);
+  background: linear-gradient(65deg, #341b6f 59%,#781991 100%);
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#341b6f', endColorstr='#781991',GradientType=1 );
 
   .ng-colombia-2018-logo {
     position: absolute;
     width: 200px;
     left: calc(50% - 100px);
-    top: 10px;
+    top: 20px;
     color: #ffffff;
     font-family: 'Poppins';
-
+    z-index: 2;
     p {
       margin: 12px 0 0;
       font-size: 20px;
@@ -42,7 +46,7 @@
     
     img {
       align-self: flex-start;
-      width: 60px;
+      width: 50px;
     }
   }
 
@@ -50,9 +54,53 @@
     max-height: 230px;
     margin: 0 auto;
     max-width: 80%;
+    position: relative;
   }
 
   @media (orientation: landscape) and (max-height: 450px) {
     height: 150vh;
+  }
+
+  .reveal {
+    overflow: hidden;
+    position: absolute;
+    left: 0;
+    top: 0;
+    bottom: 0;
+    right: 0;
+    .gradient {
+      position: absolute;
+      left: 0;
+      top: 0;
+      width: 100vw;
+      height: 100vh;
+      background: url(/assets/img/header-bg.jpg) no-repeat scroll center center #f7a5ff;
+      background-size: cover;
+    }
+    p {
+      color: #211056;
+      font-size: 26px;
+      position: relative;
+      width: 80%;
+      max-width: 850px;
+      margin: auto;
+      line-height: 1.2;
+      &.first {
+        top: calc(50% - 120px);
+        text-align: left;
+      }
+      &.second {
+        top: calc(50% + 30px);
+        text-align: right;
+      }
+      span {
+        color: white;
+        font-weight: bold;
+        text-shadow: -2px 2px black;
+        display: block;
+        text-transform: uppercase;
+        font-size: 1.6em;
+      }
+    }
   }
 }

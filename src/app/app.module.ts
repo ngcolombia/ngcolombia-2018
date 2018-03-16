@@ -12,6 +12,7 @@ import { NewsletterSignupComponent } from './newsletter-signup/newsletter-signup
 import { FooterComponent } from './footer/footer.component';
 
 import { environment } from '../environments/environment';
+import { ToggleSliderComponent } from './welcome/toggle-slider/toggle-slider.component';
 import { ParallaxHoverDirective } from './shared/directives/parallax-hover.directive';
 
 
@@ -22,6 +23,7 @@ import { ParallaxHoverDirective } from './shared/directives/parallax-hover.direc
     WelcomeComponent,
     NewsletterSignupComponent,
     FooterComponent,
+    ToggleSliderComponent
     ParallaxHoverDirective
   ],
   imports: [
