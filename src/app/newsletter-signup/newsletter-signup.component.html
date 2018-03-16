@@ -1,23 +1,23 @@
 <div class="wrapper parallax-box">
   <div class="middle-container">
-    <img parallaxAnimated src="assets/img/nl-first-circle.png" alt="" class="first-circle circle">
-    <img parallaxAnimated src="assets/img/nl-second-circle.png" alt="" class="second-circle circle">
-    <img parallaxAnimated src="assets/img/nl-third-circle.png" alt="" class="third-circle circle">
-    <img parallaxAnimated src="assets/img/nl-fourth-circle.png" alt="" class="fourth-circle circle">
+    <img parallaxAnimated #ee [resetRotation]="pbb" pbb [pbbEnabled]="pbb" src="assets/img/nl-first-circle.png" alt="" class="first-circle circle">
+    <img parallaxAnimated [resetRotation]="pbb" pbb [pbbEnabled]="pbb" src="assets/img/nl-second-circle.png" alt="" class="second-circle circle">
+    <img parallaxAnimated [resetRotation]="pbb" pbb [pbbEnabled]="pbb" src="assets/img/nl-third-circle.png" alt="" class="third-circle circle">
+    <img parallaxAnimated [resetRotation]="pbb" pbb [pbbEnabled]="pbb" src="assets/img/nl-fourth-circle.png" alt="" class="fourth-circle circle">
     <div class="signup">
       <div class="container">
-        <p class="text">Sign up to our newslatter <br class="mobile">and be <br class="desktop">the first to know <br class="mobile">about dates for <br class="desktop">tickets <br class="mobile">releasing and more!</p>
+        <p class="text"  pbb [pbbEnabled]="pbb">Sign up to our newslatter <br class="mobile">and be <br class="desktop">the first to know <br class="mobile">about dates for <br class="desktop">tickets <br class="mobile">releasing and more!</p>
         <p>
-        <mat-form-field>
+        <mat-form-field  pbb [pbbEnabled]="pbb">
           <input matInput placeholder="E-mail address" type="text">
         </mat-form-field>
       </p>
       <p>
-        <button mat-flat-button color="primary">SIGN UP</button>
+        <button pbb [pbbEnabled]="pbb" mat-flat-button color="primary">SIGN UP</button>
       </p>
       </div>
     </div>
-    <div class="big-text">
+    <div class="big-text" pbb [pbbEnabled]="pbb">
       <div>
         Get the
       </div>

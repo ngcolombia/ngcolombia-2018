@@ -2,7 +2,7 @@ import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 import { ServiceWorkerModule } from '@angular/service-worker';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
-import { MatButtonModule, MatInputModule, MatFormFieldModule } from '@angular/material';
+import { MatButtonModule, MatInputModule, MatFormFieldModule, MatSnackBarModule } from '@angular/material';
 import { FormsModule } from '@angular/forms';
 
 import { AppComponent } from './app.component';
@@ -14,6 +14,7 @@ import { FooterComponent } from './footer/footer.component';
 import { environment } from '../environments/environment';
 import { ToggleSliderComponent } from './welcome/toggle-slider/toggle-slider.component';
 import { ParallaxHoverDirective } from './shared/directives/parallax-hover.directive';
+import { ParallaxBigBangDirective } from "./shared/directives/parallax-bigbang.directive";
 
 
 @NgModule({
@@ -23,8 +24,9 @@ import { ParallaxHoverDirective } from './shared/directives/parallax-hover.direc
     WelcomeComponent,
     NewsletterSignupComponent,
     FooterComponent,
-    ToggleSliderComponent
-    ParallaxHoverDirective
+    ToggleSliderComponent,
+    ParallaxHoverDirective,
+    ParallaxBigBangDirective
   ],
   imports: [
     BrowserModule,
@@ -36,7 +38,8 @@ import { ParallaxHoverDirective } from './shared/directives/parallax-hover.direc
     BrowserAnimationsModule,
     MatButtonModule,
     MatInputModule,
-    MatFormFieldModule
+    MatFormFieldModule,
+    MatSnackBarModule
   ],
   providers: [],
   bootstrap: [AppComponent]
