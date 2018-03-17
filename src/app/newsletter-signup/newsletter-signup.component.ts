@@ -12,10 +12,11 @@ import { MatSnackBar } from '@angular/material';
 export class NewsletterSignupComponent implements OnInit, AfterViewInit {
 
   pbb = false;
+  madness = false;
   timer: any;
   allowWindow: any;
   arrayOfElements: any;
-  clicksCount = 0;
+  clicksCount = 5;
 
   @ViewChildren(ParallaxHoverDirective) eeActivators: QueryList<any>;
   @ViewChildren(ParallaxBigBangDirective) children: QueryList<any>;
@@ -37,12 +38,15 @@ export class NewsletterSignupComponent implements OnInit, AfterViewInit {
   }
 
   countClicks(): void {
-    this.clicksCount += 1;
-    this.snackBar.open(`${5-this.clicksCount}`, '', {
-      duration: 500,
-    });
-    if (this.clicksCount == 5) {
-      this.enableBigBang();
+    if ( !this.pbb && this.clicksCount && !this.madness) {
+      this.clicksCount--;
+      if (this.clicksCount !== 0) {
+        this.snackBar.open(`${this.clicksCount}`, '', {
+          duration: 500,
+        });
+      } else { 
+        this.enableBigBang();
+      }
     }
   }
 
@@ -50,19 +54,39 @@ export class NewsletterSignupComponent implements OnInit, AfterViewInit {
     this.snackBar.open('move the mouse around', '', {
       duration: 2000,
     });
-    this.clicksCount = 0;
     this.timer = Observable.timer(0, 10000)
-      .subscribe((val) => {
+    .subscribe((val) => {
+      if (val == 0) {
+        this.pbb = true;
+        this.emailInput.nativeElement.disabled = true;
+      } else {
+        this.snackBar.open('lets do it again!!', '', {
+          duration: 2000,
+        });
+        this.pbb = false;
+        this.emailInput.nativeElement.disabled = false;
+        this.restoreElements();
+        this.clicksCount = 5;
+        this.timer.unsubscribe();
+        }
+      });
+  }
 
-        if (val == 0) {
-          this.pbb = true;
-        } else {
-          this.snackBar.open('lets do it again!!', '', {
-            duration: 2000,
-          });
-          this.pbb = false;
-          this.restoreElements();
-          this.timer.unsubscribe();
+  enableMadness() {
+    this.snackBar.open('move the mouse around', '', {
+      duration: 2000,
+    });
+    this.timer = Observable.timer(0, 10000)
+    .subscribe((val) => {
+      if (val == 0) {
+        this.madness = true;
+      } else {
+        this.snackBar.open('lets do it again!!', '', {
+          duration: 2000,
+        });
+        this.madness = false;
+        this.restoreElements();
+        this.timer.unsubscribe();
         }
       });
   }
@@ -74,11 +98,12 @@ export class NewsletterSignupComponent implements OnInit, AfterViewInit {
   }
 
   validateInput() {
-    if (this.emailInput.nativeElement.value.indexOf('ng-madness')!= -1) {
-      this.enableBigBang();
-      this.emailInput.nativeElement.value = '';
-    };
-    
+    if (!this.pbb){
+      if (this.emailInput.nativeElement.value.indexOf('ngmadness')!= -1) {
+        this.enableMadness();
+        this.emailInput.nativeElement.value = '';
+      };
+    }
   }
 
 }

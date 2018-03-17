@@ -1,16 +1,16 @@
-<div class="wrapper parallax-box">
+<div appMadness [madnessEnabled]='madness' class="wrapper parallax-box">
   <div class="middle-container">
-    <img parallaxAnimated [resetRotation]="pbb" pbb [pbbEnabled]="pbb" src="assets/img/nl-fourth-circle.png" alt="" class="fourth-circle circle desktop">
-    <img parallaxAnimated [resetRotation]="pbb" pbb [pbbEnabled]="pbb" src="assets/img/nl-third-circle.png" alt="" class="third-circle circle desktop">
-    <img parallaxAnimated [resetRotation]="pbb" pbb [pbbEnabled]="pbb" src="assets/img/nl-second-circle.png" alt="" class="second-circle circle desktop">
-    <img parallaxAnimated [resetRotation]="pbb" pbb [pbbEnabled]="pbb" src="assets/img/nl-first-circle.png" alt="" class="first-circle circle desktop">
+    <img parallaxAnimated [resetRotation]="pbb || madness" pbb [pbbEnabled]="pbb" src="assets/img/nl-fourth-circle.png" alt="" class="fourth-circle circle desktop">
+    <img parallaxAnimated [resetRotation]="pbb || madness" pbb [pbbEnabled]="pbb" src="assets/img/nl-third-circle.png" alt="" class="third-circle circle desktop">
+    <img parallaxAnimated [resetRotation]="pbb || madness" pbb [pbbEnabled]="pbb" src="assets/img/nl-second-circle.png" alt="" class="second-circle circle desktop">
+    <img parallaxAnimated [resetRotation]="pbb || madness" pbb [pbbEnabled]="pbb" src="assets/img/nl-first-circle.png" alt="" class="first-circle circle desktop">
     <img src="assets/img/nl-fourth-circle-mb.png" alt="" class="fourth-circle circle mobile">
     <img src="assets/img/nl-third-circle-mb.png" alt="" class="third-circle circle mobile">
     <img src="assets/img/nl-second-circle-mb.png" alt="" class="second-circle circle mobile">
     <img src="assets/img/nl-first-circle-mb.png" alt="" class="first-circle circle mobile">
     <div class="signup">
       <div class="container">
-        <p class="text"  pbb [pbbEnabled]="pbb">Sign up to our newslatter <br class="mobile">and be <br class="desktop">the first to know <br class="mobile">about dates for <br class="desktop">tickets <br class="mobile">releasing and more!</p>
+        <p class="text"  pbb [pbbEnabled]="pbb"><span>Sign</span> <span>up</span> <span>to</span> <span>our</span> <span>newslatter</span> <br class="mobile"><span>and</span> <span>be</span> <br class="desktop"><span>the</span> <span>first</span> <span>to</span> <span>know</span> <br class="mobile"><span>about</span> <span>dates</span> <span>for</span> <br class="desktop"><span>tickets</span> <br class="mobile"><span>releasing</span> <span>and</span> <span>more</span> !</p>
         <p>
         <mat-form-field  pbb [pbbEnabled]="pbb">
           <input #input matInput placeholder="E-mail address" type="text">
@@ -23,13 +23,13 @@
     </div>
     <div class="big-text" pbb [pbbEnabled]="pbb">
       <div>
-        Get the
+        <span>Get</span> <span>the</span>
       </div>
       <div>
-        latest
+        <span>latest</span>
       </div>
       <div>
-        news
+        <span>news</span>
       </div>
     </div>
   </div>
