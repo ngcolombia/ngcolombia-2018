@@ -10,7 +10,7 @@
       true,
       "check-space"
     ],
-    "curly": true,
+    "curly": ["ignore-same-line"],
     "deprecation": {
       "severity": "warn"
     },
@@ -24,7 +24,7 @@
     "import-spacing": true,
     "indent": [
       true,
-      "spaces"
+      "tabs"
     ],
     "interface-over-type-literal": true,
     "label-position": true,

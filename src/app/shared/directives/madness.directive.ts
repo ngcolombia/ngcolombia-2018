@@ -27,7 +27,7 @@ export class MadnessDirective implements AfterViewInit, OnChanges {
     this.items.push(Array.apply(null, this.element.nativeElement.querySelectorAll('button')));
     this.items.push(Array.apply(null, this.element.nativeElement.querySelectorAll('img:not(.mobile)')));
     this.items = [].concat.apply([], this.items);
-    console.log(this.items);
+    // console.log(this.items);
 
     this.getViewPortBoundaries();
     this.findElementsOffset();
@@ -35,7 +35,7 @@ export class MadnessDirective implements AfterViewInit, OnChanges {
   }
 
   ngOnChanges(changes: SimpleChanges) {
-    console.log(changes);
+    // console.log(changes);
     if (changes.madnessEnabled.previousValue == false && changes.madnessEnabled.currentValue == true) {
       this.enabledFlag = true;
     } else if (changes.madnessEnabled.previousValue == true && changes.madnessEnabled.currentValue == false) {
