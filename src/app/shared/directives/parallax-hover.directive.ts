@@ -10,7 +10,7 @@ export class ParallaxHoverDirective implements OnInit, AfterViewInit {
   viewPortHeight: number;
   elementOffset: { x: number, y: number };
   rotation = 0;
-  delta = 50; //con massDelta
+  delta = 50; // con massDelta
   // delta = 12;
   bounceCounter = 0;
 
@@ -28,8 +28,9 @@ export class ParallaxHoverDirective implements OnInit, AfterViewInit {
   }
 
   findAncestor(elmnt, className) {
-    while ((elmnt = elmnt.parentElement) && !elmnt.classList.contains(className));
-    return elmnt;
+    while ((elmnt = elmnt.parentElement) && !elmnt.classList.contains(className)) {
+      return elmnt;
+    }
   }
 
   getViewPortBoundaries(): void {
@@ -38,14 +39,14 @@ export class ParallaxHoverDirective implements OnInit, AfterViewInit {
   }
 
   animateElement(event) {
-    if (this.bounceCounter == 0) {
+    if (this.bounceCounter === 0) {
       event = event || window.event;
       const offsetX = 0.5 - event.pageX / this.viewPortWidth;
       const offsetY = 0.5 - event.pageY / this.viewPortHeight;
       const massDelta = this.element.nativeElement.offsetHeight * 0.05;
       this.rotation += 0.6;
-      const xTranslation = Math.round(offsetX * this.element.nativeElement.offsetLeft * massDelta * 0.5 / (this.delta)); 
-      const yTranslation = Math.round(offsetY * this.element.nativeElement.offsetLeft * massDelta * 0.5 / (this.delta) ); 
+      const xTranslation = Math.round(offsetX * this.element.nativeElement.offsetLeft * massDelta * 0.5 / (this.delta));
+      const yTranslation = Math.round(offsetY * this.element.nativeElement.offsetLeft * massDelta * 0.5 / (this.delta) );
       // const xTranslation = Math.round(offsetX * this.element.nativeElement.offsetLeft / this.delta);
       // const yTranslation = Math.round(offsetY * this.element.nativeElement.offsetLeft / this.delta);
       const transform = `translate(${xTranslation}px,${yTranslation}px) rotate(${this.rotation}deg)`;
@@ -58,11 +59,11 @@ export class ParallaxHoverDirective implements OnInit, AfterViewInit {
 
   @HostListener('window:mousemove', ['$event'])
   mousemoveEventHandler(event: any) {
-    if (event.path.indexOf(this.boxParent) != -1) {
+    if (event.path.indexOf(this.boxParent) !== -1) {
       if (!this.resetRotation) {
-        this.animateElement(event)
+        this.animateElement(event);
       } else {
-        if (this.rotation != 0) {
+        if (this.rotation !== 0) {
           this.rotation = 0;
         }
       }

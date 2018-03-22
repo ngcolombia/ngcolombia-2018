@@ -54,15 +54,9 @@ export class MadnessDirective implements AfterViewInit, OnChanges {
   }
 
   ngOnChanges(changes: SimpleChanges) {
-    if (
-      changes.madnessEnabled.previousValue == false &&
-      changes.madnessEnabled.currentValue === true
-    ) {
+    if (changes.madnessEnabled.previousValue === false && changes.madnessEnabled.currentValue === true) {
       this.enabledFlag = true;
-    } else if (
-      changes.madnessEnabled.previousValue == true &&
-      changes.madnessEnabled.currentValue == false
-    ) {
+    } else if (changes.madnessEnabled.previousValue === true && changes.madnessEnabled.currentValue === false) {
       this.items.forEach(item => {
         item.style.display = '';
         item.style.transform = 'translate(0px,0px) rotate(0deg)';
@@ -92,7 +86,7 @@ export class MadnessDirective implements AfterViewInit, OnChanges {
   }
 
   animateElement(event) {
-    if (this.bounceCounter == 0) {
+    if (this.bounceCounter === 0) {
       if (this.enabledFlag) {
         this.setInitialStyles();
         this.enabledFlag = false;
