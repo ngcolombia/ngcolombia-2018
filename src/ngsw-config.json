@@ -8,7 +8,8 @@
         "/favicon.ico",
         "/index.html",
         "/assets/js/wall.js",
-        "/manifest.json"
+        "/manifest.json",
+        "/ngsw-worker.js"
       ],
       "versionedFiles": [
         "/*.bundle.css",
