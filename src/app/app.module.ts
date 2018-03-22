@@ -14,7 +14,7 @@ import { FooterComponent } from './footer/footer.component';
 import { environment } from '../environments/environment';
 import { ToggleSliderComponent } from './welcome/toggle-slider/toggle-slider.component';
 import { ParallaxHoverDirective } from './shared/directives/parallax-hover.directive';
-import { ParallaxBigBangDirective } from "./shared/directives/parallax-bigbang.directive";
+import { ParallaxBigBangDirective } from './shared/directives/parallax-bigbang.directive';
 import { MadnessDirective } from './shared/directives/madness.directive';
 
 

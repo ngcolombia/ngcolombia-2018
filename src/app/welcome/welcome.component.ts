@@ -6,7 +6,7 @@ import { trigger, state, style, animate, transition, query } from '@angular/anim
   templateUrl: './welcome.component.html',
   styleUrls: ['./welcome.component.scss'],
   animations: [
-    trigger('toggle',[
+    trigger('toggle', [
       state('left', style({width: '0'})),
       state('right', style({width: '100%'})),
       transition( 'left <=> right', animate('600ms ease-out'))
@@ -21,9 +21,9 @@ export class WelcomeComponent implements OnInit {
 
   ngOnInit() {
   }
-  
+
   get toggleImg() {
-    return this.reveal?'left':'right';
+    return this.reveal ? 'left' : 'right';
   }
 
   changeState() {

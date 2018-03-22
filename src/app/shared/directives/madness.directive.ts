@@ -9,7 +9,7 @@ export class MadnessDirective implements AfterViewInit, OnChanges {
   viewPortHeight: number;
   elementsOffset: { left: number, top: number }[] = [];
   rotation = 0;
-  delta = 0.4; //con massDelta
+  delta = 0.4; // con massDelta
   // delta = 12;
   bounceCounter = 0;
   enabledFlag = false;
@@ -36,9 +36,9 @@ export class MadnessDirective implements AfterViewInit, OnChanges {
 
   ngOnChanges(changes: SimpleChanges) {
     console.log(changes);
-    if (changes.madnessEnabled.previousValue == false && changes.madnessEnabled.currentValue == true) {
+    if (changes.madnessEnabled.previousValue === false && changes.madnessEnabled.currentValue === true) {
       this.enabledFlag = true;
-    } else if (changes.madnessEnabled.previousValue == true && changes.madnessEnabled.currentValue == false) {
+    } else if (changes.madnessEnabled.previousValue === true && changes.madnessEnabled.currentValue === false) {
       this.items.forEach(item => {
         item.style.display = '';
         item.style.transform = 'translate(0px,0px) rotate(0deg)';
@@ -58,7 +58,7 @@ export class MadnessDirective implements AfterViewInit, OnChanges {
       this.elementsOffset.push({
         left: element.offsetLeft,
         top: element.offsetTop,
-      })
+      });
     });
   }
 
@@ -68,7 +68,7 @@ export class MadnessDirective implements AfterViewInit, OnChanges {
   }
 
   animateElement(event) {
-    if (this.bounceCounter == 0) {
+    if (this.bounceCounter === 0) {
 
       if (this.enabledFlag) {
         this.setInitialStyles();
@@ -83,14 +83,14 @@ export class MadnessDirective implements AfterViewInit, OnChanges {
 
 
 
-      let transaltionsArray = this.elementsOffset.map(offsetPair => {
+      const transaltionsArray = this.elementsOffset.map(offsetPair => {
         const xTranslation = Math.round(offsetX * offsetPair.left / (this.delta));
         const yTranslation = Math.round(offsetY * offsetPair.left / (this.delta));
-        return [xTranslation, yTranslation]
+        return [xTranslation, yTranslation];
       });
 
-      let transformsArray = transaltionsArray.map(item => {
-        let tranformText = `translate(${item[0] + 50}px,${item[1] + 5}px) rotate(${this.rotation}deg)`;
+      const transformsArray = transaltionsArray.map(item => {
+        const tranformText = `translate(${item[0] + 50}px,${item[1] + 5}px) rotate(${this.rotation}deg)`;
         return tranformText;
       });
 
@@ -105,9 +105,9 @@ export class MadnessDirective implements AfterViewInit, OnChanges {
 
   @HostListener('window:mousemove', ['$event'])
   mousemoveEventHandler(event: any) {
-    if (event.path.indexOf(this.element.nativeElement) != -1 && this.madnessEnabled) {
-      this.animateElement(event)
-    } else if (!this.madnessEnabled && this.rotation != 0) {
+    if (event.path.indexOf(this.element.nativeElement) !== -1 && this.madnessEnabled) {
+      this.animateElement(event);
+    } else if (!this.madnessEnabled && this.rotation !== 0) {
       this.rotation = 0;
     }
   }
