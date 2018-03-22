@@ -1,5 +1,5 @@
-import { Component, OnInit } from '@angular/core';
-import { trigger, state, style, animate, transition, query } from '@angular/animations';
+import { Component, OnInit } from "@angular/core";
+import { trigger, state, style, animate, transition, query } from "@angular/animations";
 
 @Component({
   selector: 'app-welcome',
@@ -14,19 +14,18 @@ import { trigger, state, style, animate, transition, query } from '@angular/anim
   ]
 })
 export class WelcomeComponent implements OnInit {
+	reveal = true;
 
-  reveal = true;
+	constructor() {}
 
-  constructor() { }
-
-  ngOnInit() {
-  }
+	ngOnInit() {}
 
   get toggleImg() {
     return this.reveal ? 'left' : 'right';
   }
 
-  changeState() {
-    this.reveal = !this.reveal;
-  }
+	changeState(side) {
+		this.reveal = side === "left" ? true : false;
+		// this.reveal = !this.reveal;
+	}
 }

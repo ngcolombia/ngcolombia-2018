@@ -15,6 +15,8 @@ import { ToggleSliderComponent } from './welcome/toggle-slider/toggle-slider.com
 import { ParallaxHoverDirective } from './shared/directives/parallax-hover.directive';
 import { ParallaxBigBangDirective } from './shared/directives/parallax-bigbang.directive';
 import { MadnessDirective } from './shared/directives/madness.directive';
+import { ToggleSliderDirective } from './welcome/toggle-slider/directives/toggle-slider.directive';
+import { ToggleSliderElementDirective } from './welcome/toggle-slider/directives/toggle-slider-element.directive';
 
 
 @NgModule({
@@ -25,9 +27,11 @@ import { MadnessDirective } from './shared/directives/madness.directive';
     NewsletterSignupComponent,
     FooterComponent,
     ToggleSliderComponent,
+    ToggleSliderDirective,
     ParallaxHoverDirective,
     ParallaxBigBangDirective,
-    MadnessDirective
+    MadnessDirective,
+    ToggleSliderElementDirective
   ],
   imports: [
     BrowserModule,

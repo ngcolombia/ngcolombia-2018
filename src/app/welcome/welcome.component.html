@@ -12,5 +12,5 @@
 
   </div>
   <img class="angular" src="assets/img/angular.png" alt="">
-  <app-toggle-slider (click)="changeState()" [class]="toggleImg"></app-toggle-slider>
+  <app-toggle-slider (selectedSide)="changeState($event)" [class]="toggleImg"></app-toggle-slider>
 </div>
