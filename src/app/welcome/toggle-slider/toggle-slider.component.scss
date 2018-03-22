@@ -22,7 +22,7 @@ $int-padding: 2px;
         display: block;
     }
     span {
-        transition: all 0.3s ease-in-out;   
+        // transition: all 0.3s linear;
         position: relative;
         width: $comp-height - ($int-padding * 4);
         height: $comp-height - ($int-padding * 4);
@@ -39,11 +39,15 @@ $int-padding: 2px;
     left: calc(50% - 100px);
     bottom: 40px;
     &.right span {
-        left: $comp-width - 32px;
+        // left: $comp-width - 32px;
     }
 }
 
 p {
     text-transform: uppercase;
     color: white;
+}
+
+.animate-slide {
+	transition: all 0.2s linear;
 }
