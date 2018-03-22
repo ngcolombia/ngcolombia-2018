@@ -1,44 +1,68 @@
-import { Directive, AfterViewInit, ElementRef, HostListener, Input, OnChanges, SimpleChanges } from '@angular/core';
+import {
+  Directive,
+  AfterViewInit,
+  ElementRef,
+  HostListener,
+  Input,
+  OnChanges,
+  SimpleChanges,
+} from '@angular/core';
 
 @Directive({
-  selector: '[appMadness]'
+  selector: '[appMadness]',
 })
 export class MadnessDirective implements AfterViewInit, OnChanges {
   boxParent: any;
   viewPortWidth: number;
   viewPortHeight: number;
-  elementsOffset: { left: number, top: number }[] = [];
+  elementsOffset: { left: number; top: number }[] = [];
   rotation = 0;
-  delta = 0.4; //con massDelta
+  delta = 0.4; // con massDelta
   // delta = 12;
   bounceCounter = 0;
   enabledFlag = false;
 
   items: any[] = [];
 
-  @Input() madnessEnabled: boolean = false;
+  @Input() madnessEnabled = false;
 
-  constructor(private element: ElementRef) { }
+  constructor(private element: ElementRef) {}
 
   ngAfterViewInit() {
-    this.items.push(Array.apply(null, this.element.nativeElement.querySelectorAll('span')));
-    this.items.push(Array.apply(null, this.element.nativeElement.querySelectorAll('div')));
-    this.items.push(Array.apply(null, this.element.nativeElement.querySelectorAll('p')));
-    this.items.push(Array.apply(null, this.element.nativeElement.querySelectorAll('button')));
-    this.items.push(Array.apply(null, this.element.nativeElement.querySelectorAll('img:not(.mobile)')));
+    this.items.push(
+      Array.apply(null, this.element.nativeElement.querySelectorAll('span')),
+    );
+    this.items.push(
+      Array.apply(null, this.element.nativeElement.querySelectorAll('div')),
+    );
+    this.items.push(
+      Array.apply(null, this.element.nativeElement.querySelectorAll('p')),
+    );
+    this.items.push(
+      Array.apply(null, this.element.nativeElement.querySelectorAll('button')),
+    );
+    this.items.push(
+      Array.apply(
+        null,
+        this.element.nativeElement.querySelectorAll('img:not(.mobile)'),
+      ),
+    );
     this.items = [].concat.apply([], this.items);
-    // console.log(this.items);
 
     this.getViewPortBoundaries();
     this.findElementsOffset();
-
   }
 
   ngOnChanges(changes: SimpleChanges) {
-    // console.log(changes);
-    if (changes.madnessEnabled.previousValue == false && changes.madnessEnabled.currentValue == true) {
+    if (
+      changes.madnessEnabled.previousValue == false &&
+      changes.madnessEnabled.currentValue === true
+    ) {
       this.enabledFlag = true;
-    } else if (changes.madnessEnabled.previousValue == true && changes.madnessEnabled.currentValue == false) {
+    } else if (
+      changes.madnessEnabled.previousValue == true &&
+      changes.madnessEnabled.currentValue == false
+    ) {
       this.items.forEach(item => {
         item.style.display = '';
         item.style.transform = 'translate(0px,0px) rotate(0deg)';
@@ -58,7 +82,7 @@ export class MadnessDirective implements AfterViewInit, OnChanges {
       this.elementsOffset.push({
         left: element.offsetLeft,
         top: element.offsetTop,
-      })
+      });
     });
   }
 
@@ -69,7 +93,6 @@ export class MadnessDirective implements AfterViewInit, OnChanges {
 
   animateElement(event) {
     if (this.bounceCounter == 0) {
-
       if (this.enabledFlag) {
         this.setInitialStyles();
         this.enabledFlag = false;
@@ -81,16 +104,15 @@ export class MadnessDirective implements AfterViewInit, OnChanges {
       const massDelta = this.element.nativeElement.offsetHeight * 0.05;
       this.rotation += 5;
 
-
-
-      let transaltionsArray = this.elementsOffset.map(offsetPair => {
-        const xTranslation = Math.round(offsetX * offsetPair.left / (this.delta));
-        const yTranslation = Math.round(offsetY * offsetPair.left / (this.delta));
-        return [xTranslation, yTranslation]
+      const transaltionsArray = this.elementsOffset.map(offsetPair => {
+        const xTranslation = Math.round(offsetX * offsetPair.left / this.delta);
+        const yTranslation = Math.round(offsetY * offsetPair.left / this.delta);
+        return [xTranslation, yTranslation];
       });
 
-      let transformsArray = transaltionsArray.map(item => {
-        let tranformText = `translate(${item[0] + 50}px,${item[1] + 5}px) rotate(${this.rotation}deg)`;
+      const transformsArray = transaltionsArray.map(item => {
+        const tranformText = `translate(${item[0] + 50}px,${item[1] +
+          5}px) rotate(${this.rotation}deg)`;
         return tranformText;
       });
 
@@ -105,9 +127,12 @@ export class MadnessDirective implements AfterViewInit, OnChanges {
 
   @HostListener('window:mousemove', ['$event'])
   mousemoveEventHandler(event: any) {
-    if (event.path.indexOf(this.element.nativeElement) != -1 && this.madnessEnabled) {
-      this.animateElement(event)
-    } else if (!this.madnessEnabled && this.rotation != 0) {
+    if (
+      event.path.indexOf(this.element.nativeElement) !== -1 &&
+      this.madnessEnabled
+    ) {
+      this.animateElement(event);
+    } else if (!this.madnessEnabled && this.rotation !== 0) {
       this.rotation = 0;
     }
   }
