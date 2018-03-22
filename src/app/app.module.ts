@@ -3,7 +3,6 @@ import { NgModule } from '@angular/core';
 import { ServiceWorkerModule } from '@angular/service-worker';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { MatButtonModule, MatInputModule, MatFormFieldModule, MatSnackBarModule } from '@angular/material';
-import { FormsModule } from '@angular/forms';
 
 import { AppComponent } from './app.component';
 import { CallForPapersComponent } from './call-for-papers/call-for-papers.component';
@@ -36,7 +35,6 @@ import { MadnessDirective } from './shared/directives/madness.directive';
       enabled: environment.production
     }),
     ServiceWorkerModule,
-    FormsModule,
     BrowserAnimationsModule,
     MatButtonModule,
     MatInputModule,
