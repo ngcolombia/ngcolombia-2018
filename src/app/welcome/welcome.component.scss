@@ -13,6 +13,48 @@
   background: linear-gradient(65deg, #341b6f 59%, #781991 100%);
   filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#341b6f', endColorstr='#781991',GradientType=1 );
 
+  .dates {
+    position: absolute;
+    top: 3rem;
+    left: 3rem;
+    .date {
+      position: relative;
+      border: 2px solid #78f5ff;
+      padding: 10px;
+      color: white;
+      font-weight: bold;
+      font-size: 1.4rem;
+      margin-right: 5px;
+    }
+    .date-month {
+      background-color: #211056;
+    }
+  }
+
+  @media (max-width: 800px) {
+    .dates {
+      top: 2rem;
+      left: 2rem;
+      .date {
+        padding: 5px;
+        font-size: 1rem;
+        margin-right: 3px;
+      }
+    }
+  }
+
+  @media (max-width: 500px) {
+    .dates {
+      top: 1rem;
+      left: 1rem;
+      .date {
+        padding: 3px;
+        font-size: 0.7rem;
+        margin-right: 1.5px;
+      }
+    }
+  }
+
   .ng-colombia-2018-logo {
     position: absolute;
     width: 200px;
@@ -92,8 +134,7 @@
       top: 0;
       width: 100vw;
       height: 100vh;
-      background: url(/assets/img/header-bg.jpg) no-repeat scroll center center
-        #f7a5ff;
+      background: url(/assets/img/header-bg.jpg) no-repeat scroll center center #f7a5ff;
       background-size: cover;
     }
     p {
@@ -127,14 +168,16 @@
 
 #sliderContainer {
   left: calc(50% - 100px);
-  bottom: 40px;
+  bottom: 20px;
   position: absolute;
-
   width: 220px;
 
   mat-slider {
     width: 100%;
     height: 40px;
+    border: 2px solid white;
+    transition: all ease-in-out 1s;
+    border-radius: 1.5rem;
     &::before {
       background-color: rgba(255, 255, 255, 0.2);
       border-radius: 18px;
@@ -166,8 +209,9 @@
       }
     }
   }
-  p {
+  p.move-me {
     text-transform: uppercase;
     color: white;
+    transition: all ease-in-out 1s;
   }
 }
