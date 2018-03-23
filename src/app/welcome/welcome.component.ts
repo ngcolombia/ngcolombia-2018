@@ -1,31 +1,37 @@
-import { Component, OnInit } from "@angular/core";
-import { trigger, state, style, animate, transition, query } from "@angular/animations";
+import { Component, OnInit, ViewChild, ElementRef } from '@angular/core';
+import { trigger, state, style, animate, transition, query, AnimationBuilder, AnimationPlayer } from '@angular/animations';
+import { MatSliderChange } from '@angular/material';
 
 @Component({
   selector: 'app-welcome',
   templateUrl: './welcome.component.html',
-  styleUrls: ['./welcome.component.scss'],
-  animations: [
-    trigger('toggle', [
-      state('left', style({width: '0'})),
-      state('right', style({width: '100%'})),
-      transition( 'left <=> right', animate('600ms ease-out'))
-    ])
-  ]
+  styleUrls: [ './welcome.component.scss' ],
 })
-export class WelcomeComponent implements OnInit {
-	reveal = true;
+export class WelcomeComponent {
+  @ViewChild('revealTarget')
+  revealTarget: ElementRef;
 
-	constructor() {}
+  player: AnimationPlayer;
 
-	ngOnInit() {}
+  constructor(private builder: AnimationBuilder) { }
 
-  get toggleImg() {
-    return this.reveal ? 'left' : 'right';
+  setAnimationProgress(event: MatSliderChange) {
+
+    // Build initial style & animation function
+    const animation = this.builder.build([
+      animate('600ms ease-out', style({ width: `${event.value}%`})),
+    ]);
+
+    let oldPlayer = this.player;
+
+    // Create player for animation & play
+    this.player = animation.create(this.revealTarget.nativeElement);
+    this.player.play();
+
+    // Destroy old player
+    if (oldPlayer) {
+      oldPlayer.destroy();
+      oldPlayer = null;
+    }
   }
-
-	changeState(side) {
-		this.reveal = side === "left" ? true : false;
-		// this.reveal = !this.reveal;
-	}
 }

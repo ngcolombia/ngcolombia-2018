@@ -1,7 +1,7 @@
 import { Directive, HostListener, OnInit, ElementRef, AfterViewInit, Input } from '@angular/core';
 
 @Directive({
-  selector: '[parallaxAnimated]'
+  selector: '[appParallaxAnimated]',
 })
 export class ParallaxHoverDirective implements OnInit, AfterViewInit {
 

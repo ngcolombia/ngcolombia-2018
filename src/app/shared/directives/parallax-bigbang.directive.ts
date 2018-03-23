@@ -1,7 +1,7 @@
 import { Directive, HostListener, OnInit, ElementRef, AfterViewInit, Input } from '@angular/core';
 
 @Directive({
-  selector: '[pbb]'
+  selector: '[pbb]',
 })
 export class ParallaxBigBangDirective implements OnInit, AfterViewInit {
 
@@ -33,7 +33,7 @@ export class ParallaxBigBangDirective implements OnInit, AfterViewInit {
     this.getViewPortBoundaries();
     this.elementOffset = {
       x: this.element.nativeElement.offsetLeft,
-      y: this.element.nativeElement.offsetTop
+      y: this.element.nativeElement.offsetTop,
     };
   }
 
