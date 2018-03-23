@@ -66,6 +66,10 @@
     "quotemark": [true, "single"],
     "radix": false,
     "semicolon": [true, "always"],
+    "trailing-comma": [true, {
+      "multiline": "always",
+      "singleline": "never"
+    }],
     "triple-equals": [true, "allow-null-check"],
     "typedef-whitespace": [
       true,

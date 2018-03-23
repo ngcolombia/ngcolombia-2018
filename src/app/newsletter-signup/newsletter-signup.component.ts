@@ -7,7 +7,7 @@ import { MatSnackBar } from '@angular/material';
 @Component({
   selector: 'app-newsletter-signup',
   templateUrl: './newsletter-signup.component.html',
-  styleUrls: ['./newsletter-signup.component.scss']
+  styleUrls: ['./newsletter-signup.component.scss'],
 })
 export class NewsletterSignupComponent implements OnInit, AfterViewInit {
 
