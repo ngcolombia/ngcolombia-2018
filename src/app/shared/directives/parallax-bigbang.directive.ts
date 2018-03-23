@@ -43,6 +43,13 @@ export class ParallaxBigBangDirective implements OnInit, AfterViewInit {
     }
   }
 
+  parallaxBoxInPath(elmnt): boolean {
+    while ((elmnt = elmnt.parentElement) && !elmnt.classList.contains('parallax-box')) {
+      return true;
+    }
+    return false
+  }
+
   getViewPortBoundaries(): void {
     this.viewPortWidth = window.innerWidth;
     this.viewPortHeight = window.innerHeight;
@@ -70,7 +77,12 @@ export class ParallaxBigBangDirective implements OnInit, AfterViewInit {
 
   @HostListener('window:mousemove', ['$event'])
   mousemoveEventHandler(event: any) {
-    if (event.path.indexOf(this.boxParent) !== -1 && this.pbbEnabled) {
+    if (event.path) {
+      var path = event.path;
+    }
+    if (path && event.path.indexOf(this.boxParent) !== -1 && this.pbbEnabled) {
+      this.animateElement(event);
+    } else if (this.parallaxBoxInPath(event.target) && this.pbbEnabled) {
       this.animateElement(event);
     } else if (!this.pbbEnabled && this.rotation !== 0) {
       this.rotation = 0;

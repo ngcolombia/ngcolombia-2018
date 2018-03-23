@@ -8,6 +8,7 @@
   display: flex;
   align-items: center;
   justify-content: center;
+  height: 100%;
 
   .middle-container {
     display: flex;
@@ -82,13 +83,13 @@
     display: none;
   }
 
-  @media (min-width: 600px) {
+  @media (min-width: 600px) and (min-height: 551px) {
     width: 100vw;
     height: 100vh;
-    top: initial;
-    left: initial;
-    right: initial;
-    bottom: initial;
+    top: auto;
+    left: auto;
+    right: auto;
+    bottom: auto;
 
     .middle-container {
       display: flex;
@@ -104,29 +105,29 @@
           display: none;
         }
         &.desktop {
-          display: initial;
+          display: inline;
         }
       }
 
       img.first-circle {
         top: -56%;
         left: 58%;
-        width: initial;
+        width: auto;
       }
       img.second-circle {
         top: 25%;
         left: 68%;
-        width: initial;
-      }
+        width: auto;
+      } 
       img.third-circle {
         top: 36%;
         left: 55%;
-        width: initial;
+        width: auto;
       }
       img.fourth-circle {
         top: 95%;
         left: 39%;
-        width: initial;
+        width: auto;
       }
 
       .big-text {
@@ -134,7 +135,7 @@
         font-size: 110px;
         line-height: 107px;
         padding-left: 30px;
-        order: initial;
+        order: 0;
       }
 
       .signup {
@@ -150,18 +151,44 @@
       display: none;
     }
 
-    br.desktop {
-      display: initial;
+    br.desktop { 
+      display: inline;
     }
   }
 
-  @media (orientation: landscape) and (max-height: 450px) {
-    height: auto;
-
+  @media (orientation: landscape) and (max-height: 550px) {
     .middle-container {
+      margin: 0;
+      width: 100%;
+      justify-content: space-around;
+
       .big-text {
-        font-size: 16vw;
-        line-height: 16vw;
+        font-size: 10vw;
+        line-height: 10vw;
+      }
+      
+      .circle {
+        &.mobile {
+          display: inline;
+        }
+        &.desktop {
+          display: none;
+        }
+      }
+
+      .signup {
+        p.text {
+          text-align: center
+        }
+      }
+
+      img.third-circle {
+        top: 6%;
+        left: 76%;
+      }
+      img.first-circle {
+        top: 64%;
+        left: 37%;
       }
     }
   }
