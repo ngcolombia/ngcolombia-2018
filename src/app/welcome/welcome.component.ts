@@ -1,6 +1,7 @@
-import { Component, OnInit, ViewChild, ElementRef } from '@angular/core';
-import { trigger, state, style, animate, transition, query, AnimationBuilder, AnimationPlayer } from '@angular/animations';
+import { Component, ViewChild, ElementRef, EventEmitter } from '@angular/core';
+import { style, animate, AnimationBuilder, AnimationPlayer } from '@angular/animations';
 import { MatSliderChange } from '@angular/material';
+import { throttleTime } from 'rxjs/operators';
 
 @Component({
   selector: 'app-welcome',
@@ -9,17 +10,23 @@ import { MatSliderChange } from '@angular/material';
 })
 export class WelcomeComponent {
   @ViewChild('revealTarget')
-  revealTarget: ElementRef;
+  public revealTarget: ElementRef;
 
-  player: AnimationPlayer;
+  public player: AnimationPlayer;
+  public animationInputEmitter = new EventEmitter<MatSliderChange>();
+  public animationChangeEmitter = new EventEmitter<MatSliderChange>();
 
-  constructor(private builder: AnimationBuilder) { }
+  constructor(private builder: AnimationBuilder) {
+    this.animationInputEmitter.pipe(
+      throttleTime(50),
+    ).subscribe(this.setAnimationProgress);
+  }
 
-  setAnimationProgress(event: MatSliderChange) {
+  setAnimationProgress = (event: MatSliderChange) => {
 
     // Build initial style & animation function
     const animation = this.builder.build([
-      animate('600ms ease-out', style({ width: `${event.value}%`})),
+      animate('300ms ease-out', style({ width: `${event.value}%` })),
     ]);
 
     let oldPlayer = this.player;
@@ -28,7 +35,10 @@ export class WelcomeComponent {
     this.player = animation.create(this.revealTarget.nativeElement);
     this.player.play();
 
-    // Destroy old player
+    /**
+     * Destroy old player, order is important,
+     * destroy after new player is running.
+     */
     if (oldPlayer) {
       oldPlayer.destroy();
       oldPlayer = null;
