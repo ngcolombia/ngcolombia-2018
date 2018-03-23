@@ -61,10 +61,67 @@
   }
 
   @media (orientation: landscape) and (max-height: 450px) {
-    height: 170vh;
+    .ng-colombia-2018-logo {
+      width: auto;
+      left: auto;
+      color: #ffffff;
+      display: flex;
+      right: 20px;
+      top: 5px;
+      align-items: flex-end;
+
+      p {
+        font-size: 16px;
+
+        &.year {
+          font-size: 25px;
+          line-height: 25px;
+
+          span {
+            font-size: 21px;
+            line-height: 21px;
+          }
+        }
+      }
+
+      img { 
+        width: 30px;
+      }
+    }
+    .reveal{
+      .gradient {
+        height: auto;
+
+        p.first {
+          top: calc(58% - 135px);
+        }
+        p {
+          
+          &.second{
+            top: calc(36% + 15px);
+          }
+          span {
+            font-size: 1.1em;
+          }
+        }
+      }
+    }
+
+    #sliderContainer {
+      bottom: 0;
+
+      p{
+        margin: 5px;
+      }
+    }
+
+    img.angular {
+      max-height: 95px;
+      margin-top: -35px;
+    }
   }
 
-  @media (min-width: 600px) and (orientation: portrait) {
+  @media (min-width: 600px) and (min-height: 551px) {
     width: 100vw;
     height: 100vh;
     position: relative;
