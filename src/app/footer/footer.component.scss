@@ -1,21 +1,21 @@
-.wrapper  {
-  background-color: #392cb2;
+.wrapper {
+  background-color: #0a5afe;
   width: 100%;
   text-align: center;
-  
+
   .logos {
     padding-top: 30px;
     width: 100%;
     display: flex;
-    justify-content: center; 
+    justify-content: center;
 
     .divider {
       width: 2px;
       margin: 20px 0 10px;
       background-color: #fff;
-      height: 80px; 
+      height: 80px;
     }
-  
+
     img {
       max-height: 100px;
       margin: 10px 5vw;
@@ -35,7 +35,7 @@
       .divider {
         margin: 20px 20px 10px;
       }
-  
+
       img {
         margin: 10px 30px;
       }
