@@ -9,8 +9,8 @@
   bottom: 0;
   background: transparent;
   background: -moz-linear-gradient(65deg, #341b6f 59%, #781991 100%);
-  background: -webkit-linear-gradient(65deg, #341b6f 59%,#781991 100%);
-  background: linear-gradient(65deg, #341b6f 59%,#781991 100%);
+  background: -webkit-linear-gradient(65deg, #341b6f 59%, #781991 100%);
+  background: linear-gradient(65deg, #341b6f 59%, #781991 100%);
   filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#341b6f', endColorstr='#781991',GradientType=1 );
 
   .ng-colombia-2018-logo {
@@ -22,13 +22,13 @@
     font-family: 'Poppins';
     z-index: 2;
     p {
-      margin: 12px 0 0;
+      margin: 4px;
       font-size: 20px;
       font-weight: 600;
 
       &.text {
         letter-spacing: 0.16em;
-        margin-top: 4px;
+        margin-top: -4px;
       }
 
       &.year {
@@ -41,7 +41,7 @@
         span {
           font-size: 31px;
           line-height: 24px;
-          border-bottom: 3px solid #FFF;
+          border-bottom: 3px solid #fff;
           letter-spacing: -1px;
         }
       }
@@ -91,7 +91,8 @@
       top: 0;
       width: 100vw;
       height: 100vh;
-      background: url(/assets/img/header-bg.jpg) no-repeat scroll center center #f7a5ff;
+      background: url(/assets/img/header-bg.jpg) no-repeat scroll center center
+        #f7a5ff;
       background-size: cover;
     }
     p {
@@ -103,8 +104,9 @@
       margin: auto;
       line-height: 1.2;
       &.first {
-        top: calc(50% - 120px);
+        top: calc(51% - 120px);
         text-align: left;
+        padding-left: calc(7%);
       }
       &.second {
         top: calc(50% + 30px);
@@ -141,7 +143,7 @@
       top: 50%;
       left: 50%;
       transform: translate(-50%, -50%);
-      content: "";
+      content: '';
       display: block;
     }
     ::ng-deep {
@@ -155,13 +157,12 @@
         background-color: rgba(0, 0, 0, 0.26);
       }
       .mat-slider-thumb-container {
-        top: 50
+        top: 50;
       }
       .mat-slider-thumb {
         transform: scale(1.6);
-        background-color: #78F5FF;
+        background-color: #78f5ff;
       }
-
     }
   }
   p {

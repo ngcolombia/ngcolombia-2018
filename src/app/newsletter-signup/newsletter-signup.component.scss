@@ -9,8 +9,7 @@
   align-items: center;
   justify-content: center;
 
-
-  .middle-container{
+  .middle-container {
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
@@ -21,7 +20,7 @@
     .circle {
       position: absolute;
 
-      &.desktop{
+      &.desktop {
         display: none;
       }
     }
@@ -35,7 +34,7 @@
       top: 23%;
       left: 90%;
       width: 15px;
-    } 
+    }
     img.third-circle {
       top: 28%;
       left: 76%;
@@ -57,8 +56,13 @@
       position: relative;
       letter-spacing: 0.01em;
       word-spacing: 0.08em;
+      .period {
+        font-family: serif;
+        margin-left: -2px;
+        font-size: 8rem;
+      }
     }
-    
+
     .signup {
       text-align: center;
       font-weight: 200;
@@ -67,19 +71,18 @@
       margin-top: 4vh;
       justify-content: center;
       position: relative;
-      
+
       p.text {
         text-align: right;
       }
     }
   }
-  
-  br.desktop { 
+
+  br.desktop {
     display: none;
   }
-  
-  @media (min-width: 600px) {
 
+  @media (min-width: 600px) {
     width: 100vw;
     height: 100vh;
     top: auto;
@@ -96,7 +99,7 @@
       position: relative;
       z-index: 1;
 
-      .circle{
+      .circle {
         &.mobile {
           display: none;
         }
@@ -125,7 +128,7 @@
         left: 39%;
         width: auto;
       }
-      
+
       .big-text {
         flex-grow: 2;
         font-size: 110px;
@@ -133,7 +136,7 @@
         padding-left: 30px;
         order: 0;
       }
-      
+
       .signup {
         flex-grow: 1;
         display: flex;
@@ -143,7 +146,7 @@
       }
     }
 
-    br.mobile { 
+    br.mobile {
       display: none;
     }
 
@@ -164,19 +167,27 @@
   }
 }
 
-::ng-deep{
+@media (max-width: 750px) {
+  .big-text {
+    .period {
+      display: none;
+    }
+  }
+}
+
+::ng-deep {
   .mat-form-field-label.mat-input-placeholder.mat-form-field-placeholder {
     color: #b36dfc;
     text-align: center;
     font-family: Muli;
     letter-spacing: 0.05em;
     font-weight: 200;
-    
+
     @media (min-width: 600px) {
       text-align: right;
     }
   }
-  .mat-form-field-underline{
+  .mat-form-field-underline {
     background-color: #0a5afe;
   }
 }
