@@ -61,10 +61,10 @@
   }
 
   @media (orientation: landscape) and (max-height: 450px) {
-    height: 150vh;
+    height: 170vh;
   }
 
-  @media (min-width: 600px) {
+  @media (min-width: 600px) and (orientation: portrait) {
     width: 100vw;
     height: 100vh;
     position: relative;

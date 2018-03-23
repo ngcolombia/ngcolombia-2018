@@ -29,13 +29,19 @@
 <body>
   <app-root></app-root>
 </body>
-<!-- <script type="text/javascript" async src="./assets/js/wall.js"></script> -->
-<script src="https://cdn.jsdelivr.net/npm/wall.js"></script>
+<script type="text/javascript" src="./assets/js/wall.js"></script>
 <script>
   var config = {
-    sectionAnimateDuration: 0.8 // every section now move 3 seconds
+    sectionAnimateDuration: 0.8 // every section transition now takes 0.8 seconds
   }
   var wall = new Wall('#wrapper');
+  window.addEventListener("resize", () => {
+    // let isMobile = window.getComputedStyle(document.querySelectorAll('.mobile')[0]).display != 'none';
+    // if( isMobile && document.activeElement.tagName == 'INPUT' ){
+    //   return;
+    // }
+    wall._setupSize()._cssHtmlAndBody()._cssWrapper()._cssSections();
+  });
 </script>
 
 <noscript>
