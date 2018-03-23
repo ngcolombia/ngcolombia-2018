@@ -1,7 +1,7 @@
 import { Directive, HostListener, OnInit, ElementRef, AfterViewInit, Input } from '@angular/core';
 
 @Directive({
-  selector: '[parallaxAnimated]'
+  selector: '[appParallaxAnimated]',
 })
 export class ParallaxHoverDirective implements OnInit, AfterViewInit {
 
@@ -46,7 +46,7 @@ export class ParallaxHoverDirective implements OnInit, AfterViewInit {
       const massDelta = this.element.nativeElement.offsetHeight * 0.05;
       this.rotation += 0.6;
       const xTranslation = Math.round(offsetX * this.element.nativeElement.offsetLeft * massDelta * 0.5 / (this.delta));
-      const yTranslation = Math.round(offsetY * this.element.nativeElement.offsetLeft * massDelta * 0.5 / (this.delta) );
+      const yTranslation = Math.round(offsetY * this.element.nativeElement.offsetLeft * massDelta * 0.5 / (this.delta));
       // const xTranslation = Math.round(offsetX * this.element.nativeElement.offsetLeft / this.delta);
       // const yTranslation = Math.round(offsetY * this.element.nativeElement.offsetLeft / this.delta);
       const transform = `translate(${xTranslation}px,${yTranslation}px) rotate(${this.rotation}deg)`;
@@ -57,7 +57,7 @@ export class ParallaxHoverDirective implements OnInit, AfterViewInit {
     }
   }
 
-  @HostListener('window:mousemove', ['$event'])
+  @HostListener('window:mousemove', [ '$event' ])
   mousemoveEventHandler(event: any) {
     if (event.path.indexOf(this.boxParent) !== -1) {
       if (!this.resetRotation) {
