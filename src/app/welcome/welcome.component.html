@@ -1,23 +1,33 @@
 <div class="wrapper">
-  <div class="reveal" #revealTarget>
-    <div class="gradient">
-      <p class="first">The <b>First</b></p>
-      <p class="second">conference in <b>Latin America</b> is <span>back</span></p>
+    <div class="reveal"
+         #revealTarget>
+        <div class="gradient">
+            <p class="first">The <b>First</b></p>
+            <p class="second">conference in <b>Latin America</b> is <span>back</span></p>
+        </div>
     </div>
-  </div>
-  <div class="ng-colombia-2018-logo">
-    <img alt="" class="" src="assets/img/logo-ng-header.svg">
-    <p class="text">NG-COLOMBIA</p>
-    <p class="year">201<span>8</span></p>
+    <div class="ng-colombia-2018-logo">
+        <img alt=""
+             class=""
+             src="assets/img/logo-ng-header.svg">
+        <p class="text">NG-COLOMBIA</p>
+        <p class="year">201<span>8</span></p>
 
-  </div>
-  <img class="angular" src="assets/img/angular.png" alt="">
-  <div id='sliderContainer'>
-    <mat-slider
-      value='0'
-      (input)='animationInputEmitter.next($event)'
-      (change)='setAnimationProgress($event)'
-    ></mat-slider>
-    <p>Move me</p>
-  </div>
+    </div>
+    <div class="dates">
+        <span class="date date-month">Sept.</span>
+        <span class="date date-day1">27</span>
+        <span class="date date-day2">28</span>
+    </div>
+    <img class="angular"
+         src="assets/img/angular.png"
+         alt="">
+    <div id='sliderContainer'>
+        <mat-slider #slider
+                    value='0'
+                    (input)='animationInputEmitter.next($event)'
+                    (change)='setAnimationProgress($event)'></mat-slider>
+        <p class="move-me"
+           #moveMe>Move me</p>
+    </div>
 </div>
