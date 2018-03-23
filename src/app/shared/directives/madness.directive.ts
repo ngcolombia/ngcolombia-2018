@@ -80,6 +80,13 @@ export class MadnessDirective implements AfterViewInit, OnChanges {
     });
   }
 
+  parallaxBoxInPath(elmnt):boolean{
+    while ((elmnt = elmnt.parentElement) && !elmnt.classList.contains('parallax-box')) {
+      return true;
+    }
+    return false
+  }
+
   getViewPortBoundaries(): void {
     this.viewPortWidth = window.innerWidth;
     this.viewPortHeight = window.innerHeight;
@@ -121,10 +128,12 @@ export class MadnessDirective implements AfterViewInit, OnChanges {
 
   @HostListener('window:mousemove', ['$event'])
   mousemoveEventHandler(event: any) {
-    if (
-      event.path.indexOf(this.element.nativeElement) !== -1 &&
-      this.madnessEnabled
-    ) {
+    if (event.path) {
+      var path = event.path;
+    }
+    if (path && event.path.indexOf(this.boxParent) !== -1 && this.madnessEnabled) {
+      this.animateElement(event);
+    } else if (this.parallaxBoxInPath(event.target) && this.madnessEnabled) {
       this.animateElement(event);
     } else if (!this.madnessEnabled && this.rotation !== 0) {
       this.rotation = 0;
