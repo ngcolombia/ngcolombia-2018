@@ -85,10 +85,10 @@
   @media (min-width: 600px) {
     width: 100vw;
     height: 100vh;
-    top: initial;
-    left: initial;
-    right: initial;
-    bottom: initial;
+    top: auto;
+    left: auto;
+    right: auto;
+    bottom: auto;
 
     .middle-container {
       display: flex;
@@ -104,29 +104,29 @@
           display: none;
         }
         &.desktop {
-          display: initial;
+          display: inline;
         }
       }
 
       img.first-circle {
         top: -56%;
         left: 58%;
-        width: initial;
+        width: auto;
       }
       img.second-circle {
         top: 25%;
         left: 68%;
-        width: initial;
-      }
+        width: auto;
+      } 
       img.third-circle {
         top: 36%;
         left: 55%;
-        width: initial;
+        width: auto;
       }
       img.fourth-circle {
         top: 95%;
         left: 39%;
-        width: initial;
+        width: auto;
       }
 
       .big-text {
@@ -134,7 +134,7 @@
         font-size: 110px;
         line-height: 107px;
         padding-left: 30px;
-        order: initial;
+        order: 0;
       }
 
       .signup {
@@ -150,8 +150,8 @@
       display: none;
     }
 
-    br.desktop {
-      display: initial;
+    br.desktop { 
+      display: inline;
     }
   }
 

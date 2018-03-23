@@ -76,10 +76,10 @@
     width: 100vw;
     height: 100vh;
     position: relative;
-    top: initial;
-    left: initial;
-    right: initial;
-    bottom: initial;
+    top: auto;
+    left: auto;
+    right: auto;
+    bottom: auto;
 
     .middle-container {
       display: flex;
@@ -93,26 +93,26 @@
           display: none;
         }
         &.desktop {
-          display: initial;
+          display: inline;
         }
       }
 
       img.first-circle {
         top: -54%;
         left: 44%;
-        width: initial;
+        width: auto;
       }
 
       img.second-circle {
         top: 37%;
         left: 50%;
-        width: initial;
+        width: auto;
       }
 
       img.third-circle {
         top: 30%;
         left: 39%;
-        width: initial;
+        width: auto;
       }
 
       .big-text {
@@ -134,8 +134,8 @@
       display: none;
     }
 
-    br.desktop {
-      display: initial;
+    br.desktop { 
+      display: inline;
     }
   }
 

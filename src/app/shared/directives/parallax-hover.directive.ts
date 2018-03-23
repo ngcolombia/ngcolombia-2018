@@ -13,7 +13,6 @@ export class ParallaxHoverDirective implements OnInit, AfterViewInit {
   delta = 50; // con massDelta
   // delta = 12;
   bounceCounter = 0;
-
   @Input() resetRotation: boolean;
 
   constructor(private element: ElementRef) { }
@@ -31,6 +30,13 @@ export class ParallaxHoverDirective implements OnInit, AfterViewInit {
     while ((elmnt = elmnt.parentElement) && !elmnt.classList.contains(className)) {
       return elmnt;
     }
+  }
+
+  parallaxBoxInPath(elmnt): boolean {
+    while ((elmnt = elmnt.parentElement) && !elmnt.classList.contains('parallax-box')) {
+      return true;
+    }
+    return false
   }
 
   getViewPortBoundaries(): void {
@@ -57,16 +63,25 @@ export class ParallaxHoverDirective implements OnInit, AfterViewInit {
     }
   }
 
-  @HostListener('window:mousemove', [ '$event' ])
-  mousemoveEventHandler(event: any) {
-    if (event.path.indexOf(this.boxParent) !== -1) {
-      if (!this.resetRotation) {
-        this.animateElement(event);
-      } else {
-        if (this.rotation !== 0) {
-          this.rotation = 0;
-        }
+  eventCustomHandler(event) {
+    if (!this.resetRotation) {
+      this.animateElement(event);
+    } else {
+      if (this.rotation !== 0) {
+        this.rotation = 0;
       }
+    }
+  }
+
+  @HostListener('window:mousemove', ['$event'])
+  mousemoveEventHandler(event: any) {
+    if (event.path) {
+      var path = event.path;
+    }
+    if (path && event.path.indexOf(this.boxParent) !== -1) {
+      this.eventCustomHandler(event);
+    } else if (this.parallaxBoxInPath(event.target)) {
+      this.eventCustomHandler(event);
     }
   }
 }
