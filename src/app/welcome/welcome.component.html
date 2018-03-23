@@ -13,7 +13,11 @@
   </div>
   <img class="angular" src="assets/img/angular.png" alt="">
   <div id='sliderContainer'>
-    <mat-slider value='100' (change)='setAnimationProgress($event)'></mat-slider>
+    <mat-slider
+      value='100'
+      (input)='animationInputEmitter.next($event)'
+      (change)='setAnimationProgress($event)'
+    ></mat-slider>
     <p>Move me</p>
   </div>
 </div>
