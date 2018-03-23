@@ -1,31 +1,47 @@
-import { Component, OnInit } from "@angular/core";
-import { trigger, state, style, animate, transition, query } from "@angular/animations";
+import { Component, ViewChild, ElementRef, EventEmitter } from '@angular/core';
+import { style, animate, AnimationBuilder, AnimationPlayer } from '@angular/animations';
+import { MatSliderChange } from '@angular/material';
+import { throttleTime } from 'rxjs/operators';
 
 @Component({
   selector: 'app-welcome',
   templateUrl: './welcome.component.html',
-  styleUrls: ['./welcome.component.scss'],
-  animations: [
-    trigger('toggle', [
-      state('left', style({width: '0'})),
-      state('right', style({width: '100%'})),
-      transition( 'left <=> right', animate('600ms ease-out'))
-    ])
-  ]
+  styleUrls: [ './welcome.component.scss' ],
 })
-export class WelcomeComponent implements OnInit {
-	reveal = true;
+export class WelcomeComponent {
+  @ViewChild('revealTarget')
+  public revealTarget: ElementRef;
 
-	constructor() {}
+  public player: AnimationPlayer;
+  public animationInputEmitter = new EventEmitter<MatSliderChange>();
+  public animationChangeEmitter = new EventEmitter<MatSliderChange>();
 
-	ngOnInit() {}
-
-  get toggleImg() {
-    return this.reveal ? 'left' : 'right';
+  constructor(private builder: AnimationBuilder) {
+    this.animationInputEmitter.pipe(
+      throttleTime(50),
+    ).subscribe(this.setAnimationProgress);
   }
 
-	changeState(side) {
-		this.reveal = side === "left" ? true : false;
-		// this.reveal = !this.reveal;
-	}
+  setAnimationProgress = (event: MatSliderChange) => {
+
+    // Build initial style & animation function
+    const animation = this.builder.build([
+      animate('300ms ease-out', style({ width: `${event.value}%` })),
+    ]);
+
+    let oldPlayer = this.player;
+
+    // Create player for animation & play
+    this.player = animation.create(this.revealTarget.nativeElement);
+    this.player.play();
+
+    /**
+     * Destroy old player, order is important,
+     * destroy after new player is running.
+     */
+    if (oldPlayer) {
+      oldPlayer.destroy();
+      oldPlayer = null;
+    }
+  }
 }

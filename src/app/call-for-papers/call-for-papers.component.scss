@@ -1,5 +1,5 @@
 .wrapper {
-  background-color: #FFF;
+  background-color: #fff;
   position: absolute;
   top: 0;
   left: 0;
@@ -9,7 +9,7 @@
   align-items: center;
   justify-content: center;
 
-  .middle-container{
+  .middle-container {
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
@@ -18,10 +18,10 @@
     margin: 10%;
     position: relative;
 
-    .circle{
+    .circle {
       position: absolute;
 
-      &.desktop{
+      &.desktop {
         display: none;
       }
     }
@@ -43,7 +43,7 @@
       left: 7%;
       width: 18px;
     }
-   
+
     .big-text {
       text-align: right;
       font-weight: bold;
@@ -53,6 +53,11 @@
       position: relative;
       letter-spacing: 0.01em;
       word-spacing: 0.08em;
+      .period {
+        font-family: serif;
+        margin-left: -25px;
+        font-size: 8rem;
+      }
     }
 
     .text {
@@ -63,18 +68,18 @@
     }
   }
 
-  br.desktop { 
+  br.desktop {
     display: none;
   }
-      
-  @media (min-width: 600px) {
+
+  @media (min-width: 600px) and (min-height: 551px) {
     width: 100vw;
     height: 100vh;
     position: relative;
-    top: initial;
-    left: initial;
-    right: initial;
-    bottom: initial;
+    top: auto;
+    left: auto;
+    right: auto;
+    bottom: auto;
 
     .middle-container {
       display: flex;
@@ -83,40 +88,40 @@
       flex-wrap: nowrap;
       margin: auto;
 
-      .circle{
+      .circle {
         &.mobile {
           display: none;
         }
         &.desktop {
-          display: initial;
+          display: inline;
         }
       }
 
       img.first-circle {
         top: -54%;
         left: 44%;
-        width: initial;
+        width: auto;
       }
-  
+
       img.second-circle {
         top: 37%;
         left: 50%;
-        width: initial;
+        width: auto;
       }
-  
+
       img.third-circle {
         top: 30%;
         left: 39%;
-        width: initial;
+        width: auto;
       }
-      
+
       .big-text {
         flex-grow: 2;
         padding-right: 30px;
         font-size: 110px;
         line-height: 107px;
       }
-      
+
       .text {
         flex-grow: 1;
         display: flex;
@@ -125,16 +130,24 @@
       }
     }
 
-    br.mobile { 
+    br.mobile {
       display: none;
     }
 
     br.desktop { 
-      display: initial;
+      display: inline;
     }
   }
 
-  @media (orientation: landscape) and (max-height: 450px) {
+  @media (max-width: 750px) {
+    .big-text {
+      .period {
+        display: none;
+      }
+    }
+  }
+
+  @media (orientation: landscape) and (max-height: 550px) {
     .middle-container {
       margin: 0;
       width: 100%;
@@ -145,10 +158,18 @@
         line-height: 10vw;
       }
 
+      .circle {
+        &.mobile {
+          display: inline;
+        }
+        &.desktop {
+          display: none;
+        }
+      }
+
       img.second-circle {
         top: 48%;
       }
     }
   }
-  
 }

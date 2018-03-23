@@ -1,7 +1,7 @@
 import { Directive, HostListener, OnInit, ElementRef, AfterViewInit, Input } from '@angular/core';
 
 @Directive({
-  selector: '[pbb]'
+  selector: '[pbb]',
 })
 export class ParallaxBigBangDirective implements OnInit, AfterViewInit {
 
@@ -33,7 +33,7 @@ export class ParallaxBigBangDirective implements OnInit, AfterViewInit {
     this.getViewPortBoundaries();
     this.elementOffset = {
       x: this.element.nativeElement.offsetLeft,
-      y: this.element.nativeElement.offsetTop
+      y: this.element.nativeElement.offsetTop,
     };
   }
 
@@ -41,6 +41,13 @@ export class ParallaxBigBangDirective implements OnInit, AfterViewInit {
     while ((elmnt = elmnt.parentElement) && !elmnt.classList.contains(className)) {
       return elmnt;
     }
+  }
+
+  parallaxBoxInPath(elmnt): boolean {
+    while ((elmnt = elmnt.parentElement) && !elmnt.classList.contains('parallax-box')) {
+      return true;
+    }
+    return false
   }
 
   getViewPortBoundaries(): void {
@@ -70,7 +77,12 @@ export class ParallaxBigBangDirective implements OnInit, AfterViewInit {
 
   @HostListener('window:mousemove', ['$event'])
   mousemoveEventHandler(event: any) {
-    if (event.path.indexOf(this.boxParent) !== -1 && this.pbbEnabled) {
+    if (event.path) {
+      var path = event.path;
+    }
+    if (path && event.path.indexOf(this.boxParent) !== -1 && this.pbbEnabled) {
+      this.animateElement(event);
+    } else if (this.parallaxBoxInPath(event.target) && this.pbbEnabled) {
       this.animateElement(event);
     } else if (!this.pbbEnabled && this.rotation !== 0) {
       this.rotation = 0;

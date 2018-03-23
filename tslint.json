@@ -64,8 +64,12 @@
     ],
     "prefer-const": true,
     "quotemark": [true, "single"],
-    "radix": true,
+    "radix": false,
     "semicolon": [true, "always"],
+    "trailing-comma": [true, {
+      "multiline": "always",
+      "singleline": "never"
+    }],
     "triple-equals": [true, "allow-null-check"],
     "typedef-whitespace": [
       true,

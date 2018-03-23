@@ -10,8 +10,7 @@
   justify-content: center;
   height: 100%;
 
-
-  .middle-container{
+  .middle-container {
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
@@ -22,7 +21,7 @@
     .circle {
       position: absolute;
 
-      &.desktop{
+      &.desktop {
         display: none;
       }
     }
@@ -36,7 +35,7 @@
       top: 23%;
       left: 90%;
       width: 15px;
-    } 
+    }
     img.third-circle {
       top: 28%;
       left: 76%;
@@ -58,8 +57,13 @@
       position: relative;
       letter-spacing: 0.01em;
       word-spacing: 0.08em;
+      .period {
+        font-family: serif;
+        margin-left: -2px;
+        font-size: 8rem;
+      }
     }
-    
+
     .signup {
       text-align: center;
       font-weight: 200;
@@ -68,25 +72,24 @@
       margin-top: 4vh;
       justify-content: center;
       position: relative;
-      
+
       p.text {
         text-align: right;
       }
     }
   }
-  
-  br.desktop { 
+
+  br.desktop {
     display: none;
   }
-  
-  @media (min-width: 600px) {
 
+  @media (min-width: 600px) and (min-height: 551px) {
     width: 100vw;
     height: 100vh;
-    top: initial;
-    left: initial;
-    right: initial;
-    bottom: initial;
+    top: auto;
+    left: auto;
+    right: auto;
+    bottom: auto;
 
     .middle-container {
       display: flex;
@@ -97,44 +100,44 @@
       position: relative;
       z-index: 1;
 
-      .circle{
+      .circle {
         &.mobile {
           display: none;
         }
         &.desktop {
-          display: initial;
+          display: inline;
         }
       }
 
       img.first-circle {
         top: -56%;
         left: 58%;
-        width: initial;
+        width: auto;
       }
       img.second-circle {
         top: 25%;
         left: 68%;
-        width: initial;
+        width: auto;
       } 
       img.third-circle {
         top: 36%;
         left: 55%;
-        width: initial;
+        width: auto;
       }
       img.fourth-circle {
         top: 95%;
         left: 39%;
-        width: initial;
+        width: auto;
       }
-      
+
       .big-text {
         flex-grow: 2;
         font-size: 110px;
         line-height: 107px;
         padding-left: 30px;
-        order: initial;
+        order: 0;
       }
-      
+
       .signup {
         flex-grow: 1;
         display: flex;
@@ -144,16 +147,16 @@
       }
     }
 
-    br.mobile { 
+    br.mobile {
       display: none;
     }
 
     br.desktop { 
-      display: initial;
+      display: inline;
     }
   }
 
-  @media (orientation: landscape) and (max-height: 450px) {
+  @media (orientation: landscape) and (max-height: 550px) {
     .middle-container {
       margin: 0;
       width: 100%;
@@ -162,6 +165,15 @@
       .big-text {
         font-size: 10vw;
         line-height: 10vw;
+      }
+      
+      .circle {
+        &.mobile {
+          display: inline;
+        }
+        &.desktop {
+          display: none;
+        }
       }
 
       .signup {
@@ -182,19 +194,27 @@
   }
 }
 
-::ng-deep{
+@media (max-width: 750px) {
+  .big-text {
+    .period {
+      display: none;
+    }
+  }
+}
+
+::ng-deep {
   .mat-form-field-label.mat-input-placeholder.mat-form-field-placeholder {
     color: #b36dfc;
     text-align: center;
     font-family: Muli;
     letter-spacing: 0.05em;
     font-weight: 200;
-    
+
     @media (min-width: 600px) {
       text-align: right;
     }
   }
-  .mat-form-field-underline{
+  .mat-form-field-underline {
     background-color: #0a5afe;
   }
 }

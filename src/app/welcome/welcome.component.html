@@ -1,5 +1,5 @@
 <div class="wrapper">
-  <div class="reveal" [@toggle]="toggleImg">
+  <div class="reveal" #revealTarget>
     <div class="gradient">
       <p class="first">The <b>First</b></p>
       <p class="second">conference in <b>Latin America</b> is <span>back</span></p>
@@ -12,5 +12,12 @@
 
   </div>
   <img class="angular" src="assets/img/angular.png" alt="">
-  <app-toggle-slider (selectedSide)="changeState($event)" [class]="toggleImg"></app-toggle-slider>
+  <div id='sliderContainer'>
+    <mat-slider
+      value='100'
+      (input)='animationInputEmitter.next($event)'
+      (change)='setAnimationProgress($event)'
+    ></mat-slider>
+    <p>Move me</p>
+  </div>
 </div>
