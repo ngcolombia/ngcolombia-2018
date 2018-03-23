@@ -8,6 +8,7 @@
   display: flex;
   align-items: center;
   justify-content: center;
+  height: 100%;
 
   .middle-container {
     display: flex;
@@ -82,7 +83,7 @@
     display: none;
   }
 
-  @media (min-width: 600px) {
+  @media (min-width: 600px) and (min-height: 551px) {
     width: 100vw;
     height: 100vh;
     top: auto;
@@ -155,13 +156,39 @@
     }
   }
 
-  @media (orientation: landscape) and (max-height: 450px) {
-    height: auto;
-
+  @media (orientation: landscape) and (max-height: 550px) {
     .middle-container {
+      margin: 0;
+      width: 100%;
+      justify-content: space-around;
+
       .big-text {
-        font-size: 16vw;
-        line-height: 16vw;
+        font-size: 10vw;
+        line-height: 10vw;
+      }
+      
+      .circle {
+        &.mobile {
+          display: inline;
+        }
+        &.desktop {
+          display: none;
+        }
+      }
+
+      .signup {
+        p.text {
+          text-align: center
+        }
+      }
+
+      img.third-circle {
+        top: 6%;
+        left: 76%;
+      }
+      img.first-circle {
+        top: 64%;
+        left: 37%;
       }
     }
   }
