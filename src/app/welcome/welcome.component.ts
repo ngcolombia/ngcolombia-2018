@@ -2,13 +2,13 @@ import {
   animate,
   AnimationBuilder,
   AnimationPlayer,
-  style
+  style,
   } from '@angular/animations';
 import {
   Component,
   ElementRef,
   EventEmitter,
-  ViewChild
+  ViewChild,
   } from '@angular/core';
 import { MatSliderChange } from '@angular/material';
 import { throttleTime } from 'rxjs/operators';
@@ -28,10 +28,13 @@ export class WelcomeComponent {
   public animationChangeEmitter = new EventEmitter<MatSliderChange>();
 
   constructor(private builder: AnimationBuilder) {
-    this.animationInputEmitter.pipe(throttleTime(50)).subscribe(this.setAnimationProgress);
+    this.animationInputEmitter.pipe(
+      throttleTime(20),
+    ).subscribe(this.setAnimationProgress);
   }
 
   setAnimationProgress = (event: MatSliderChange) => {
+
     if (event.value > 50) {
       event.source._elementRef.nativeElement.style.setProperty('border-color', '#211056');
       this.moveMe.nativeElement.style.setProperty('color', '#211056');
@@ -62,5 +65,5 @@ export class WelcomeComponent {
       oldPlayer.destroy();
       oldPlayer = null;
     }
-  };
+  }
 }

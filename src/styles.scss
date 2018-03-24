@@ -10,7 +10,7 @@ body{
   font-size: 14px;
 }
 
-* {
+*:not(input) {
   user-select: none;
   box-sizing: border-box;
 }
