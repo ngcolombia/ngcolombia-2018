@@ -2,52 +2,85 @@
 <html lang="en">
 
 <head>
-  <meta charset="utf-8">
-  <title>NgColombia - Angular Conference</title>
-  <base href="/">
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script async
+            src="https://www.googletagmanager.com/gtag/js?id=UA-116317729-1"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
 
-  <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
-  <meta http-equiv="ScreenOrientation" content="autoRotate:disabled">
-  <link rel="icon" type="image/x-icon" href="favicon.ico">
-  <link rel="manifest" href="./manifest.json">
-  <link href="https://fonts.googleapis.com/css?family=Muli:200,400,800|Poppins:200,400,600,700|Roboto:200,400,800" rel="stylesheet">
-  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
-  <meta name="twitter:card" content="summary" />
-  <meta name="twitter:site" content="@angularcolombia" />
-  <meta name="twitter:image" content="https://raw.githubusercontent.com/angular-medellin/ng-colombia/master/src/assets/img/ngcolombia-logo.png"
-  />
-  <meta name="theme-color" content="#211056">
-  <meta property="og:site_name" content="Angular Colombia" />
-  <meta property="og:title" content="NgColombia" />
-  <meta property="og:description" content="The first Angular Conference in Latin America" />
-  <meta property="og:image" content="https://raw.githubusercontent.com/angular-medellin/ng-colombia/master/src/assets/img/ngcolombia-logo.png">
-  <meta property="og:image:width" content="171" />
-  <meta property="og:image:height" content="182" />
+        function gtag() {
+            dataLayer.push(arguments);
+        }
+        gtag('js', new Date());
 
-  <meta property="og:url" content="http://ng-colombia.org/">
-  <meta property="og:type" content="website" />
-  <script type="text/javascript" async src="https://platform.twitter.com/widgets.js"></script>
+        gtag('config', 'UA-116317729-1');
+    </script>
+
+    <meta charset="utf-8">
+    <title>NgColombia - Angular Conference</title>
+    <base href="/">
+
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1, user-scalable=no">
+    <meta http-equiv="ScreenOrientation"
+          content="autoRotate:disabled">
+    <link rel="icon"
+          type="image/x-icon"
+          href="favicon.ico">
+    <link rel="manifest"
+          href="./manifest.json">
+    <link href="https://fonts.googleapis.com/css?family=Muli:200,400,800|Poppins:200,400,600,700|Roboto:200,400,800"
+          rel="stylesheet">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons"
+          rel="stylesheet">
+    <meta name="twitter:card"
+          content="summary" />
+    <meta name="twitter:site"
+          content="@angularcolombia" />
+    <meta name="twitter:image"
+          content="https://raw.githubusercontent.com/angular-medellin/ng-colombia/master/src/assets/img/ngcolombia-logo.png" />
+    <meta name="theme-color"
+          content="#211056">
+    <meta property="og:site_name"
+          content="Angular Colombia" />
+    <meta property="og:title"
+          content="NgColombia" />
+    <meta property="og:description"
+          content="The first Angular Conference in Latin America" />
+    <meta property="og:image"
+          content="https://raw.githubusercontent.com/angular-medellin/ng-colombia/master/src/assets/img/ngcolombia-logo.png">
+    <meta property="og:image:width"
+          content="171" />
+    <meta property="og:image:height"
+          content="182" />
+    <meta property="og:url"
+          content="http://ng-colombia.org/">
+    <meta property="og:type"
+          content="website" />
+    <script type="text/javascript"
+            async
+            src="https://platform.twitter.com/widgets.js"></script>
 </head>
 
 <body>
-  <app-root></app-root>
+    <app-root></app-root>
 </body>
-<script type="text/javascript" src="./assets/js/wall.js"></script>
+<script type="text/javascript"
+        src="./assets/js/wall.js"></script>
 <script>
-  var config = {
-    sectionAnimateDuration: 0.8 // every section transition now takes 0.8 seconds
-  }
-  var wall = new Wall('#wrapper');
-  if (window.addEventListener) {
-    window.addEventListener("resize", function(){
-      wall._setupSize()._cssHtmlAndBody()._cssWrapper()._cssSections();
-    });
-  } else if (window.attachEvent) {
-    window.attachEvent("resize", function() {
-      wall._setupSize()._cssHtmlAndBody()._cssWrapper()._cssSections();
-    });
-  }
-
+    var config = {
+        sectionAnimateDuration: 0.8 // every section transition now takes 0.8 seconds
+    }
+    var wall = new Wall('#wrapper');
+    if (window.addEventListener) {
+        window.addEventListener("resize", function() {
+            wall._setupSize()._cssHtmlAndBody()._cssWrapper()._cssSections();
+        });
+    } else if (window.attachEvent) {
+        window.attachEvent("resize", function() {
+            wall._setupSize()._cssHtmlAndBody()._cssWrapper()._cssSections();
+        });
+    }
 </script>
 
 <noscript>
