@@ -1,15 +1,5 @@
-import {
-  animate,
-  AnimationBuilder,
-  AnimationPlayer,
-  style,
-  } from '@angular/animations';
-import {
-  Component,
-  ElementRef,
-  EventEmitter,
-  ViewChild,
-  } from '@angular/core';
+import { animate, AnimationBuilder, AnimationPlayer, style } from '@angular/animations';
+import { Component, ElementRef, EventEmitter, ViewChild } from '@angular/core';
 import { MatSliderChange } from '@angular/material';
 import { throttleTime } from 'rxjs/operators';
 
@@ -25,7 +15,6 @@ export class WelcomeComponent {
 
   public player: AnimationPlayer;
   public animationInputEmitter = new EventEmitter<MatSliderChange>();
-  public animationChangeEmitter = new EventEmitter<MatSliderChange>();
 
   constructor(private builder: AnimationBuilder) {
     this.animationInputEmitter.pipe(
