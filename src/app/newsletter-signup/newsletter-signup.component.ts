@@ -1,5 +1,5 @@
 import { Component, OnInit, ViewChildren, QueryList, AfterViewInit, HostListener, ElementRef, ViewChild } from '@angular/core';
-import { timer } from 'rxjs/observable/timer';
+import { timer } from 'rxjs';
 import { ParallaxHoverDirective } from './../shared/directives/parallax-hover.directive';
 import { ParallaxBigBangDirective } from './../shared/directives/parallax-bigbang.directive';
 import { MatSnackBar } from '@angular/material';
