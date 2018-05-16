@@ -1,12 +1,4 @@
-import {
-  Directive,
-  AfterViewInit,
-  ElementRef,
-  HostListener,
-  Input,
-  OnChanges,
-  SimpleChanges,
-} from '@angular/core';
+import { Directive, AfterViewInit, ElementRef, HostListener, Input, OnChanges, SimpleChanges } from '@angular/core';
 
 @Directive({
   selector: '[appMadness]',
@@ -29,24 +21,11 @@ export class MadnessDirective implements AfterViewInit, OnChanges {
   constructor(private element: ElementRef) {}
 
   ngAfterViewInit() {
-    this.items.push(
-      Array.apply(null, this.element.nativeElement.querySelectorAll('span')),
-    );
-    this.items.push(
-      Array.apply(null, this.element.nativeElement.querySelectorAll('div')),
-    );
-    this.items.push(
-      Array.apply(null, this.element.nativeElement.querySelectorAll('p')),
-    );
-    this.items.push(
-      Array.apply(null, this.element.nativeElement.querySelectorAll('button')),
-    );
-    this.items.push(
-      Array.apply(
-        null,
-        this.element.nativeElement.querySelectorAll('img:not(.mobile)'),
-      ),
-    );
+    this.items.push(Array.apply(null, this.element.nativeElement.querySelectorAll('span')));
+    this.items.push(Array.apply(null, this.element.nativeElement.querySelectorAll('div')));
+    this.items.push(Array.apply(null, this.element.nativeElement.querySelectorAll('p')));
+    this.items.push(Array.apply(null, this.element.nativeElement.querySelectorAll('button')));
+    this.items.push(Array.apply(null, this.element.nativeElement.querySelectorAll('img:not(.mobile)')));
     this.items = [].concat.apply([], this.items);
 
     this.getViewPortBoundaries();
@@ -80,11 +59,11 @@ export class MadnessDirective implements AfterViewInit, OnChanges {
     });
   }
 
-  parallaxBoxInPath(elmnt):boolean{
+  parallaxBoxInPath(elmnt): boolean {
     while ((elmnt = elmnt.parentElement) && !elmnt.classList.contains('parallax-box')) {
       return true;
     }
-    return false
+    return false;
   }
 
   getViewPortBoundaries(): void {
@@ -112,8 +91,7 @@ export class MadnessDirective implements AfterViewInit, OnChanges {
       });
 
       const transformsArray = transaltionsArray.map(item => {
-        const tranformText = `translate(${item[0] + 50}px,${item[1] +
-          5}px) rotate(${this.rotation}deg)`;
+        const tranformText = `translate(${item[0] + 50}px,${item[1] + 5}px) rotate(${this.rotation}deg)`;
         return tranformText;
       });
 
@@ -128,8 +106,9 @@ export class MadnessDirective implements AfterViewInit, OnChanges {
 
   @HostListener('window:mousemove', ['$event'])
   mousemoveEventHandler(event: any) {
+    let path;
     if (event.path) {
-      var path = event.path;
+      path = event.path;
     }
     if (path && event.path.indexOf(this.boxParent) !== -1 && this.madnessEnabled) {
       this.animateElement(event);

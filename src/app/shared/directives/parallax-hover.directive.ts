@@ -4,18 +4,17 @@ import { Directive, HostListener, OnInit, ElementRef, AfterViewInit, Input } fro
   selector: '[appParallaxAnimated]',
 })
 export class ParallaxHoverDirective implements OnInit, AfterViewInit {
-
   boxParent: any;
   viewPortWidth: number;
   viewPortHeight: number;
-  elementOffset: { x: number, y: number };
+  elementOffset: { x: number; y: number };
   rotation = 0;
   delta = 50; // con massDelta
   // delta = 12;
   bounceCounter = 0;
   @Input() resetRotation: boolean;
 
-  constructor(private element: ElementRef) { }
+  constructor(private element: ElementRef) {}
 
   ngOnInit() {
     this.boxParent = this.findAncestor(this.element.nativeElement, 'parallax-box');
@@ -36,7 +35,7 @@ export class ParallaxHoverDirective implements OnInit, AfterViewInit {
     while ((elmnt = elmnt.parentElement) && !elmnt.classList.contains('parallax-box')) {
       return true;
     }
-    return false
+    return false;
   }
 
   getViewPortBoundaries(): void {
@@ -51,8 +50,8 @@ export class ParallaxHoverDirective implements OnInit, AfterViewInit {
       const offsetY = 0.5 - event.pageY / this.viewPortHeight;
       const massDelta = this.element.nativeElement.offsetHeight * 0.05;
       this.rotation += 0.6;
-      const xTranslation = Math.round(offsetX * this.element.nativeElement.offsetLeft * massDelta * 0.5 / (this.delta));
-      const yTranslation = Math.round(offsetY * this.element.nativeElement.offsetLeft * massDelta * 0.5 / (this.delta));
+      const xTranslation = Math.round(offsetX * this.element.nativeElement.offsetLeft * massDelta * 0.5 / this.delta);
+      const yTranslation = Math.round(offsetY * this.element.nativeElement.offsetLeft * massDelta * 0.5 / this.delta);
       // const xTranslation = Math.round(offsetX * this.element.nativeElement.offsetLeft / this.delta);
       // const yTranslation = Math.round(offsetY * this.element.nativeElement.offsetLeft / this.delta);
       const transform = `translate(${xTranslation}px,${yTranslation}px) rotate(${this.rotation}deg)`;
@@ -75,8 +74,9 @@ export class ParallaxHoverDirective implements OnInit, AfterViewInit {
 
   @HostListener('window:mousemove', ['$event'])
   mousemoveEventHandler(event: any) {
+    let path;
     if (event.path) {
-      var path = event.path;
+      path = event.path;
     }
     if (path && event.path.indexOf(this.boxParent) !== -1) {
       this.eventCustomHandler(event);
