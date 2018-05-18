@@ -1,13 +1,15 @@
 @import 'style/palette';
 
-body{
+body {
+  font-size: 14px;
   font-family: 'Poppins', sans-serif;
   text-rendering: optimizeLegibility;
   -webkit-font-smoothing: antialiased !important;
+
   border: 0;
   margin: 0;
+  height: 100vh;
   padding: 0;
-  font-size: 14px;
 }
 
 *:not(input) {
