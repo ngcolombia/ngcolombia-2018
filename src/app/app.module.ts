@@ -5,6 +5,8 @@ import {
   MatInputModule,
   MatSliderModule,
   MatSnackBarModule,
+  MatIconModule,
+  MatGridListModule,
 } from '@angular/material';
 import { BrowserModule } from '@angular/platform-browser';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
@@ -20,33 +22,40 @@ import { NewsletterSignupComponent } from './newsletter-signup/newsletter-signup
 import { MadnessDirective } from './shared/directives/madness.directive';
 import { ParallaxBigBangDirective } from './shared/directives/parallax-bigbang.directive';
 import { ParallaxHoverDirective } from './shared/directives/parallax-hover.directive';
+import { SpeakersComponent } from './speakers/speakers.component';
 import { WelcomeComponent } from './welcome/welcome.component';
+import { SpeakerPhotoUrlPipe } from './speakers/speaker-photo.pipe';
 
 @NgModule({
   declarations: [
     AppComponent,
-    FooterComponent,
-    WelcomeComponent,
-    MadnessDirective,
-    ParallaxHoverDirective,
     CallForPapersComponent,
-    ParallaxBigBangDirective,
-    NewsletterSignupComponent,
+    FooterComponent,
     HomeComponent,
+    MadnessDirective,
+    NewsletterSignupComponent,
+    ParallaxBigBangDirective,
+    ParallaxHoverDirective,
+    SpeakersComponent,
+    WelcomeComponent,
+    SpeakerPhotoUrlPipe,
   ],
   imports: [
-    BrowserModule,
     AppRoutingModule,
+    BrowserAnimationsModule,
+    BrowserModule,
+    ServiceWorkerModule,
     ServiceWorkerModule.register('./ngsw-worker.js', {
       enabled: environment.production,
     }),
-    ServiceWorkerModule,
-    BrowserAnimationsModule,
+
     MatButtonModule,
+    MatFormFieldModule,
+    MatGridListModule,
+    MatIconModule,
     MatInputModule,
     MatSliderModule,
     MatSnackBarModule,
-    MatFormFieldModule,
   ],
   providers: [],
   bootstrap: [AppComponent],
