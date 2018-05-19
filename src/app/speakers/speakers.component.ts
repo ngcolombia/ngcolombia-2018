@@ -1,7 +1,7 @@
 import { ChangeDetectionStrategy, Component } from '@angular/core';
 import { MatDialog } from '@angular/material';
 
-import { Speaker } from './speaker.models';
+import { Speaker } from './speaker.model';
 import { SpeakersBioComponent } from './speakers-bio/speakers-bio.component';
 
 @Component({
@@ -15,14 +15,14 @@ export class SpeakersComponent {
 
   constructor(public dialog: MatDialog) {
     this.speakers = [
-      new Speaker({
-        name: 'Carlos Lopez Jaramillo',
-        title: 'Digital App Developer',
-        bio: 'A great guy',
-        github: 'https://github.com/luchillo17',
-        twitter: 'https://twitter.com/luchillo17',
-        photo: 'https://secure.gravatar.com/avatar/357efbf6f7a1495e5854cb47728fa523?s=64',
-      }),
+      new Speaker(
+        'Carlos Lopez Jaramillo',
+        'Digital App Developer',
+        'A great guy',
+        'https://secure.gravatar.com/avatar/357efbf6f7a1495e5854cb47728fa523?s=64',
+        'https://twitter.com/luchillo17',
+        'https://github.com/luchillo17',
+      ),
       ...new Array(5).fill(1).map(() => new Speaker()),
     ];
   }

@@ -1,7 +1,7 @@
 import { ChangeDetectionStrategy, Component, Inject } from '@angular/core';
 import { MAT_DIALOG_DATA, MatDialogRef } from '@angular/material';
 
-import { Speaker } from '../speaker.models';
+import { Speaker } from '../speaker.model';
 
 @Component({
   selector: 'app-speakers-bio',
@@ -11,8 +11,9 @@ import { Speaker } from '../speaker.models';
 })
 export class SpeakersBioComponent {
   constructor(public dialogRef: MatDialogRef<SpeakersBioComponent>, @Inject(MAT_DIALOG_DATA) public speaker: Speaker) {
-    console.log('====================================');
-    console.log('Dialog Speaker: ', speaker);
-    console.log('====================================');
+  }
+
+  openUrl(url: string) {
+    window.open(url, '_blank');
   }
 }
