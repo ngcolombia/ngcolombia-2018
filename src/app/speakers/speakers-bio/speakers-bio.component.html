@@ -1,0 +1,43 @@
+<mat-toolbar mat-dialog-title
+  color="primary"
+  tabindex="0">
+
+  <button mat-icon-button
+    (click)='openUrl(speaker.twitter)'>
+    <fa-icon [icon]="['fab', 'twitter']"></fa-icon>
+  </button>
+  <button mat-icon-button
+    (click)='openUrl(speaker.github)'>
+    <fa-icon [icon]="['fab', 'github']"></fa-icon>
+  </button>
+
+  <span id="toolbarSpacer"></span>
+
+  <button mat-icon-button
+    (click)='dialogRef.close()'>
+    <mat-icon>close</mat-icon>
+  </button>
+</mat-toolbar>
+
+<mat-dialog-content>
+  <mat-grid-list cols='3'
+    rowHeight='150px'>
+
+    <mat-grid-tile class="speakerDialogTitle"
+      colspan='2'>
+      <div>
+        <div class='speakerName'>{{ speaker.name }}</div>
+        <div class='speakerTitle'>{{ speaker.title }}</div>
+      </div>
+    </mat-grid-tile>
+
+    <mat-grid-tile>
+      <img [src]='speaker.photo'
+        alt='Speaker profile photo'>
+    </mat-grid-tile>
+
+    <mat-grid-tile colspan='3'>
+      {{ speaker.bio }}
+    </mat-grid-tile>
+  </mat-grid-list>
+</mat-dialog-content>

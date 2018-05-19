@@ -1,0 +1,45 @@
+@import '../../style/_palette.scss';
+
+$primary-color: #211056;
+
+:host {
+  padding: 1rem;
+}
+
+#title,
+#scrollDown {
+  color: $primary-color;
+  text-align: center;
+  font-weight: bold;
+
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  justify-content: center;
+}
+
+#title {
+  height: 200px;
+  font-size: 6rem;
+}
+
+#scrollDown {
+  padding: 20px;
+}
+
+mat-grid-tile {
+  background-repeat: no-repeat;
+  background-size: contain;
+}
+
+.speakerData {
+  color: white;
+
+  left: 20px;
+  bottom: 20px;
+  position: absolute;
+
+  > * {
+    margin: 0;
+  }
+}
