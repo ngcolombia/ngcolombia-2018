@@ -5,7 +5,6 @@ import { BrowserModule } from '@angular/platform-browser';
 import { environment } from '../environments/environment';
 import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
 import { HomeModule } from './home/home.module';
-import { MaterialModule } from './material/material.module';
 import { NewsletterSignupComponent } from './newsletter-signup/newsletter-signup.component';
 import { NgModule } from '@angular/core';
 import { ServiceWorkerModule } from '@angular/service-worker';
@@ -27,7 +26,6 @@ import '../style/fontAwesome.icons';
       enabled: environment.production,
     }),
     FontAwesomeModule,
-    MaterialModule,
     HomeModule,
   ],
   entryComponents: [SpeakersBioComponent],
