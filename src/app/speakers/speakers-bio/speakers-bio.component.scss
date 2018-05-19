@@ -11,3 +11,24 @@ mat-toolbar {
     flex: 1;
   }
 }
+
+mat-dialog-content {
+  img {
+    border-radius: 100%;
+    height: 100%;
+    object-fit: cover;
+    width: 100%;
+  }
+}
+
+.speakerDialogTitle {
+  ::ng-deep figure {
+    font-size: 1.8rem;
+    justify-content: left;
+  }
+}
+
+.speakerName {
+  font-size: 1.2em;
+  font-weight: bold;
+}
