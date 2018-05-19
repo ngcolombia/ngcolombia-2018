@@ -1,16 +1,21 @@
+import '../style/fontAwesome.icons';
+
 import { NgModule } from '@angular/core';
 import {
   MatButtonModule,
+  MatDialogModule,
   MatFormFieldModule,
+  MatGridListModule,
+  MatIconModule,
   MatInputModule,
   MatSliderModule,
   MatSnackBarModule,
-  MatIconModule,
-  MatGridListModule,
+  MatToolbarModule,
 } from '@angular/material';
 import { BrowserModule } from '@angular/platform-browser';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { ServiceWorkerModule } from '@angular/service-worker';
+import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
 
 import { environment } from '../environments/environment';
 import { AppRoutingModule } from './app-routing.module';
@@ -22,9 +27,10 @@ import { NewsletterSignupComponent } from './newsletter-signup/newsletter-signup
 import { MadnessDirective } from './shared/directives/madness.directive';
 import { ParallaxBigBangDirective } from './shared/directives/parallax-bigbang.directive';
 import { ParallaxHoverDirective } from './shared/directives/parallax-hover.directive';
+import { SpeakerPhotoUrlPipe } from './speakers/speaker-photo.pipe';
+import { SpeakersBioComponent } from './speakers/speakers-bio/speakers-bio.component';
 import { SpeakersComponent } from './speakers/speakers.component';
 import { WelcomeComponent } from './welcome/welcome.component';
-import { SpeakerPhotoUrlPipe } from './speakers/speaker-photo.pipe';
 
 @NgModule({
   declarations: [
@@ -39,6 +45,7 @@ import { SpeakerPhotoUrlPipe } from './speakers/speaker-photo.pipe';
     SpeakersComponent,
     WelcomeComponent,
     SpeakerPhotoUrlPipe,
+    SpeakersBioComponent,
   ],
   imports: [
     AppRoutingModule,
@@ -49,14 +56,19 @@ import { SpeakerPhotoUrlPipe } from './speakers/speaker-photo.pipe';
       enabled: environment.production,
     }),
 
+    FontAwesomeModule,
+
     MatButtonModule,
+    MatDialogModule,
     MatFormFieldModule,
     MatGridListModule,
     MatIconModule,
     MatInputModule,
     MatSliderModule,
     MatSnackBarModule,
+    MatToolbarModule,
   ],
+  entryComponents: [SpeakersBioComponent],
   providers: [],
   bootstrap: [AppComponent],
 })

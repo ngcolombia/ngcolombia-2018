@@ -1,0 +1,13 @@
+:host {
+  display: block;
+  min-width: 500px;
+}
+
+mat-toolbar {
+  margin: -24px -24px 20px;
+  width: calc(100% + 48px);
+
+  #toolbarSpacer {
+    flex: 1;
+  }
+}

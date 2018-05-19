@@ -13,7 +13,8 @@
   rowHeight='3:2'
   gutterSize='10px'>
   <mat-grid-tile *ngFor="let speaker of speakers"
-    [style.background-image]='speaker.photo | speakerPhotoUrl'>
+    [style.background-image]='speaker.photo | speakerPhotoUrl'
+    (click)='showBio(speaker)'>
 
     <div class='speakerData'>
       <h3>{{ speaker.name }}</h3>

@@ -1,0 +1,21 @@
+<mat-toolbar mat-dialog-title
+  color="primary">
+
+  <button mat-icon-button>
+    <fa-icon [icon]="['fab', 'twitter']"></fa-icon>
+  </button>
+  <button mat-icon-button>
+    <fa-icon [icon]="['fab', 'github']"></fa-icon>
+  </button>
+
+  <span id="toolbarSpacer"></span>
+
+  <button mat-icon-button
+    (click)='dialogRef.close()'>
+    <mat-icon>close</mat-icon>
+  </button>
+</mat-toolbar>
+
+<mat-dialog-content>
+  Test
+</mat-dialog-content>
