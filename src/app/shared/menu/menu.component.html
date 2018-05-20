@@ -2,13 +2,11 @@
     <mat-sidenav #drawer
                  class="sidenav"
                  fixedInViewport="true"
-                 [attr.role]="isHandset ? 'dialog' : 'navigation'"
-                 [mode]="(isHandset | async)!.matches ? 'over' : 'side'"
-                 [opened]="!(isHandset | async)!.matches">
+                 position="end">
         <mat-toolbar color="primary">Menu</mat-toolbar>
         <mat-nav-list>
             <a mat-list-item
-               href="#">Link 1</a>
+               [routerLink]="['/speakers']">Speakers</a>
             <a mat-list-item
                href="#">Link 2</a>
             <a mat-list-item
@@ -17,14 +15,15 @@
     </mat-sidenav>
     <mat-sidenav-content>
         <mat-toolbar color="primary">
+            <span>NG-COLOMBIA</span>
+            <span class="fill-space"></span>
             <button type="button"
                     aria-label="Toggle sidenav"
                     mat-icon-button
-                    (click)="drawer.toggle()"
-                    *ngIf="(isHandset | async)!.matches">
+                    (click)="drawer.toggle()">
         <mat-icon aria-label="Side nav toggle icon">menu</mat-icon>
       </button>
-            <span>Application Title</span>
         </mat-toolbar>
+        <ng-content></ng-content>
     </mat-sidenav-content>
 </mat-sidenav-container>
