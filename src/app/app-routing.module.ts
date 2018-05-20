@@ -5,7 +5,7 @@ import { SpeakersComponent } from './speakers/speakers.component';
 const routes: Routes = [
   {
     path: 'speakers',
-    component: SpeakersComponent,
+    loadChildren: 'app/speakers/speakers.module#SpeakersModule',
   },
   {
     path: '**',
