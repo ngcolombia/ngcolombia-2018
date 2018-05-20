@@ -2,15 +2,29 @@
     <mat-sidenav #drawer
                  class="sidenav"
                  fixedInViewport="true"
-                 position="end">
-        <mat-toolbar color="primary">Menu</mat-toolbar>
-        <mat-nav-list>
+                 opened="true"
+                 position="end"
+                 tabindex="0">
+        <button type="button"
+                class="close-menu-button"
+                aria-label="Toggle sidenav"
+                mat-icon-button
+                (click)="drawer.toggle()">
+                <mat-icon aria-label="Side nav toggle icon" [style.font-size]="'2rem'">close</mat-icon>
+              </button>
+        <mat-nav-list class="menu-link-list">
             <a mat-list-item
+               class="menu-link"
+               [routerLink]="['/about']">About</a>
+            <a mat-list-item
+               class="menu-link"
                [routerLink]="['/speakers']">Speakers</a>
             <a mat-list-item
-               href="#">Link 2</a>
+               class="menu-link"
+               [routerLink]="['/event']">Event</a>
             <a mat-list-item
-               href="#">Link 3</a>
+               class="menu-link"
+               [routerLink]="['/community']">Community</a>
         </mat-nav-list>
     </mat-sidenav>
     <mat-sidenav-content>

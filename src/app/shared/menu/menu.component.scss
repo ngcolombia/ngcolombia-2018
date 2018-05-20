@@ -1,0 +1,32 @@
+$primary-color: #211056;
+.fill-space {
+    flex: 1 1 auto;
+}
+
+.menu-link-list {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    height: calc(100vh - 64px);
+    margin: 0 1.7rem;
+}
+
+.menu-link {
+    font-size: 2rem;
+    font-weight: 700;
+    color: $primary-color;
+}
+
+.close-menu-button {
+    float: right;
+    margin: 1rem;
+}
+
+.sidenav-container {
+    height: 100%;
+}
+
+.sidenav {
+    width: 300px;
+    box-shadow: 3px 0 6px rgba(0, 0, 0, .24);
+}
