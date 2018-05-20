@@ -1,21 +1,20 @@
-import { AppComponent } from './app.component';
-import { AppRoutingModule } from './app-routing.module';
-import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
-import { BrowserModule } from '@angular/platform-browser';
-import { environment } from '../environments/environment';
-import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
-import { HomeModule } from './home/home.module';
-import { NewsletterSignupComponent } from './newsletter-signup/newsletter-signup.component';
-import { NgModule } from '@angular/core';
-import { ServiceWorkerModule } from '@angular/service-worker';
-import { SharedModule } from './shared/shared.module';
-import { SpeakerPhotoUrlPipe } from './speakers/speaker-photo.pipe';
-import { SpeakersBioComponent } from './speakers/speakers-bio/speakers-bio.component';
-import { SpeakersComponent } from './speakers/speakers.component';
 import '../style/fontAwesome.icons';
 
+import { NgModule } from '@angular/core';
+import { BrowserModule } from '@angular/platform-browser';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { ServiceWorkerModule } from '@angular/service-worker';
+import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
+
+import { environment } from '../environments/environment';
+import { AppRoutingModule } from './app-routing.module';
+import { AppComponent } from './app.component';
+import { HomeModule } from './home/home.module';
+import { NewsletterSignupComponent } from './newsletter-signup/newsletter-signup.component';
+import { SharedModule } from './shared/shared.module';
+
 @NgModule({
-  declarations: [AppComponent, NewsletterSignupComponent, SpeakersComponent, SpeakerPhotoUrlPipe, SpeakersBioComponent],
+  declarations: [AppComponent, NewsletterSignupComponent],
   imports: [
     AppRoutingModule,
     BrowserAnimationsModule,
@@ -28,7 +27,6 @@ import '../style/fontAwesome.icons';
     FontAwesomeModule,
     HomeModule,
   ],
-  entryComponents: [SpeakersBioComponent],
   providers: [],
   bootstrap: [AppComponent],
 })
