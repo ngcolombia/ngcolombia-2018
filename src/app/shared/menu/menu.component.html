@@ -28,8 +28,10 @@
         </mat-nav-list>
     </mat-sidenav>
     <mat-sidenav-content>
-        <mat-toolbar color="primary">
-            <span>NG-COLOMBIA</span>
+        <mat-toolbar color="primary"
+                     class="toolbar"
+                     [@scrollAnimation]="toolbarState">
+            <span class="title">NG-COLOMBIA</span>
             <span class="fill-space"></span>
             <button type="button"
                     aria-label="Toggle sidenav"
