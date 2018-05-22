@@ -3,12 +3,19 @@
   tabindex="0">
 
   <button mat-icon-button
+    *ngIf='speaker.twitter'
     (click)='openUrl(speaker.twitter)'>
     <fa-icon [icon]="['fab', 'twitter']"></fa-icon>
   </button>
   <button mat-icon-button
+    *ngIf='speaker.github'
     (click)='openUrl(speaker.github)'>
     <fa-icon [icon]="['fab', 'github']"></fa-icon>
+  </button>
+  <button mat-icon-button
+    *ngIf='speaker.website'
+    (click)='openUrl(speaker.website)'>
+    <mat-icon>open_in_new</mat-icon>
   </button>
 
   <span id="toolbarSpacer"></span>
