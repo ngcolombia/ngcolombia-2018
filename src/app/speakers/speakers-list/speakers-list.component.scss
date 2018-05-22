@@ -1,9 +1,17 @@
-@import '../../style/_palette.scss';
+@import '../../../style/_palette.scss';
 
+$header-height: 45px;
+$page-padding: 1rem;
 $primary-color: #211056;
 
 :host {
-  padding: 1rem;
+  padding: $page-padding;
+}
+
+#firstScreen {
+  display: flex;
+  flex-direction: column;
+  height: calc(100vh - #{$header-height} - #{$page-padding});
 }
 
 #title,
@@ -19,11 +27,13 @@ $primary-color: #211056;
 }
 
 #title {
-  height: 200px;
+  flex: 1;
   font-size: 6rem;
+  min-height: 200px;
 }
 
 #scrollDown {
+  height: 85px;
   padding: 20px;
 }
 
