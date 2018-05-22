@@ -5,4 +5,25 @@
     border: 1px solid black;
     justify-content: center;
     align-items: center;
+
+    h2 {
+        font-size: 15rem;
+        color: #211056;
+        margin: 0;
+        line-height: 14rem;
+    }
+
+    h4 {
+        font-size: 1.85rem;
+        font-weight: normal;
+        width: 57%;
+        text-align: right;
+        margin-left: 41%;
+        margin-top: 0;
+        margin-bottom: 0;
+    }
+
+    .roboto {
+        font-family: 'Roboto, sans-serif';
+    }
 }
