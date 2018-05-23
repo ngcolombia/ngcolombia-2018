@@ -5,6 +5,11 @@
     border: 1px solid black;
     justify-content: center;
     align-items: center;
+    position: relative;
+
+    .text-wrapper {
+        z-index: 2;
+    }
 
     h2 {
         font-size: 15rem;
@@ -21,6 +26,17 @@
         margin-left: 41%;
         margin-top: 0;
         margin-bottom: 0;
+    }
+
+    .ball {
+        position: absolute;
+
+        &.front{
+            z-index: 3;
+        }
+        &.bottom{
+            z-index: 1;
+        }
     }
 
     .roboto {

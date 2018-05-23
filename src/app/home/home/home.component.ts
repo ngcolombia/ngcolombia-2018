@@ -14,7 +14,37 @@ export class HomeComponent implements OnInit {
   shareBigText = "share";
   shareSubText = "Share your experience with the world";
 
-  constructor() { }
+  learnImages: any;
+
+  constructor() {
+    this.learnImages = [
+      {
+        path: 'learn/BOLITA1_desktop.png',
+        position: {
+          x: '-415px',
+          y: '2%'
+        },
+        layer: 'bottom'
+      },
+      {
+        path: 'learn/BOLITA2_desktop.png',
+        position: {
+          x: '3%',
+          y: '50%'
+        },
+        layer: 'front'
+      },
+      {
+        path: 'learn/BOLITA3_desktop.png',
+        position: {
+          x: '65%',
+          y: '20%'
+        },
+        layer: 'front'
+      }
+    ]
+
+   }
 
   ngOnInit() {
   }
