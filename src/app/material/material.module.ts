@@ -1,18 +1,17 @@
-import { CommonModule } from '@angular/common';
 import { LayoutModule } from '@angular/cdk/layout';
+import { CommonModule } from '@angular/common';
 import { NgModule } from '@angular/core';
 import {
   MatButtonModule,
   MatDialogModule,
   MatFormFieldModule,
-  MatGridListModule,
   MatIconModule,
   MatInputModule,
+  MatListModule,
+  MatSidenavModule,
   MatSliderModule,
   MatSnackBarModule,
   MatToolbarModule,
-  MatSidenavModule,
-  MatListModule,
 } from '@angular/material';
 
 @NgModule({
@@ -21,7 +20,6 @@ import {
     MatButtonModule,
     MatDialogModule,
     MatFormFieldModule,
-    MatGridListModule,
     MatIconModule,
     MatInputModule,
     MatSliderModule,
@@ -40,7 +38,6 @@ import {
     MatButtonModule,
     MatDialogModule,
     MatFormFieldModule,
-    MatGridListModule,
     MatIconModule,
     MatInputModule,
     MatSliderModule,
