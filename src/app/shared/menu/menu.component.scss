@@ -4,6 +4,7 @@ $primary-color: #211056;
     background-color: rgba(255, 255, 255, 0.6);
     color: $primary-color;
     font-weight: 600;
+    z-index: 10;
     .title {
         padding-left: 2rem;
         font-size: 1rem;

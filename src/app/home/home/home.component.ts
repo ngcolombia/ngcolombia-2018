@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { ImageList } from '../home-banner/image-list.model';
 
 @Component({
   selector: 'app-home',
@@ -14,7 +15,9 @@ export class HomeComponent implements OnInit {
   shareBigText = "share";
   shareSubText = "Share your experience with the world";
 
-  learnImages: any;
+  learnImages: ImageList[];
+  meetImages: ImageList[];
+  shareImages: ImageList[];
 
   constructor() {
     this.learnImages = [
@@ -39,6 +42,68 @@ export class HomeComponent implements OnInit {
         position: {
           x: '65%',
           y: '20%'
+        },
+        layer: 'front'
+      }
+    ];
+
+    this.meetImages = [
+      {
+        path: 'meet/BOLITA1_desktop.png',
+        position: {
+          x: '90%',
+          y: '40%'
+        },
+        layer: 'front'
+      },
+      {
+        path: 'meet/BOLITA2_desktop.png',
+        position: {
+          x: '-3%',
+          y: '30%'
+        },
+        layer: 'front'
+      },
+      {
+        path: 'meet/BOLITA3_desktop.png',
+        position: {
+          x: '24%',
+          y: '13%'
+        },
+        layer: 'bottom'
+      }
+    ];
+
+    this.shareImages = [
+      {
+        path: 'share/BOLITA1_desktop.png',
+        position: {
+          x: '-10%',
+          y: '52%'
+        },
+        layer: 'bottom'
+      },
+      {
+        path: 'share/BOLITA2_desktop.png',
+        position: {
+          x: '80%',
+          y: '-2%'
+        },
+        layer: 'bottom'
+      },
+      {
+        path: 'share/BOLITA3_desktop.png',
+        position: {
+          x: '63%',
+          y: '57%'
+        },
+        layer: 'front'
+      },
+      {
+        path: 'share/BOLITA3_desktop.png',
+        position: {
+          x: '35%',
+          y: '80%'
         },
         layer: 'front'
       }

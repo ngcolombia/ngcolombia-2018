@@ -5,6 +5,10 @@
   height: 100%;
 }
 
+app-menu {
+  z-index: 100;
+}
+
 router-outlet + ::ng-deep * {
   flex: 1;
 }

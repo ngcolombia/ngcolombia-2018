@@ -1,8 +1,11 @@
+:host {
+    display:block;
+}
+
 .container {
     display: flex;
     background-color: #a296f7;
-    min-height: 100vh;
-    border: 1px solid black;
+    min-height: 150vh;
     justify-content: center;
     align-items: center;
     position: relative;
@@ -30,6 +33,7 @@
 
     .ball {
         position: absolute;
+        transition: transform 1.2s cubic-bezier(0.25, 0.46, 0.45, 0.94);
 
         &.front{
             z-index: 3;
