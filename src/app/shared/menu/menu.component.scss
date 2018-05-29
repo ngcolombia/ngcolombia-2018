@@ -1,4 +1,12 @@
+@mixin mat-icon-size($size: 24px) {
+    font-size: $size;
+    height: $size;
+    width: $size;
+    line-height: $size;
+}
+
 $primary-color: #211056;
+
 .toolbar {
     position: fixed;
     background-color: rgba(255, 255, 255, 0.6);
@@ -24,14 +32,36 @@ $primary-color: #211056;
 }
 
 .menu-link {
-    font-size: 2rem;
+    font-size: 3rem;
     font-weight: 700;
     color: $primary-color;
+    margin: 14px 0;
+
+}
+
+.menu-button {
+    &:before {
+        content: 'Menu';
+        position: absolute;
+        font-size: 24px;
+        top: 1px;
+        left: 5px;
+        width: 0;
+        transition: all 0.5s 0.2s;
+        overflow: hidden;
+    }
+    
+    &:hover:before {
+        width: 70px;
+        left: -65px;
+        transition: all 0.4s;
+    }
 }
 
 .close-menu-button {
-    float: right;
-    margin: 1rem;
+    position: absolute;
+    right: 20px;
+    top: 10px;
 }
 
 .sidenav-container {
@@ -39,6 +69,18 @@ $primary-color: #211056;
 }
 
 .sidenav {
-    width: 300px;
+    width: 100%;
     box-shadow: 3px 0 6px rgba(0, 0, 0, .24);
+    
+    @media (min-width: 680px) {
+        width: 400px;
+    }
+}
+
+::ng-deep mat-sidenav-content .mat-icon-button.cdk-program-focused .mat-button-focus-overlay {
+    opacity: 0;
+}
+
+.mat-icon-button .mat-icon {
+    @include mat-icon-size(40px);
 }

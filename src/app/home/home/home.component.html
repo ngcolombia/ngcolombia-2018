@@ -1,19 +1,17 @@
-<app-home-banner
-  parallaxScroll
-  [bigText]="learnBigText"
-  [subText]="learnSubText"
-  [images]="learnImages"
-  ></app-home-banner>
-  <app-home-banner
-  class="b"
-  parallaxScroll
-  [bigText]="meetBigText"
-  [subText]="meetSubText"
-  [images]="meetImages"
-  ></app-home-banner>
-  <app-home-banner
-  parallaxScroll
-  [bigText]="shareBigText"
-  [subText]="shareSubText"
-  [images]="shareImages"
-></app-home-banner>
+<div class="wrapper" #wrapper parallaxScroll>
+  <app-home-banner [bigText]="learnBigText" [subText]="learnSubText"></app-home-banner>
+
+  <app-home-banner class="b" [bigText]="meetBigText" [subText]="meetSubText"></app-home-banner>
+
+  <app-home-banner [bigText]="shareBigText" [subText]="shareSubText"></app-home-banner>
+
+  <ng-container *ngFor="let image of imagesList">
+    <img alt=""
+    class="ball {{image.device}}"
+    [src]='getUrl(image)'
+    [class.bottom]="image.layer === 'bottom'"
+    [class.front]="image.layer === 'front'"
+    [ngStyle]="{left: image.position.x, top: image.position.y}">
+  </ng-container>
+</div>
+<app-home-newsletter></app-home-newsletter>

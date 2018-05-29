@@ -11,6 +11,8 @@ $ngcolombia-app-theme: mat-light-theme($temporaryprimary, $accent, $warn);
 
 @include angular-material-theme($ngcolombia-app-theme);
 
+
+
 // Custom NgColombia Material Theme styles
 mat-icon,
 .material-icons {

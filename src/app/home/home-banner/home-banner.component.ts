@@ -9,19 +9,9 @@ export class HomeBannerComponent implements OnInit {
 
   @Input() bigText: string;
   @Input() subText: string;
-  @Input() images: any[];
 
   constructor() { }
 
   ngOnInit() {
   }
-
-  getUrl(image):string {
-    return `assets/img/home/${image.path}`
-  }
-
-  getPositionStyles(image): string {
-    return `{left: ${image.position.x}, top: ${image.position.y}}`;
-  }
-
 }

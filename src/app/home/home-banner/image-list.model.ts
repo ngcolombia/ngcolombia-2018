@@ -4,5 +4,6 @@ export interface ImageList {
     x: string,
     y: string
   },
-  layer: string
+  layer: string,
+  device: string
 }

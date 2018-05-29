@@ -40,13 +40,16 @@ export class ParallaxScrollDirective implements OnInit, AfterViewInit {
 
   updatePositions(parentTop) {
     this.items.forEach((item: HTMLElement) => {
+      let isMobile = item.classList.contains('mobile');
+      let value = isMobile ? 'scale(0.5) ' : 'scale(0.7) ';
       let itemTopPosition = parentTop + item.offsetTop;
       if (window.pageYOffset + window.innerHeight >= itemTopPosition && window.pageYOffset <= itemTopPosition + item.offsetHeight) {
         if(item.classList.contains('front')){
-          item.style.transform = `translateY(-${window.pageYOffset * 0.12}px)`
+          value += `translateY(-${window.pageYOffset * 0.12}px)`;
         } else if (item.classList.contains('bottom')) {
-          item.style.transform = `translateY(-${window.pageYOffset * 0.04}px)`
+          value += `translateY(-${window.pageYOffset * 0.06}px)`;
         }
+        item.style.transform = value;
       }
     })
   }
