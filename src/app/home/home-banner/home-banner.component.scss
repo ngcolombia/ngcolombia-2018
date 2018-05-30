@@ -1,0 +1,65 @@
+:host {
+    display:block;
+}
+
+.container {
+    display: flex;
+    background-color: transparent;
+    min-height: 100vh;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    
+    @media (min-width: 680px) and (max-width: 1400px){
+        min-height: 130vh;
+    }
+
+    .text-wrapper {
+        z-index: 2;
+        padding: 0 15px;
+        box-sizing: border-box;
+    }
+
+    h2 {
+
+        font-size: 30vw;
+        line-height: 30vw;
+        color: #211056;
+        margin: 0;
+        text-align: center;
+        letter-spacing: -0.025em;
+        
+        @media (min-width: 678px){
+            text-align: left;
+            font-size: 15rem;
+            line-height: 14rem;
+        }
+
+    }
+
+    h4 {
+
+        font-size: 28px;
+        line-height: 29px;
+        font-weight: normal;
+        width: 255px;
+        text-align: right;
+        margin-left: calc(100% - 255px);
+        margin-top: 0;
+        margin-bottom: 0;
+        padding-right: 20px;
+        
+        @media (min-width: 678px){
+            font-size: 1.85rem;
+            line-height: 2rem;
+            width: 57%;
+            max-width: inherit;
+            margin-left: 41%;
+            padding-right: 0px;
+        }
+    }
+
+    .roboto {
+        font-family: 'Roboto, sans-serif';
+    }
+}

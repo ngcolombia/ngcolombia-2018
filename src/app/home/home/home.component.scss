@@ -1,0 +1,44 @@
+:host{
+  position: relative;
+  display: block;
+  overflow: hidden;
+  
+  .wrapper {
+    background: linear-gradient(to bottom, #a698f7 0%, #dcb3ff 90%, #ffffff 100%);
+    padding-bottom: 100px;
+    position: relative;
+  }
+
+  app-home-banner {
+    z-index: 2;
+  }
+
+  .ball {
+    position: absolute;
+    display: none;
+    transition: transform 1.5s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+    transform: scale(0.5);
+    
+    &.mobile {
+      display: block;
+    }
+    
+    &.front{
+      z-index: 3;
+    }
+    &.bottom{
+      z-index: 1;
+    }
+    
+    @media (min-width: 680px) {
+      transform: scale(0.7);
+
+      &.mobile {
+        display: none;
+      }
+      &.desktop {
+        display: block;
+      }
+    }
+  }
+}

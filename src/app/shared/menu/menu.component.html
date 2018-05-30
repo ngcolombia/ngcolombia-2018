@@ -1,0 +1,46 @@
+<mat-sidenav-container class="sidenav-container">
+    <mat-sidenav #drawer
+                 class="sidenav"
+                 fixedInViewport="true"
+                 opened="false"
+                 position="end"
+                 tabindex="0">
+        <button type="button"
+                class="close-menu-button"
+                aria-label="Toggle sidenav"
+                mat-icon-button
+                (click)="drawer.toggle()">
+                <mat-icon aria-label="Side nav toggle icon">close</mat-icon>
+              </button>
+        <mat-nav-list class="menu-link-list">
+            <a mat-list-item
+               class="menu-link"
+               [routerLink]="['/']">About</a>
+            <a mat-list-item
+               class="menu-link"
+               [routerLink]="['/speakers']">Speakers</a>
+            <a mat-list-item
+               class="menu-link"
+               [routerLink]="['/event']">Event</a>
+            <a mat-list-item
+               class="menu-link"
+               [routerLink]="['/community']">Community</a>
+        </mat-nav-list>
+    </mat-sidenav>
+    <mat-sidenav-content>
+        <mat-toolbar color="primary"
+                     class="toolbar"
+                     [@scrollAnimation]="toolbarState">
+            <span class="title">NG-COLOMBIA</span>
+            <span class="fill-space"></span>
+            <button type="button"
+                    class="menu-button"
+                    aria-label="Toggle sidenav"
+                    mat-icon-button
+                    (click)="drawer.toggle()">
+        <mat-icon class="md-36" aria-label="Side nav toggle icon">menu</mat-icon>
+      </button>
+        </mat-toolbar>
+        <ng-content></ng-content>
+    </mat-sidenav-content>
+</mat-sidenav-container>

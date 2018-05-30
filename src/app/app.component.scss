@@ -1,8 +1,18 @@
 :host {
   display: flex;
   flex-direction: column;
+}
 
-  height: 100%;
+app-menu {
+  z-index: 100;
+}
+
+router-outlet {
+  z-index: 1;
+}
+
+app-footer {
+  z-index: 2;
 }
 
 router-outlet + ::ng-deep * {
