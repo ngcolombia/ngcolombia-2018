@@ -1,0 +1,25 @@
+<div id='firstScreen'>
+  <div id='title'>
+    <div>Speakers</div>
+  </div>
+
+  <div id='scrollDown'>
+    <mat-icon>expand_more</mat-icon>
+    <div>
+      Scroll Down
+    </div>
+  </div>
+</div>
+
+<div class='grid-container'>
+  <div class='grid-item'
+    *ngFor="let speaker of speakers"
+    [style.background-image]='speaker.photo | speakerPhotoUrl'
+    (click)='showBio(speaker)'>
+
+    <div class='speakerData'>
+      <h3>{{ speaker.name }}</h3>
+      <h5>{{ speaker.title }}</h5>
+    </div>
+  </div>
+</div>

@@ -3,12 +3,19 @@
   tabindex="0">
 
   <button mat-icon-button
+    *ngIf='speaker.twitter'
     (click)='openUrl(speaker.twitter)'>
     <fa-icon [icon]="['fab', 'twitter']"></fa-icon>
   </button>
   <button mat-icon-button
+    *ngIf='speaker.github'
     (click)='openUrl(speaker.github)'>
     <fa-icon [icon]="['fab', 'github']"></fa-icon>
+  </button>
+  <button mat-icon-button
+    *ngIf='speaker.website'
+    (click)='openUrl(speaker.website)'>
+    <mat-icon>open_in_new</mat-icon>
   </button>
 
   <span id="toolbarSpacer"></span>
@@ -20,24 +27,20 @@
 </mat-toolbar>
 
 <mat-dialog-content>
-  <mat-grid-list cols='3'
-    rowHeight='150px'>
 
-    <mat-grid-tile class="speakerDialogTitle"
-      colspan='2'>
+  <div class='grid-container'>
+    <div class='grid-item speakerDialogTitle'>
       <div>
         <div class='speakerName'>{{ speaker.name }}</div>
         <div class='speakerTitle'>{{ speaker.title }}</div>
       </div>
-    </mat-grid-tile>
-
-    <mat-grid-tile>
+    </div>
+    <div class='grid-item'>
       <img [src]='speaker.photo'
         alt='Speaker profile photo'>
-    </mat-grid-tile>
-
-    <mat-grid-tile colspan='3'>
+    </div>
+    <div class='grid-item speaker-bio'>
       {{ speaker.bio }}
-    </mat-grid-tile>
-  </mat-grid-list>
+    </div>
+  </div>
 </mat-dialog-content>

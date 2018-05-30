@@ -1,0 +1,74 @@
+@import '../../../style/_palette.scss';
+@import '../../../style/_variables.scss';
+
+:host {
+  padding: $page-padding;
+}
+
+#firstScreen {
+  display: flex;
+  flex-direction: column;
+  @media (min-width: 680px) {
+    height: calc(100vh - #{$header-height} - #{$page-padding});
+  }
+}
+
+#title,
+#scrollDown {
+  color: $primary-color;
+  text-align: center;
+  font-weight: bold;
+
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  justify-content: center;
+}
+
+#title {
+  flex: 1;
+  // Font-size fallback just in case
+  font-size: 6rem;
+  font-size: 10vw;
+}
+
+#scrollDown {
+  height: 85px;
+  padding: 20px;
+}
+
+// Speakers Grid style start here
+.grid-container {
+  display: grid;
+  grid-gap: 10px;
+  place-items: stretch;
+  place-content: stretch;
+
+  @media (min-width: $desktop-min-size) {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+.grid-item {
+  background-repeat: no-repeat;
+  background-size: contain;
+  padding-bottom: calc(100% / #{$speaker-img-aspect-ratio});
+  position: relative;
+}
+
+.speakerData {
+  color: white;
+
+  bottom: 10px;
+  font-size: 6vw;
+  left: 10px;
+  position: absolute;
+
+  @media (min-width: $desktop-min-size) {
+    font-size: 2vw;
+  }
+
+  > * {
+    margin: 0;
+  }
+}
