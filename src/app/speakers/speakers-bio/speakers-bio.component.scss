@@ -33,16 +33,13 @@ mat-toolbar {
   position: relative;
 
   @media (min-width: $desktop-min-size) {
-    &.speakerDialogTitle,
-    &.speaker-bio {
+    &.speakerDialogTitle{
       grid-column-start: 1;
-    }
-
-    &.speakerDialogTitle {
       grid-column-end: 3;
     }
 
     &.speaker-bio {
+      grid-column-start: 1;
       grid-column-end: 4;
     }
   }
