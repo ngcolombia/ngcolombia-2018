@@ -2,6 +2,8 @@
 
 ## Routes
 
+### /
+
 ### /about
 
 - Event general info
@@ -12,4 +14,20 @@
 
 ### /schedule
 
-- 
+### /speakers
+
+### /tickets
+
+### /community
+
+### /faq
+
+### /diversity
+
+### /code-of-coduct
+
+# Hidden
+
+### /por-que-en-ingles
+
+
