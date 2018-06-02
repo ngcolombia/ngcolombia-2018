@@ -12,11 +12,11 @@
 
 ### /schedule
 
-Find full info [here](https://drive.google.com/open?id=1CkZMb7v4Rv1mcT6Do3WNKXZoIhi33pdf)
+Find full info [here](https://drive.google.com/open?id=1jHhZnp-m86UejJYsqUz2ZBuBF-0JMoHs)
 
 ### /speakers
 
-Find full info [here](https://drive.google.com/open?id=1jHhZnp-m86UejJYsqUz2ZBuBF-0JMoHs)
+Find full info [here](https://drive.google.com/open?id=1CkZMb7v4Rv1mcT6Do3WNKXZoIhi33pdf)
 
 ### /tickets
 
