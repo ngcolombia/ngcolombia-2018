@@ -60,25 +60,17 @@ export class MenuComponent implements OnInit {
     private router: Router
   ) {
     this.isHandset = this.breakpointObserver.observe(Breakpoints.Handset);
+    this.showedMenuLinks = MenuLinks;
   }
 
   ngOnInit() {
     this.subscribeToScroll();
-    
     this.router.events.subscribe((event) => {
       if (!(event instanceof NavigationEnd)) {
           return;
       }
-      if(this.canUpdatedMenuItems){
-        this.updateMenuLinks();
-      }
       window.scrollTo(0, 0)
     });
-  }
-
-  updateMenuLinks(){
-    let currentUrl = this.router.url;
-    this.showedMenuLinks = MenuLinks.filter( (link) => link.route !== currentUrl );
   }
 
   subscribeToScroll(){
@@ -97,14 +89,5 @@ export class MenuComponent implements OnInit {
       .subscribe(toolbarState => {
         this.toolbarState = toolbarState;
       });
-  }
-
-  sideNavAction(action?){
-    if(action === 'closed'){
-      this.canUpdatedMenuItems = true;
-      this.updateMenuLinks();
-    } else {
-      this.canUpdatedMenuItems = false;
-    }
   }
 }

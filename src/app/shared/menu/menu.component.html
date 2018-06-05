@@ -4,9 +4,7 @@
                  fixedInViewport="true"
                  opened="false"
                  position="end"
-                 tabindex="0"
-                 (opened)="sideNavAction('opened')"
-                 (closed)="sideNavAction('closed')">
+                 tabindex="0">
         <button type="button"
                 class="close-menu-button"
                 aria-label="Toggle sidenav"
@@ -19,6 +17,7 @@
                 <a mat-list-item
                     (click)="drawer.toggle()"
                     class="menu-link"
+                    routerLinkActive="active-link"
                     [routerLink]="link.route">{{link.text}}</a>
             </ng-container>
         </mat-nav-list>

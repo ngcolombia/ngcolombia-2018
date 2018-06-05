@@ -93,10 +93,12 @@ mat-toolbar {
       height: 96px;
 
       img {
-        width: 100%;
-        -webkit-clip-path: circle(50% at 50% 50%);
-        clip-path: circle(50% at 50% 50%);
-        height: inherit;
+        width: 130%;
+        -webkit-clip-path: circle(38% at 50% 50%);
+        clip-path: circle(38% at 50% 50%);
+        object-fit: cover;
+        position: relative;
+        left: -15%;
       }
     }
   }
