@@ -18,6 +18,7 @@
                     (click)="drawer.toggle()"
                     class="menu-link"
                     routerLinkActive="active-link"
+                    [routerLinkActiveOptions]="{exact:true}"
                     [routerLink]="link.route">{{link.text}}</a>
             </ng-container>
         </mat-nav-list>
