@@ -1,4 +1,4 @@
-export interface ImageList {
+export interface ImageInfo {
   path: string,
   position: {
     x: string,
