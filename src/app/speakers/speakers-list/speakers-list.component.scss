@@ -8,8 +8,10 @@
 #firstScreen {
   display: flex;
   flex-direction: column;
+  min-height: 250px;
+
   @media (min-width: 680px) {
-    height: calc(100vh - #{$header-height} - #{$page-padding});
+    height: calc(100vh - #{$page-padding});
   }
 }
 
@@ -18,7 +20,6 @@
   color: $primary-color;
   text-align: center;
   font-weight: bold;
-
   display: flex;
   align-items: center;
   flex-direction: column;
@@ -28,41 +29,112 @@
 #title {
   flex: 1;
   // Font-size fallback just in case
-  font-size: 6rem;
-  font-size: 10vw;
+  font-size: 4rem;
+  font-size: 14vw;
+
+  @media (min-width: 680px) {
+    font-size: 6rem;
+    font-size: 10vw;
+  }
 }
 
 #scrollDown {
   height: 85px;
   padding: 20px;
+  display: none;
+
+  @media (min-width: 680px) {
+    display: flex;
+  }
 }
 
 // Speakers Grid style start here
 .grid-container {
   display: grid;
-  grid-gap: 10px;
+  grid-gap: 0px;
   place-items: stretch;
   place-content: stretch;
-
+  margin-bottom: 20px;
+  
   @media (min-width: $desktop-min-size) {
+    grid-gap: 15px;
     grid-template-columns: repeat(3, 1fr);
+    margin: 0 60px 60px;
   }
 }
 
 .grid-item {
   background-repeat: no-repeat;
   background-size: contain;
+  background-position: center center;
+  background-color: rgba(0,0,0,0.6);
   padding-bottom: calc(100% / #{$speaker-img-aspect-ratio});
   position: relative;
+  cursor: pointer;
+
+  .more-info {
+    position: absolute;
+    top: 12px;
+    right: 20px;
+    color: #ffffff;
+    font-size: 30px;
+    height: 30px;
+    width: 30px;
+    opacity: 0;
+    transition: opacity 0.7s;
+  }
+
+  &::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 0;
+    width: 0;
+    background-color: rgba(33, 16,86, 0.9);
+    transition: all 1s;
+    z-index: 2;
+  }
+
+  &::after {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    height: 0;
+    width: 0;
+    background-color: rgba(33, 16,86, 0.9);
+    transition: all 1s;
+    z-index: 3;
+  }
+  
+  &:hover {
+    .more-info {
+      opacity: 1;
+      z-index: 4;
+      transition: opacity 0.7s;
+    }
+    
+    &::before {
+      height: 100%;
+      width: 100%;
+      transition: all 1s;
+    }
+    &::after {
+      height: 100%;
+      width: 100%;
+      transition: all 1s;
+    }
+  }
 }
 
 .speakerData {
   color: white;
-
   bottom: 10px;
   font-size: 6vw;
   left: 10px;
   position: absolute;
+  z-index: 5;
 
   @media (min-width: $desktop-min-size) {
     font-size: 2vw;

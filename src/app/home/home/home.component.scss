@@ -2,6 +2,35 @@
   position: relative;
   display: block;
   overflow: hidden;
+
+  .event-date {
+    position: absolute;
+    left: 16px;
+    top: 40px;
+    z-index: 10;
+    font-size: 19px;
+    font-weight: bold;
+    display: flex;
+    
+    @media (min-width: 680px) {
+      left: calc(16px + 2rem);
+    }
+
+    > div {
+      padding: 3px 14px;
+      background-color: #211056;
+      margin: 10px 3px;
+      color: #FFF;
+      box-shadow: 0px 0px 0px 1px #63A5CB;
+
+      &:first-child {
+        margin-left: 0;
+      }
+      &:last-child {
+        margin-right: 0;
+      }
+    }
+  }
   
   .wrapper {
     background: linear-gradient(to bottom, #a698f7 0%, #dcb3ff 90%, #ffffff 100%);

@@ -13,18 +13,27 @@
                 <mat-icon aria-label="Side nav toggle icon">close</mat-icon>
               </button>
         <mat-nav-list class="menu-link-list">
+            <ng-container *ngFor="let link of showedMenuLinks">
+                <a mat-list-item
+                    (click)="drawer.toggle()"
+                    class="menu-link"
+                    routerLinkActive="active-link"
+                    [routerLink]="link.route">{{link.text}}</a>
+            </ng-container>
+        </mat-nav-list>
+        <mat-nav-list class="other-info-list">
             <a mat-list-item
-               class="menu-link"
-               [routerLink]="['/']">About</a>
+            (click)="drawer.toggle()"
+            class="menu-link"
+            [routerLink]="['/faq']">FAQ</a>
             <a mat-list-item
-               class="menu-link"
-               [routerLink]="['/speakers']">Speakers</a>
+            (click)="drawer.toggle()"
+            class="menu-link"
+            [routerLink]="['/diversity']">Diversity</a>
             <a mat-list-item
-               class="menu-link"
-               [routerLink]="['/event']">Event</a>
-            <a mat-list-item
-               class="menu-link"
-               [routerLink]="['/community']">Community</a>
+            (click)="drawer.toggle()"
+            class="menu-link"
+            [routerLink]="['/code-of-coduct']">Code of conduct</a>
         </mat-nav-list>
     </mat-sidenav>
     <mat-sidenav-content>

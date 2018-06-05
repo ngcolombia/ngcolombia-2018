@@ -1,4 +1,4 @@
-import { ChangeDetectionStrategy, Component } from '@angular/core';
+import { ChangeDetectionStrategy, Component, OnInit } from '@angular/core';
 import { MatDialog } from '@angular/material';
 
 import { Speaker } from '../core/speaker.model';
@@ -10,15 +10,15 @@ import { SpeakersBioComponent } from '../speakers-bio/speakers-bio.component';
   styleUrls: ['./speakers-list.component.scss'],
   changeDetection: ChangeDetectionStrategy.OnPush,
 })
-export class SpeakersListComponent {
+export class SpeakersListComponent implements OnInit {
   public speakers: Speaker[];
 
   constructor(public dialog: MatDialog) {
     this.speakers = [
       new Speaker(
-        'Carlos Lopez Jaramillo',
+        'Carlos Lopez',
         'Digital App Developer',
-        'A great guy',
+        'Lorem ipsum dolor sit amet consectetur, adipisicing elit. Aliquid, dicta vel? Esse magni voluptate tempore corporis ab assumenda. Nam omnis a laboriosam expedita vero voluptate, fuga veritatis dolorum placeat? Delectus. Sit, asperiores explicabo? Doloremque maxime facere nulla iure deleniti. Corrupti, maiores aliquam obcaecati harum soluta quo voluptate fugit cum magni nemo est reprehenderit vel unde cupiditate voluptatem nisi suscipit porro?',
         'https://secure.gravatar.com/avatar/357efbf6f7a1495e5854cb47728fa523?s=64',
         'https://twitter.com/luchillo17',
         'https://github.com/luchillo17',
@@ -27,6 +27,8 @@ export class SpeakersListComponent {
       ...new Array(5).fill(1).map(() => new Speaker()),
     ];
   }
+
+  ngOnInit() { }
 
   showBio(speaker: Speaker) {
     this.dialog.open(SpeakersBioComponent, { data: speaker });

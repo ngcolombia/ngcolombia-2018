@@ -2,44 +2,44 @@
   color="primary"
   tabindex="0">
 
-  <button mat-icon-button
-    *ngIf='speaker.twitter'
-    (click)='openUrl(speaker.twitter)'>
-    <fa-icon [icon]="['fab', 'twitter']"></fa-icon>
-  </button>
-  <button mat-icon-button
-    *ngIf='speaker.github'
-    (click)='openUrl(speaker.github)'>
-    <fa-icon [icon]="['fab', 'github']"></fa-icon>
-  </button>
-  <button mat-icon-button
-    *ngIf='speaker.website'
-    (click)='openUrl(speaker.website)'>
-    <mat-icon>open_in_new</mat-icon>
-  </button>
+  <div class="social-media-links">
+    <button class="big-icon" mat-icon-button
+      *ngIf='speaker.twitter'
+      (click)='openUrl(speaker.twitter)'>
+      <fa-icon [icon]="['fab', 'twitter']"></fa-icon>
+    </button>
+    <button class="big-icon" mat-icon-button
+      *ngIf='speaker.github'
+      (click)='openUrl(speaker.github)'>
+      <fa-icon [icon]="['fab', 'github']"></fa-icon>
+    </button>
+    <button mat-icon-button
+      *ngIf='speaker.website'
+      (click)='openUrl(speaker.website)'>
+      <mat-icon>open_in_new</mat-icon>
+    </button>
+  </div>
 
-  <span id="toolbarSpacer"></span>
-
-  <button mat-icon-button
+  <button class="close-btn" mat-icon-button
     (click)='dialogRef.close()'>
-    <mat-icon>close</mat-icon>
+    <mat-icon>highlight_off</mat-icon>
   </button>
 </mat-toolbar>
 
 <mat-dialog-content>
 
-  <div class='grid-container'>
-    <div class='grid-item speakerDialogTitle'>
-      <div>
-        <div class='speakerName'>{{ speaker.name }}</div>
-        <div class='speakerTitle'>{{ speaker.title }}</div>
+  <div class='content-wrapper'>
+    <div class='speaker-dialog-title'>
+      <div class="text">
+        <div class='speaker-name'>{{ speaker.name }}</div>
+        <div class='speaker-title'>{{ speaker.title }}</div>
+      </div>
+      <div class='photo-container'>
+        <img [src]='speaker.photo'
+          alt='Speaker profile photo'>
       </div>
     </div>
-    <div class='grid-item'>
-      <img [src]='speaker.photo'
-        alt='Speaker profile photo'>
-    </div>
-    <div class='grid-item speaker-bio'>
+    <div class='speaker-bio'>
       {{ speaker.bio }}
     </div>
   </div>
