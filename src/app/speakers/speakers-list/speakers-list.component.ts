@@ -28,7 +28,7 @@ export class SpeakersListComponent implements OnInit {
     ];
   }
 
-  ngOnInit() { }
+  ngOnInit() {}
 
   showBio(speaker: Speaker) {
     this.dialog.open(SpeakersBioComponent, { data: speaker });

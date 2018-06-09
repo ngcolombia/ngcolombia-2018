@@ -22,5 +22,5 @@ export const MenuLinks = [
   {
     text: 'Community',
     route: '/community',
-  }
+  },
 ];

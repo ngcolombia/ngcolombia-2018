@@ -1,9 +1,9 @@
 export interface ImageInfo {
-  path: string,
+  path: string;
   position: {
-    x: string,
-    y: string
-  },
-  layer: string,
-  device: string
+    x: string;
+    y: string;
+  };
+  layer: string;
+  device: string;
 }

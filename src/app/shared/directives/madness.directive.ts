@@ -1,4 +1,12 @@
-import { Directive, AfterViewInit, ElementRef, HostListener, Input, OnChanges, SimpleChanges } from '@angular/core';
+import {
+  Directive,
+  AfterViewInit,
+  ElementRef,
+  HostListener,
+  Input,
+  OnChanges,
+  SimpleChanges,
+} from '@angular/core';
 
 @Directive({
   selector: '[appMadness]',
@@ -21,11 +29,24 @@ export class MadnessDirective implements AfterViewInit, OnChanges {
   constructor(private element: ElementRef) {}
 
   ngAfterViewInit() {
-    this.items.push(Array.apply(null, this.element.nativeElement.querySelectorAll('span')));
-    this.items.push(Array.apply(null, this.element.nativeElement.querySelectorAll('div')));
-    this.items.push(Array.apply(null, this.element.nativeElement.querySelectorAll('p')));
-    this.items.push(Array.apply(null, this.element.nativeElement.querySelectorAll('button')));
-    this.items.push(Array.apply(null, this.element.nativeElement.querySelectorAll('img:not(.mobile)')));
+    this.items.push(
+      Array.apply(null, this.element.nativeElement.querySelectorAll('span')),
+    );
+    this.items.push(
+      Array.apply(null, this.element.nativeElement.querySelectorAll('div')),
+    );
+    this.items.push(
+      Array.apply(null, this.element.nativeElement.querySelectorAll('p')),
+    );
+    this.items.push(
+      Array.apply(null, this.element.nativeElement.querySelectorAll('button')),
+    );
+    this.items.push(
+      Array.apply(
+        null,
+        this.element.nativeElement.querySelectorAll('img:not(.mobile)'),
+      ),
+    );
     this.items = [].concat.apply([], this.items);
 
     this.getViewPortBoundaries();
@@ -33,9 +54,15 @@ export class MadnessDirective implements AfterViewInit, OnChanges {
   }
 
   ngOnChanges(changes: SimpleChanges) {
-    if (changes.madnessEnabled.previousValue === false && changes.madnessEnabled.currentValue === true) {
+    if (
+      changes.madnessEnabled.previousValue === false &&
+      changes.madnessEnabled.currentValue === true
+    ) {
       this.enabledFlag = true;
-    } else if (changes.madnessEnabled.previousValue === true && changes.madnessEnabled.currentValue === false) {
+    } else if (
+      changes.madnessEnabled.previousValue === true &&
+      changes.madnessEnabled.currentValue === false
+    ) {
       this.items.forEach(item => {
         item.style.display = '';
         item.style.transform = 'translate(0px,0px) rotate(0deg)';
@@ -60,7 +87,10 @@ export class MadnessDirective implements AfterViewInit, OnChanges {
   }
 
   parallaxBoxInPath(elmnt): boolean {
-    while ((elmnt = elmnt.parentElement) && !elmnt.classList.contains('parallax-box')) {
+    while (
+      (elmnt = elmnt.parentElement) &&
+      !elmnt.classList.contains('parallax-box')
+    ) {
       return true;
     }
     return false;
@@ -72,7 +102,7 @@ export class MadnessDirective implements AfterViewInit, OnChanges {
   }
 
   animateElement(event) {
-    if (this.bounceCounter === 0) {
+    if (this.bounceCounter) {
       if (this.enabledFlag) {
         this.setInitialStyles();
         this.enabledFlag = false;
@@ -85,13 +115,18 @@ export class MadnessDirective implements AfterViewInit, OnChanges {
       this.rotation += 5;
 
       const transaltionsArray = this.elementsOffset.map(offsetPair => {
-        const xTranslation = Math.round(offsetX * offsetPair.left / this.delta);
-        const yTranslation = Math.round(offsetY * offsetPair.left / this.delta);
+        const xTranslation = Math.round(
+          (offsetX * offsetPair.left) / this.delta,
+        );
+        const yTranslation = Math.round(
+          (offsetY * offsetPair.left) / this.delta,
+        );
         return [xTranslation, yTranslation];
       });
 
       const transformsArray = transaltionsArray.map(item => {
-        const tranformText = `translate(${item[0] + 50}px,${item[1] + 5}px) rotate(${this.rotation}deg)`;
+        const tranformText = `translate(${item[0] + 50}px,${item[1] +
+          5}px) rotate(${this.rotation}deg)`;
         return tranformText;
       });
 
@@ -110,7 +145,11 @@ export class MadnessDirective implements AfterViewInit, OnChanges {
     if (event.path) {
       path = event.path;
     }
-    if (path && event.path.indexOf(this.boxParent) !== -1 && this.madnessEnabled) {
+    if (
+      path &&
+      event.path.indexOf(this.boxParent) !== -1 &&
+      this.madnessEnabled
+    ) {
       this.animateElement(event);
     } else if (this.parallaxBoxInPath(event.target) && this.madnessEnabled) {
       this.animateElement(event);

@@ -8,17 +8,8 @@ import { SpeakersRoutingModule } from './speakers-routing.module';
 import { SharedModule } from '../shared/shared.module';
 
 @NgModule({
-  imports: [
-    CommonModule,
-    FontAwesomeModule,
-    SharedModule,
-    SpeakersRoutingModule,
-  ],
-  declarations: [
-    SpeakerPhotoUrlPipe,
-    SpeakersBioComponent,
-    SpeakersListComponent,
-  ],
+  imports: [CommonModule, FontAwesomeModule, SharedModule, SpeakersRoutingModule],
+  declarations: [SpeakerPhotoUrlPipe, SpeakersBioComponent, SpeakersListComponent],
   entryComponents: [SpeakersBioComponent],
 })
 export class SpeakersModule {}

@@ -1,56 +1,56 @@
 <mat-sidenav-container class="sidenav-container">
-    <mat-sidenav #drawer
-                 class="sidenav"
-                 fixedInViewport="true"
-                 opened="false"
-                 position="end"
-                 tabindex="0">
-        <button type="button"
-                class="close-menu-button"
-                aria-label="Toggle sidenav"
-                mat-icon-button
-                (click)="drawer.toggle()">
+  <mat-sidenav #drawer
+               class="sidenav"
+               fixedInViewport="true"
+               opened="false"
+               position="end"
+               tabindex="0">
+    <button type="button"
+            class="close-menu-button"
+            aria-label="Toggle sidenav"
+            mat-icon-button
+            (click)="drawer.toggle()">
                 <mat-icon aria-label="Side nav toggle icon">close</mat-icon>
               </button>
-        <mat-nav-list class="menu-link-list">
-            <ng-container *ngFor="let link of showedMenuLinks">
-                <a mat-list-item
-                    (click)="drawer.toggle()"
-                    class="menu-link"
-                    routerLinkActive="active-link"
-                    [routerLinkActiveOptions]="{exact:true}"
-                    [routerLink]="link.route">{{link.text}}</a>
-            </ng-container>
-        </mat-nav-list>
-        <mat-nav-list class="other-info-list">
-            <a mat-list-item
-            (click)="drawer.toggle()"
-            class="menu-link"
-            [routerLink]="['/faq']">FAQ</a>
-            <a mat-list-item
-            (click)="drawer.toggle()"
-            class="menu-link"
-            [routerLink]="['/diversity']">Diversity</a>
-            <a mat-list-item
-            (click)="drawer.toggle()"
-            class="menu-link"
-            [routerLink]="['/code-of-coduct']">Code of conduct</a>
-        </mat-nav-list>
-    </mat-sidenav>
-    <mat-sidenav-content>
-        <mat-toolbar color="primary"
-                     class="toolbar"
-                     [@scrollAnimation]="toolbarState">
-            <span class="title">NG-COLOMBIA</span>
-            <span class="fill-space"></span>
-            <button type="button"
-                    class="menu-button"
-                    aria-label="Toggle sidenav"
-                    mat-icon-button
-                    (click)="drawer.toggle()">
+    <mat-nav-list class="menu-link-list">
+      <ng-container *ngFor="let link of showedMenuLinks">
+        <a mat-list-item
+           (click)="drawer.toggle()"
+           class="menu-link"
+           routerLinkActive="active-link"
+           [routerLinkActiveOptions]="{exact:true}"
+           [routerLink]="link.route">{{link.text}}</a>
+      </ng-container>
+    </mat-nav-list>
+    <mat-nav-list class="other-info-list">
+      <a mat-list-item
+         (click)="drawer.toggle()"
+         class="menu-link"
+         [routerLink]="['/faq']">FAQ</a>
+      <a mat-list-item
+         (click)="drawer.toggle()"
+         class="menu-link"
+         [routerLink]="['/diversity']">Diversity</a>
+      <a mat-list-item
+         (click)="drawer.toggle()"
+         class="menu-link"
+         [routerLink]="['/code-of-coduct']">Code of conduct</a>
+    </mat-nav-list>
+  </mat-sidenav>
+  <mat-sidenav-content>
+    <mat-toolbar color="primary"
+                 class="toolbar"
+                 [@scrollAnimation]="toolbarState">
+      <span class="title">NG-COLOMBIA</span>
+      <span class="fill-space"></span>
+      <button type="button"
+              class="menu-button"
+              aria-label="Toggle sidenav"
+              mat-icon-button
+              (click)="drawer.toggle()">
         <mat-icon class="md-36" aria-label="Side nav toggle icon">menu</mat-icon>
       </button>
-        </mat-toolbar>
-        <ng-content></ng-content>
-    </mat-sidenav-content>
+    </mat-toolbar>
+    <ng-content></ng-content>
+  </mat-sidenav-content>
 </mat-sidenav-container>

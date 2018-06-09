@@ -13,11 +13,12 @@
 
 <div class='grid-container'>
   <div class='grid-item'
-    *ngFor="let speaker of speakers"
-    [style.background-image]='speaker.photo | speakerPhotoUrl'
-    (click)='showBio(speaker)'>
+       *ngFor="let speaker of speakers"
+       [style.background-image]='speaker.photo | speakerPhotoUrl'
+       (click)='showBio(speaker)'>
 
-    <mat-icon class="more-info" aria-label="icon">add_circle_outline</mat-icon>
+    <mat-icon class="more-info"
+              aria-label="icon">add_circle_outline</mat-icon>
 
     <div class='speakerData'>
       <h3>{{ speaker.name }}</h3>

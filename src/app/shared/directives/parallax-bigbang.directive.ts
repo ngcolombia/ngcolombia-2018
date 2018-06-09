@@ -1,4 +1,11 @@
-import { Directive, HostListener, OnInit, ElementRef, AfterViewInit, Input } from '@angular/core';
+import {
+  Directive,
+  HostListener,
+  OnInit,
+  ElementRef,
+  AfterViewInit,
+  Input,
+} from '@angular/core';
 
 @Directive({
   selector: '[appPbb]',
@@ -12,11 +19,8 @@ export class ParallaxBigBangDirective implements OnInit, AfterViewInit {
   // delta = 9; //con massDelta
   delta = 0.4;
   bounceCounter = 0;
-
   timer: any;
-
   allowWindow: boolean;
-
   @Input() pbbEnabled: boolean;
 
   constructor(private element: ElementRef) {}
@@ -61,9 +65,15 @@ export class ParallaxBigBangDirective implements OnInit, AfterViewInit {
       this.rotation += 3;
       // const xTranslation = Math.round(offsetX * this.element.nativeElement.offsetLeft / (this.delta * massDelta));
       // const yTranslation = Math.round(offsetY * this.element.nativeElement.offsetTop / (this.delta * massDelta));
-      const xTranslation = Math.round(offsetX * this.element.nativeElement.offsetLeft / this.delta);
-      const yTranslation = Math.round(offsetY * this.element.nativeElement.offsetTop / this.delta);
-      const transform = `translate(${xTranslation}px,${yTranslation}px) rotate(${this.rotation}deg)`;
+      const xTranslation = Math.round(
+        (offsetX * this.element.nativeElement.offsetLeft) / this.delta,
+      );
+      const yTranslation = Math.round(
+        (offsetY * this.element.nativeElement.offsetTop) / this.delta,
+      );
+      const transform = `translate(${xTranslation}px,${yTranslation}px) rotate(${
+        this.rotation
+      }deg)`;
       this.element.nativeElement.style.transform = transform;
       this.bounceCounter = 1;
     } else {

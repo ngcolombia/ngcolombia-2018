@@ -9,7 +9,9 @@ export class Speaker {
     public website: string = null,
   ) {
     if (this.photo === null) {
-      this.photo = `https://picsum.photos/600/400?random&image=${Math.round(Math.random() * 100)}`;
+      this.photo = `https://picsum.photos/600/400?random&image=${Math.round(
+        Math.random() * 100,
+      )}`;
     }
   }
 }
