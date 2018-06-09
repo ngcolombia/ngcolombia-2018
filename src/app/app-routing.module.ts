@@ -7,6 +7,10 @@ const routes: Routes = [
     loadChildren: 'app/speakers/speakers.module#SpeakersModule',
   },
   {
+    path: 'about',
+    loadChildren: 'app/about/about.module#AboutModule',
+  },
+  {
     path: '**',
     redirectTo: '/',
   },
