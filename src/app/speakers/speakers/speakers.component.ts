@@ -1,16 +1,14 @@
 import { ChangeDetectionStrategy, Component, OnInit } from '@angular/core';
 import { MatDialog } from '@angular/material';
-
-import { Speaker } from '../core/speaker.model';
+import { Speaker } from '../speaker.model';
 import { SpeakersBioComponent } from '../speakers-bio/speakers-bio.component';
 
 @Component({
-  selector: 'app-speakers-list',
-  templateUrl: './speakers-list.component.html',
-  styleUrls: ['./speakers-list.component.scss'],
-  changeDetection: ChangeDetectionStrategy.OnPush,
+  selector: 'app-speakers',
+  templateUrl: './speakers.component.html',
+  styleUrls: ['./speakers.component.scss'],
 })
-export class SpeakersListComponent implements OnInit {
+export class SpeakersComponent implements OnInit {
   public speakers: Speaker[];
 
   constructor(public dialog: MatDialog) {

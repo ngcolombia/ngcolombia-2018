@@ -6,5 +6,7 @@
   "beautify.ignore": ["**/**.js", "**/**.ts"],
   "beautify.language": {
     "css": ["css", "scss"]
-  }
+  },
+  // SORT TYPESCRIPT IMPORTS
+  "typescript.extension.sortImports.sortOnSave": true
 }

@@ -1,9 +1,9 @@
 import { Pipe, PipeTransform } from '@angular/core';
 
 @Pipe({
-  name: 'speakerPhotoUrl',
+  name: 'photoUrl',
 })
-export class SpeakerPhotoUrlPipe implements PipeTransform {
+export class PhotoUrlPipe implements PipeTransform {
   transform(value: any, args?: any): any {
     return `url(${value})`;
   }

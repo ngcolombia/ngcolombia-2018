@@ -14,7 +14,7 @@
 <div class='grid-container'>
   <div class='grid-item'
        *ngFor="let speaker of speakers"
-       [style.background-image]='speaker.photo | speakerPhotoUrl'
+       [style.background-image]='speaker.photo | photoUrl'
        (click)='showBio(speaker)'>
 
     <mat-icon class="more-info"
