@@ -1,6 +1,10 @@
 {
-  // "beautify.language": {
-  //   "css": ["css", "scss"],
-  //   "js": ["js", "ts"]
-  // }
+  // PRETTIER
+  "prettier.singleQuote": true,
+  "prettier.trailingComma": "all",
+  // BEAUTIFY
+  "beautify.ignore": ["**/**.js", "**/**.ts"],
+  "beautify.language": {
+    "css": ["css", "scss"]
+  }
 }
