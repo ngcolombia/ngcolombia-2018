@@ -1,4 +1,5 @@
 import { CommonModule } from '@angular/common';
+import { FullscreenComponent } from './fullscreen/fullscreen.component';
 import { MadnessDirective } from './directives/madness.directive';
 import { MaterialModule } from '../material/material.module';
 import { NgModule } from '@angular/core';
@@ -14,6 +15,7 @@ import { RouterModule } from '@angular/router';
     ParallaxBigBangDirective,
     ParallaxScrollDirective,
     ParallaxHoverDirective,
+    FullscreenComponent,
   ],
   exports: [
     MadnessDirective,
@@ -21,6 +23,7 @@ import { RouterModule } from '@angular/router';
     ParallaxBigBangDirective,
     ParallaxHoverDirective,
     ParallaxScrollDirective,
+    FullscreenComponent,
   ],
 })
 export class SharedModule {}

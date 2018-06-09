@@ -5,7 +5,7 @@
 
 body {
   font-size: 14px;
-  font-family: 'Poppins', sa ns-serif;
+  font-family: 'Poppins', sans-serif;
   text-rendering: optimizeLegibility;
   -webkit-font-smoothing: antialiased !important;
   border: 0;
@@ -17,4 +17,12 @@ body {
 *:not(input) {
   user-select: none;
   box-sizing: border-box;
+}
+
+.inline {
+  display: inline-block;
+}
+
+.roboto {
+  font-family: 'Roboto, sans-serif';
 }
