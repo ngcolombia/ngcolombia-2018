@@ -1,4 +1,11 @@
-import { Directive, HostListener, OnInit, ElementRef, AfterViewInit, Input } from '@angular/core';
+import {
+  Directive,
+  HostListener,
+  OnInit,
+  ElementRef,
+  AfterViewInit,
+  Input,
+} from '@angular/core';
 
 @Directive({
   selector: '[appParallaxAnimated]',
@@ -50,11 +57,17 @@ export class ParallaxHoverDirective implements OnInit, AfterViewInit {
       const offsetY = 0.5 - event.pageY / this.viewPortHeight;
       const massDelta = this.element.nativeElement.offsetHeight * 0.05;
       this.rotation += 0.6;
-      const xTranslation = Math.round(offsetX * this.element.nativeElement.offsetLeft * massDelta * 0.5 / this.delta);
-      const yTranslation = Math.round(offsetY * this.element.nativeElement.offsetLeft * massDelta * 0.5 / this.delta);
+      const xTranslation = Math.round(
+        (offsetX * this.element.nativeElement.offsetLeft * massDelta * 0.5) / this.delta,
+      );
+      const yTranslation = Math.round(
+        (offsetY * this.element.nativeElement.offsetLeft * massDelta * 0.5) / this.delta,
+      );
       // const xTranslation = Math.round(offsetX * this.element.nativeElement.offsetLeft / this.delta);
       // const yTranslation = Math.round(offsetY * this.element.nativeElement.offsetLeft / this.delta);
-      const transform = `translate(${xTranslation}px,${yTranslation}px) rotate(${this.rotation}deg)`;
+      const transform = `translate(${xTranslation}px,${yTranslation}px) rotate(${
+        this.rotation
+      }deg)`;
       this.element.nativeElement.style.transform = transform;
       this.bounceCounter = 1;
     } else {

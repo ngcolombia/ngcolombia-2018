@@ -10,8 +10,10 @@ import { Speaker } from '../core/speaker.model';
   changeDetection: ChangeDetectionStrategy.OnPush,
 })
 export class SpeakersBioComponent {
-  constructor(public dialogRef: MatDialogRef<SpeakersBioComponent>, @Inject(MAT_DIALOG_DATA) public speaker: Speaker) {
-  }
+  constructor(
+    public dialogRef: MatDialogRef<SpeakersBioComponent>,
+    @Inject(MAT_DIALOG_DATA) public speaker: Speaker,
+  ) {}
 
   openUrl(url: string) {
     window.open(url, '_blank');

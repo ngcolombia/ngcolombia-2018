@@ -1,0 +1,11 @@
+{
+  "indent_size": 2,
+  "css": {
+    "newline_between_rules": true,
+    "space_around_combinator": true,
+    "selector_separator_newline": true
+  },
+  "html": {
+    "wrap_attributes": "force-aligned"
+  }
+}

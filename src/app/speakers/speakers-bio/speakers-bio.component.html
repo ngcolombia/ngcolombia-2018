@@ -1,27 +1,30 @@
 <mat-toolbar mat-dialog-title
-  color="primary"
-  tabindex="0">
+             color="primary"
+             tabindex="0">
 
   <div class="social-media-links">
-    <button class="big-icon" mat-icon-button
-      *ngIf='speaker.twitter'
-      (click)='openUrl(speaker.twitter)'>
+    <button class="big-icon"
+            mat-icon-button
+            *ngIf='speaker.twitter'
+            (click)='openUrl(speaker.twitter)'>
       <fa-icon [icon]="['fab', 'twitter']"></fa-icon>
     </button>
-    <button class="big-icon" mat-icon-button
-      *ngIf='speaker.github'
-      (click)='openUrl(speaker.github)'>
+    <button class="big-icon"
+            mat-icon-button
+            *ngIf='speaker.github'
+            (click)='openUrl(speaker.github)'>
       <fa-icon [icon]="['fab', 'github']"></fa-icon>
     </button>
     <button mat-icon-button
-      *ngIf='speaker.website'
-      (click)='openUrl(speaker.website)'>
+            *ngIf='speaker.website'
+            (click)='openUrl(speaker.website)'>
       <mat-icon>open_in_new</mat-icon>
     </button>
   </div>
 
-  <button class="close-btn" mat-icon-button
-    (click)='dialogRef.close()'>
+  <button class="close-btn"
+          mat-icon-button
+          (click)='dialogRef.close()'>
     <mat-icon>highlight_off</mat-icon>
   </button>
 </mat-toolbar>
@@ -36,7 +39,7 @@
       </div>
       <div class='photo-container'>
         <img [src]='speaker.photo'
-          alt='Speaker profile photo'>
+             alt='Speaker profile photo'>
       </div>
     </div>
     <div class='speaker-bio'>
