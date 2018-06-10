@@ -1,7 +1,8 @@
 .section {
   width: 100vw;
+  padding: 0 3rem;
   &.title {
-    text-align: center;
+    text-align: left;
     h2 {
       font-size: 5rem;
       line-height: 5rem;
@@ -15,7 +16,6 @@
     }
   }
   &.paragraph {
-    padding: 0rem 3rem;
     p {
       text-align: justify;
       font-size: 1rem;
@@ -36,6 +36,7 @@
 
 @media (min-width: 750px) {
   .section {
+    padding: 0rem 4rem;
     &.title > h2 {
       font-size: 8rem;
       line-height: 10rem;
@@ -45,7 +46,6 @@
       }
     }
     &.paragraph {
-      padding: 0rem 4rem;
       p {
         font-size: 1.3rem;
       }
@@ -56,8 +56,11 @@
 @media (min-width: 1150px) {
   .section {
     width: 50vw;
-    &.title > h2.smaller {
-      font-size: 6rem;
+    &.title {
+      text-align: center;
+      h2.smaller {
+        font-size: 6rem;
+      }
     }
     &.paragraph {
       padding: 0rem 6rem 0rem 2rem;
