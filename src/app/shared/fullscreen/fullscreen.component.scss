@@ -1,9 +1,15 @@
 :host {
+  flex-direction: column;
+  min-height: 100vh;
   display: flex;
-  flex-direction: row;
   flex-wrap: nowrap;
   justify-content: center;
   align-items: center;
   align-content: stretch;
-  min-height: 100vh;
+}
+
+@media (min-width: 1150px) {
+  :host {
+    flex-direction: row;
+  }
 }

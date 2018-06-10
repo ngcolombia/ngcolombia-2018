@@ -1,11 +1,66 @@
 .section {
-  width: 40vw;
+  width: 100vw;
+  &.title {
+    text-align: center;
+    h2 {
+      font-size: 5rem;
+      line-height: 5rem;
+      color: #211056;
+      margin: 0;
+      letter-spacing: -0.025em;
+      &.smaller {
+        font-size: 3rem;
+        line-height: 3rem;
+      }
+    }
+  }
+  &.paragraph {
+    padding: 0rem 3rem;
+    p {
+      text-align: justify;
+      font-size: 1rem;
+    }
+  }
 }
 
-h2 {
-  font-size: 9rem;
-  color: #211056;
-  margin: 0;
-  text-align: center;
-  letter-spacing: -0.025em;
+@media (min-width: 500px) {
+  .section.title > h2 {
+    font-size: 7rem;
+    line-height: 7rem;
+    &.smaller {
+      font-size: 5rem;
+      line-height: 5rem;
+    }
+  }
+}
+
+@media (min-width: 750px) {
+  .section {
+    &.title > h2 {
+      font-size: 8rem;
+      line-height: 10rem;
+      &.smaller {
+        font-size: 7rem;
+        line-height: 7rem;
+      }
+    }
+    &.paragraph {
+      padding: 0rem 4rem;
+      p {
+        font-size: 1.3rem;
+      }
+    }
+  }
+}
+
+@media (min-width: 1150px) {
+  .section {
+    width: 50vw;
+    &.title > h2.smaller {
+      font-size: 6rem;
+    }
+    &.paragraph {
+      padding: 0rem 6rem 0rem 2rem;
+    }
+  }
 }
