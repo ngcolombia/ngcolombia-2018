@@ -10,6 +10,6 @@ export interface Speaker {
   photo: string;
   country: Country;
   twitter: string;
-  github: string;
-  website: string;
+  github?: string;
+  website?: string;
 }

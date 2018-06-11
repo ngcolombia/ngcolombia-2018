@@ -10,14 +10,14 @@ export enum SpeakerName {
   Jorge = 'Jorge Cano',
   Bartosz = 'Bartosz Prietrucha',
   Josue = 'Josue Gutierrez',
-  Vanesa = 'Vanesa Aristizabal',
+  Vanessa = 'Vanessa Aristizabal',
   Katerina = 'Katerina Skroumpelou',
   Sebastian = 'Sebastian Gomez',
   Tatiana = 'Tatiana Molina',
   Mike = 'Mike Ryan',
   Miguel = 'Miguel Useche',
   Sherry = 'Sherry List',
-  Keneth = 'Keneth Rohde',
+  Kenneth = 'Kenneth Rohde',
   All = 'All Speakers',
 }
 
@@ -33,14 +33,14 @@ export enum ShortSpeakerBio {
   Jorge = 'Google Developer Expert in Angular',
   Bartosz = 'FullStack sofware engineer',
   Josue = 'Google Developer Expert in Angular',
-  Vanesa = 'Web UI Developer',
+  Vanessa = 'Web UI Developer',
   Katerina = 'Front-end Developer at Upstream',
   Sebastian = 'Front-end Architect',
   Tatiana = 'Front-end Developer',
   Mike = 'Angular GDE and NgRx Core member',
   Miguel = 'University Professor and Web Developer',
   Sherry = 'Senior IT developer, ngVikings Organizer',
-  Keneth = 'Web Platform Architect. W3C TAG Member',
+  Kenneth = 'Web Platform Architect. W3C TAG Member',
 }
 
 export enum SpeakerBio {
@@ -55,18 +55,18 @@ export enum SpeakerBio {
   Jorge = 'Google Developer Expert in Angular',
   Bartosz = 'FullStack sofware engineer',
   Josue = 'Google Developer Expert in Angular',
-  Vanesa = 'Web UI Developer',
+  Vanessa = 'Web UI Developer',
   Katerina = 'Front-end Developer at Upstream',
   Sebastian = 'Front-end Architect',
   Tatiana = 'Front-end Developer',
   Mike = 'Angular GDE and NgRx Core member',
   Miguel = 'University Professor and Web Developer',
   Sherry = 'Senior IT developer, ngVikings Organizer',
-  Keneth = 'Web Platform Architect. W3C TAG Member',
+  Kenneth = 'Web Platform Architect. W3C TAG Member',
 }
 
 export enum Country {
-  Argetina = 'Argentina',
+  Argentina = 'Argentina',
   Mexico = 'México',
   Chile = 'Chile',
   Colombia = 'Colombia',
