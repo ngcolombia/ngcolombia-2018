@@ -6,6 +6,9 @@
   justify-content: center;
   align-items: center;
   align-content: stretch;
+  &.start {
+    justify-content: start;
+  }
 }
 
 @media (min-width: 1150px) {

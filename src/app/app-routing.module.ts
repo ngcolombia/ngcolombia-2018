@@ -3,12 +3,16 @@ import { RouterModule, Routes } from '@angular/router';
 
 const routes: Routes = [
   {
-    path: 'speakers',
-    loadChildren: 'app/speakers/speakers.module#SpeakersModule',
-  },
-  {
     path: 'about',
     loadChildren: 'app/about/about.module#AboutModule',
+  },
+  {
+    path: 'schedule',
+    loadChildren: 'app/schedule/schedule.module#ScheduleModule',
+  },
+  {
+    path: 'speakers',
+    loadChildren: 'app/speakers/speakers.module#SpeakersModule',
   },
   {
     path: '**',

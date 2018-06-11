@@ -1,0 +1,27 @@
+@import '~style/variables';
+.sphere {
+  background-image: url("assets/img/schedule/sphere.jpg");
+  color: white;
+  font-weight: 600;
+  font-size: 0.7rem;
+  width: 4rem;
+  height: 4rem;
+  background-size: cover;
+  padding-top: 24px;
+  text-align: center;
+}
+
+.activity {
+  margin-left: 0.5rem;
+  vertical-align: top;
+  padding-top: 11px;
+  color: #211056;
+  .title {
+    border-bottom: 1px solid;
+    font-weight: 800;
+    width: 50vw;
+  }
+  .author {
+    font-size: 0.6rem;
+  }
+}

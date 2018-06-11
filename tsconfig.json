@@ -9,6 +9,10 @@
     "emitDecoratorMetadata": true,
     "experimentalDecorators": true,
     "target": "es5",
+    "paths": {
+      "@shared/*": ["app/shared/*"],
+      "@core/*": ["app/core/*"]
+    },
     "typeRoots": [
       "node_modules/@types"
     ],

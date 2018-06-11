@@ -7,6 +7,7 @@ import { environment } from '../environments/environment';
 import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
 import { HomeModule } from './home/home.module';
 import { NgModule } from '@angular/core';
+import { ScheduleModule } from './schedule/schedule.module';
 import { ServiceWorkerModule } from '@angular/service-worker';
 import { SharedModule } from './shared/shared.module';
 import '../style/fontAwesome.icons';
@@ -25,6 +26,7 @@ import '../style/fontAwesome.icons';
     }),
     FontAwesomeModule,
     HomeModule,
+    ScheduleModule,
   ],
   providers: [],
   bootstrap: [AppComponent],

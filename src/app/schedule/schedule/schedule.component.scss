@@ -1,0 +1,24 @@
+.section {
+  width: 100vw;
+  padding: 0 2rem;
+  &:first-child {
+    margin-top: 4rem;
+  }
+  &.title {
+    text-align: left;
+    h2 {
+      font-size: 3rem;
+      line-height: 3rem;
+      color: #211056;
+      margin: 0;
+      letter-spacing: -0.025em;
+      &.smaller {
+        font-size: 3rem;
+        line-height: 3rem;
+      }
+    }
+  }
+  &.agenda {
+    margin-top: 2rem;
+  }
+}

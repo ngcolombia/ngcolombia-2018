@@ -1,0 +1,8 @@
+<ng-container *ngIf="activity">
+  <div class="sphere inline">{{activity.time}}</div>
+  <div class="activity inline">
+    <div class="title">{{activity.title}}</div>
+    <div class="author"
+         *ngFor="let author of activity.authors">{{author.name}} | {{author.description}}</div>
+  </div>
+</ng-container>
