@@ -1,4 +1,8 @@
 @import '~style/variables';
+.activity-container {
+  margin-bottom: 1rem;
+}
+
 .sphere {
   background-image: url("assets/img/schedule/sphere.jpg");
   color: white;
@@ -7,21 +11,30 @@
   width: 4rem;
   height: 4rem;
   background-size: cover;
-  padding-top: 24px;
+  padding: 1rem;
   text-align: center;
 }
 
-.activity {
-  margin-left: 0.5rem;
-  vertical-align: top;
-  padding-top: 11px;
+.title {
   color: #211056;
-  .title {
-    border-bottom: 1px solid;
-    font-weight: 800;
-    width: 50vw;
-  }
-  .author {
-    font-size: 0.6rem;
-  }
+  width: 90%;
+  border-bottom: 1px solid;
+  font-weight: 600; // font-size: 0.7rem;
+  position: absolute;
+  bottom: 0;
+  left: 7px;
+  font-size: 11px;
+}
+
+.author {
+  position: absolute;
+  font-size: 9px;
+  width: 100%;
+  color: #211056;
+  top: 0;
+  left: 7px;
+}
+
+.mat-grid-tile {
+  // border: 1px solid black;
 }

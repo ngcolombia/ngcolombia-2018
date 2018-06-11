@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { EventService } from '@core/event/event.service';
 
 @Component({
   selector: 'app-schedule',
@@ -8,8 +9,8 @@ import { Component, OnInit } from '@angular/core';
 export class ScheduleComponent implements OnInit {
   friday;
 
-  constructor() {
-    // this.friday = speakerInit();
+  constructor(private eventService: EventService) {
+    this.friday = this.eventService.fridayAgenda;
   }
 
   ngOnInit() {}

@@ -1,5 +1,5 @@
-import { LayoutModule } from '@angular/cdk/layout';
 import { CommonModule } from '@angular/common';
+import { LayoutModule } from '@angular/cdk/layout';
 import { NgModule } from '@angular/core';
 import {
   MatButtonModule,
@@ -12,6 +12,7 @@ import {
   MatSliderModule,
   MatSnackBarModule,
   MatToolbarModule,
+  MatGridListModule,
 } from '@angular/material';
 
 @NgModule({
@@ -31,6 +32,7 @@ import {
     MatSidenavModule,
     MatIconModule,
     MatListModule,
+    MatGridListModule,
   ],
   declarations: [],
   exports: [
@@ -49,6 +51,7 @@ import {
     MatSidenavModule,
     MatIconModule,
     MatListModule,
+    MatGridListModule,
   ],
 })
 export class MaterialModule {}

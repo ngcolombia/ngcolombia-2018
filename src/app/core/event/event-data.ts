@@ -1,6 +1,5 @@
 export enum SpeakerName {
-  Juan = 'Juan Herrera',
-  Carlos = 'Carlos Angulo',
+  CarlosAndJuan= 'Carlos Angulo - Juan Herrera',
   Sani = 'Sani Yusuf',
   Andres = 'Andrés Villanueva',
   Alyssa = 'Alyssa Nicoll',
@@ -18,6 +17,7 @@ export enum SpeakerName {
   Miguel = 'Miguel Useche',
   Sherry = 'Sherry List',
   Kenneth = 'Kenneth Rohde',
+  SherryAndKenneth = 'Sherry List - Kenneth Rohde',
   All = 'All Speakers',
 }
 
