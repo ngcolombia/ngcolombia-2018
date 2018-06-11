@@ -1,6 +1,7 @@
-import { ChangeDetectionStrategy, Component, OnInit } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
+import { EventService } from '@core/event/event.service';
 import { MatDialog } from '@angular/material';
-import { Speaker } from '../speaker.model';
+import { Speaker } from '@core/definitions/speaker.model';
 import { SpeakersBioComponent } from '../speakers-bio/speakers-bio.component';
 
 @Component({
@@ -11,19 +12,8 @@ import { SpeakersBioComponent } from '../speakers-bio/speakers-bio.component';
 export class SpeakersComponent implements OnInit {
   public speakers: Speaker[];
 
-  constructor(public dialog: MatDialog) {
-    this.speakers = [
-      new Speaker(
-        'Carlos Lopez',
-        'Digital App Developer',
-        'Lorem ipsum dolor sit amet consectetur, adipisicing elit. Aliquid, dicta vel? Esse magni voluptate tempore corporis ab assumenda. Nam omnis a laboriosam expedita vero voluptate, fuga veritatis dolorum placeat? Delectus. Sit, asperiores explicabo? Doloremque maxime facere nulla iure deleniti. Corrupti, maiores aliquam obcaecati harum soluta quo voluptate fugit cum magni nemo est reprehenderit vel unde cupiditate voluptatem nisi suscipit porro?',
-        'https://secure.gravatar.com/avatar/357efbf6f7a1495e5854cb47728fa523?s=64',
-        'https://twitter.com/luchillo17',
-        'https://github.com/luchillo17',
-        'https://www.instagram.com/luchillo24/',
-      ),
-      ...new Array(5).fill(1).map(() => new Speaker()),
-    ];
+  constructor(public dialog: MatDialog, private eventService: EventService) {
+    this.speakers = this.eventService.speakers;
   }
 
   ngOnInit() {}

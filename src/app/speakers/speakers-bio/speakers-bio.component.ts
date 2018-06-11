@@ -1,7 +1,6 @@
 import { ChangeDetectionStrategy, Component, Inject } from '@angular/core';
 import { MAT_DIALOG_DATA, MatDialogRef } from '@angular/material';
-import { Speaker } from '../speaker.model';
-
+import { Speaker } from '@core/definitions/speaker.model';
 
 @Component({
   selector: 'app-speakers-bio',

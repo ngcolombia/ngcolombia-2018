@@ -16,29 +16,44 @@ import {
 
 @Injectable()
 export class EventService {
-  event;
+  private basePath: string = 'assets/img/speakers/black-and-white/';
+  speakers: Speaker[];
+  thursdayAgenda: Activity[];
+  fridayAgenda: Activity[];
 
-  constructor() {}
+  constructor() {
+    this.speakers = this.shuffleArray(this.getSpeakers());
+    this.thursdayAgenda = this.getThursdayAgenda();
+    this.fridayAgenda = this.getFridayAgenda();
+  }
 
-  getSpeakers(): Speaker[] {
+  private shuffleArray(array: any[]): any[] {
+    for (let i = array.length - 1; i > 0; i--) {
+      const j = Math.floor(Math.random() * (i + 1));
+      [array[i], array[j]] = [array[j], array[i]];
+    }
+    return array;
+  }
+
+  private getSpeakers(): Speaker[] {
     return [
       {
         name: SpeakerName.Sani,
         shortBio: ShortSpeakerBio.Sani,
         bio: SpeakerBio.Sani,
         talk: TalkTitle.LetsBuildAForm,
-        photo: 'assets/sani.jpg',
+        photo: this.basePath + 'sani.jpg',
         country: Country.England,
         twitter: 'http://twitter.com/saniyusuf',
         github: 'https://github.com/saniyusuf',
-        website: 'www.saniyusuf.com',
+        website: 'https://www.saniyusuf.com',
       },
       {
         name: SpeakerName.Andres,
         shortBio: ShortSpeakerBio.Andres,
         bio: SpeakerBio.Andres,
         talk: TalkTitle.FirebaseAndNgRx,
-        photo: 'assets/andres.jpg',
+        photo: this.basePath + 'andres.jpg',
         country: Country.Argentina,
         twitter: 'https://twitter.com/villanuevand',
         github: 'https://github.com/villanuevand',
@@ -48,18 +63,18 @@ export class EventService {
         shortBio: ShortSpeakerBio.Alyssa,
         bio: SpeakerBio.Alyssa,
         talk: TalkTitle.ServiceWorkersAndCows,
-        photo: 'assets/alyssa.jpg',
+        photo: this.basePath + 'alyssa.jpg',
         country: Country.UnitedStates,
         twitter: 'https://twitter.com/AlyssaNicoll',
         github: 'https://github.com/alyssamichelle',
-        website: 'alyssa.io',
+        website: 'http://alyssa.io',
       },
       {
         name: SpeakerName.Susie,
         shortBio: ShortSpeakerBio.Susie,
         bio: SpeakerBio.Susie,
         talk: TalkTitle.AccessibleAngularApps,
-        photo: 'assets/susie.jpg',
+        photo: this.basePath + 'susie.jpg',
         country: Country.UnitedStates,
         twitter: 'https://twitter.com/bogusred',
         github: 'https://github.com/bogusred',
@@ -70,7 +85,7 @@ export class EventService {
         shortBio: ShortSpeakerBio.Jeremy,
         bio: SpeakerBio.Jeremy,
         talk: TalkTitle.SafelyBreakingCode,
-        photo: 'assets/jeremy.jpg',
+        photo: this.basePath + 'jeremy.jpg',
         country: Country.UnitedStates,
         twitter: 'https://twitter.com/gnomeontherun',
         github: 'https://github.com/gnomeontherun',
@@ -81,7 +96,7 @@ export class EventService {
         shortBio: ShortSpeakerBio.Laura,
         bio: SpeakerBio.Laura,
         talk: TalkTitle.DontWorryBeHappy,
-        photo: 'assets/laura.jpg',
+        photo: this.basePath + 'laura.jpg',
         country: Country.Colombia,
         twitter: 'https://twitter.com/ltciro',
         github: 'https://github.com/ltciro',
@@ -91,7 +106,7 @@ export class EventService {
         shortBio: ShortSpeakerBio.Jorge,
         bio: SpeakerBio.Jorge,
         talk: TalkTitle.SchematicsInAngular,
-        photo: 'assets/jorge.jpg',
+        photo: this.basePath + 'jorge.jpg',
         country: Country.Argentina,
         twitter: 'https://twitter.com/jorgeucano',
         github: 'https://github.com/jorgeucano',
@@ -101,17 +116,17 @@ export class EventService {
         shortBio: ShortSpeakerBio.Bartosz,
         bio: SpeakerBio.Bartosz,
         talk: TalkTitle.TurnYourSmartphone,
-        photo: 'assets/bartosz.jpg',
+        photo: this.basePath + 'bartosz.jpg',
         country: Country.Poland,
         twitter: 'https://twitter.com/pietrucha',
-        website: 'angular-academy.com',
+        website: 'https://angular-academy.com/',
       },
       {
         name: SpeakerName.Josue,
         shortBio: ShortSpeakerBio.Josue,
         bio: SpeakerBio.Josue,
         talk: TalkTitle.AngularArt,
-        photo: 'assets/josue.jpg',
+        photo: this.basePath + 'josue.jpg',
         country: Country.Mexico,
         twitter: 'https://twitter.com/eusoj',
         github: 'https://github.com/josueggh',
@@ -121,7 +136,7 @@ export class EventService {
         shortBio: ShortSpeakerBio.Vanessa,
         bio: SpeakerBio.Vanessa,
         talk: TalkTitle.HowToImplement,
-        photo: 'assets/vanessa.jpg',
+        photo: this.basePath + 'vanessa.jpg',
         country: Country.Colombia,
         twitter: 'https://twitter.com/vanessamarely',
         github: 'https://github.com/vanessamarely',
@@ -131,7 +146,7 @@ export class EventService {
         shortBio: ShortSpeakerBio.Katerina,
         bio: SpeakerBio.Katerina,
         talk: TalkTitle.RealTimeInteractions,
-        photo: 'assets/katerina.jpg',
+        photo: this.basePath + 'katerina.jpg',
         country: Country.Greece,
         twitter: 'https://twitter.com/psybercity',
         github: 'https://github.com/mandarini',
@@ -141,29 +156,29 @@ export class EventService {
         shortBio: ShortSpeakerBio.Sebastian,
         bio: SpeakerBio.Sebastian,
         talk: TalkTitle.AngularTestbed,
-        photo: 'assets/sebastian.jpg',
+        photo: this.basePath + 'sebastian.jpg',
         country: Country.Colombia,
         twitter: 'https://twitter.com/sebasgojs',
         github: 'https://github.com/seagomezar',
-        website: 'www.sebastian-gomez.com',
+        website: 'https://www.sebastian-gomez.com',
       },
       {
         name: SpeakerName.Tatiana,
         shortBio: ShortSpeakerBio.Tatiana,
         bio: SpeakerBio.Tatiana,
         talk: TalkTitle.ThisIsWhatPWA,
-        photo: 'assets/tatiana.jpg',
+        photo: this.basePath + 'tatiana.jpg',
         country: Country.Chile,
         twitter: 'https://twitter.com/tatymolys',
         github: 'https://github.com/tatymoly',
-        website: 'tatymoly.me',
+        website: 'https://tatymoly.me',
       },
       {
         name: SpeakerName.Mike,
         shortBio: ShortSpeakerBio.Mike,
         bio: SpeakerBio.Mike,
         talk: TalkTitle.YouMightNotNeedNgRx,
-        photo: 'assets/mike.jpg',
+        photo: this.basePath + 'mike.jpg',
         country: Country.UnitedStates,
         twitter: 'https://twitter.com/mikeryandev',
         github: 'https://github.com/mikeryandev',
@@ -173,7 +188,7 @@ export class EventService {
         shortBio: ShortSpeakerBio.Miguel,
         bio: SpeakerBio.Miguel,
         talk: TalkTitle.YourBrowserIs,
-        photo: 'assets/miguel.jpg',
+        photo: this.basePath + 'miguel.jpg',
         country: Country.Venezuela,
         twitter: 'https://twitter.com/skatox',
         github: 'https://github.com/skatox',
@@ -184,7 +199,7 @@ export class EventService {
         shortBio: ShortSpeakerBio.Sherry,
         bio: SpeakerBio.Sherry,
         talk: TalkTitle.AnIntroductionToHardware,
-        photo: 'assets/sherry.jpg',
+        photo: this.basePath + 'sherry.jpg',
         country: Country.Denmark,
         twitter: 'https://twitter.com/sherrrylst',
         github: 'https://github.com/sazimi',
@@ -194,15 +209,16 @@ export class EventService {
         shortBio: ShortSpeakerBio.Kenneth,
         bio: SpeakerBio.Kenneth,
         talk: TalkTitle.AnIntroductionToHardware,
-        photo: 'assets/kenneth.jpg',
+        photo: this.basePath + 'kenneth.jpg',
         country: Country.Denmark,
         twitter: 'https://twitter.com/kennethrohde',
         github: 'https://github.com/kenchris',
+        website: 'https://www.linkedin.com/in/kenneth-rohde-christiansen/',
       },
     ];
   }
 
-  getThursdayAgenda(): Activity[] {
+  private getThursdayAgenda(): Activity[] {
     return [
       {
         title: GeneralActivity.Registration,
@@ -242,7 +258,7 @@ export class EventService {
     ];
   }
 
-  getFridayAgenda(): Activity[] {
+  private getFridayAgenda(): Activity[] {
     return [
       {
         title: GeneralActivity.Registration,
