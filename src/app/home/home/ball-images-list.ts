@@ -29,8 +29,8 @@ export const BALL_IMAGES_LIST = [
   {
     path: 'learn/BOLITA1_mobile.png',
     position: {
-      x: '-64%',
-      y: '5%',
+      x: '-20%',
+      y: '12%',
     },
     layer: 'bottom',
     device: 'mobile',
@@ -38,8 +38,8 @@ export const BALL_IMAGES_LIST = [
   {
     path: 'learn/BOLITA2_mobile.png',
     position: {
-      x: '-16%',
-      y: '16%',
+      x: '6%',
+      y: '21%',
     },
     layer: 'front',
     device: 'mobile',
@@ -47,8 +47,8 @@ export const BALL_IMAGES_LIST = [
   {
     path: 'learn/BOLITA3_mobile.png',
     position: {
-      x: '53%',
-      y: '3%',
+      x: '66%',
+      y: '6%',
     },
     layer: 'front',
     device: 'mobile',
@@ -83,8 +83,8 @@ export const BALL_IMAGES_LIST = [
   {
     path: 'meet/BOLITA1_mobile.png',
     position: {
-      x: '48%',
-      y: '45%',
+      x: '86%',
+      y: '52%',
     },
     layer: 'front',
     device: 'mobile',
@@ -92,8 +92,8 @@ export const BALL_IMAGES_LIST = [
   {
     path: 'meet/BOLITA3_mobile.png',
     position: {
-      x: '-9%',
-      y: '32%',
+      x: '10%',
+      y: '36%',
     },
     layer: 'bottom',
     device: 'mobile',
@@ -101,8 +101,8 @@ export const BALL_IMAGES_LIST = [
   {
     path: 'meet/BOLITA2_mobile.png',
     position: {
-      x: '-56%',
-      y: '30%',
+      x: '-12%',
+      y: '38%',
     },
     layer: 'bottom',
     device: 'mobile',
@@ -146,8 +146,8 @@ export const BALL_IMAGES_LIST = [
   {
     path: 'share/BOLITA1_mobile.png',
     position: {
-      x: '-62%',
-      y: '76%',
+      x: '-27%',
+      y: '87%',
     },
     layer: 'bottom',
     device: 'mobile',
@@ -155,8 +155,8 @@ export const BALL_IMAGES_LIST = [
   {
     path: 'share/BOLITA2_mobile.png',
     position: {
-      x: '29%',
-      y: '62%',
+      x: '71%',
+      y: '71%',
     },
     layer: 'bottom',
     device: 'mobile',
@@ -164,8 +164,8 @@ export const BALL_IMAGES_LIST = [
   {
     path: 'share/BOLITA3_mobile.png',
     position: {
-      x: '37%',
-      y: '68%',
+      x: '63%',
+      y: '78%',
     },
     layer: 'front',
     device: 'mobile',
@@ -173,8 +173,8 @@ export const BALL_IMAGES_LIST = [
   {
     path: 'share/BOLITA4_mobile.png',
     position: {
-      x: '7%',
-      y: '87%',
+      x: '20%',
+      y: '95%',
     },
     layer: 'front',
     device: 'mobile',
