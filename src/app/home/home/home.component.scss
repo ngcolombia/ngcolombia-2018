@@ -40,7 +40,6 @@
     position: absolute;
     display: none;
     transition: transform 1.5s cubic-bezier(0.25, 0.46, 0.45, 0.94);
-    // transform: scale(0.5);
     &.mobile {
       display: block;
 
