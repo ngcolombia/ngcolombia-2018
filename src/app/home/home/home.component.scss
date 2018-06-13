@@ -5,16 +5,16 @@
   .event-date {
     position: absolute;
     left: 16px;
-    top: 40px;
+    top: 55px;
     z-index: 10;
-    font-size: 19px;
+    font-size: 30px;
     font-weight: bold;
     display: flex;
     @media (min-width: 680px) {
       left: calc(16px + 2rem);
     }
     > div {
-      padding: 3px 14px;
+      padding: 2px 20px;
       background-color: #211056;
       margin: 10px 3px;
       color: #fff;

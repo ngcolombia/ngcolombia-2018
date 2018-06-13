@@ -50,16 +50,21 @@
   place-items: stretch;
   place-content: stretch;
   margin-bottom: 20px;
+
   @media (min-width: $desktop-min-size) {
     grid-gap: 15px;
-    grid-template-columns: repeat(3, 1fr);
+    grid-template-columns: repeat(2, 1fr);
     margin: 0 60px 60px;
+  }
+
+  @media (min-width: $middle-desktop-top-size) {
+    grid-template-columns: repeat(3, 1fr);
   }
 }
 
 .grid-item {
   background-repeat: no-repeat;
-  background-size: contain;
+  background-size: cover;
   background-position: center center;
   background-color: rgba(0, 0, 0, 0.6);
   padding-bottom: calc(100% / #{$speaker-img-aspect-ratio});
@@ -117,16 +122,43 @@
   }
 }
 
+.grid-item:hover .speakerData .background {
+  opacity: 0;
+  transition: opacity 1.2s;
+}
+
 .speakerData {
-  color: white;
-  bottom: 10px;
+  color: #fff;
   font-size: 6vw;
-  left: 10px;
   position: absolute;
   z-index: 5;
+  padding: 25px 15px 10px;
+  margin: 0;
+  box-sizing: border-box;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  
+  > h5 {
+    font-size: 0.6em;
+  }
+  
+  .background {
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    height: 100%;
+    background: linear-gradient(to bottom, transparent 0%, rgba(0, 0, 0, 0.1) 15%, rgba(0, 0, 0, 0.3) 53%);
+    z-index: -1;
+    opacity: 1;
+    transition: opacity 0.6s;
+  }
+
   @media (min-width: $desktop-min-size) {
     font-size: 2vw;
   }
+
   > * {
     margin: 0;
   }
