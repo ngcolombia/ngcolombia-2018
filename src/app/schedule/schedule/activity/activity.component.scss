@@ -4,7 +4,7 @@
 }
 
 .sphere {
-  background-image: url("assets/img/schedule/sphere.jpg");
+  background-image: url("assets/img/schedule/new-sphere.png");
   color: white;
   font-weight: 600;
   font-size: 0.7rem;
@@ -22,8 +22,8 @@
   border-bottom: 1px solid;
   font-weight: 600; // font-size: 0.7rem;
   position: absolute;
-  bottom: 0;
   left: 7px;
+  top: 15px;
   font-size: 11px;
 }
 
@@ -32,10 +32,7 @@
   font-size: 9px;
   width: 100%;
   color: #211056;
-  top: 0;
+  font-weight: 500;
   left: 7px;
-}
-
-.mat-grid-tile {
-  // border: 1px solid black;
+  bottom: 12px;
 }

@@ -1,5 +1,5 @@
 export enum SpeakerName {
-  CarlosAndJuan= 'Carlos Angulo - Juan Herrera',
+  CarlosAndJuan = 'Carlos Angulo - Juan Herrera',
   Sani = 'Sani Yusuf',
   Andres = 'Andrés Villanueva',
   Alyssa = 'Alyssa Nicoll',
@@ -137,7 +137,7 @@ export enum TalkTitle {
   TurnYourSmartphone = 'Turn your smartphone into Nintendo Wii-like controller with RxJS and TensorFlow.js',
   AngularArt = 'Angular Art',
   HowToImplement = 'How to implement a Mystical Art in Angular: beyond the code',
-  RealTimeInteractions = 'Angular real-time interactions with WebSockets',
+  RealTimeInteractions = 'Real-time interactions with WebSockets',
   AngularTestbed = 'Angular TestBed and have a good nights',
   ThisIsWhatPWA = 'This is what PWA are made of!',
   YouMightNotNeedNgRx = 'You Might Not Need NgRx',

@@ -1,24 +1,13 @@
-<!-- <div class="activity-container"
-     *ngIf="activity">
-  <div class="sphere inline">{{activity.time}}</div>
-  <div class="activity inline">
-    <div class="title">{{activity.title}}</div>
-    <div class="author">{{activity.speaker}}</div>
-  </div>
-</div> -->
-
 <mat-grid-list cols="5"
-               [rowHeight]="activity.customGrid?.rowHeight || '30px'">
+               [rowHeight]="'30px'">
   <mat-grid-tile [colspan]="1"
-                 [rowspan]="activity.customGrid?.time || 2">
+                 [rowspan]="2">
     <div class="sphere inline">{{activity.time}}</div>
   </mat-grid-tile>
   <mat-grid-tile [colspan]="4"
-                 [rowspan]="activity.customGrid?.title || 1">
-    <div class="title">{{activity.title}}</div>
-  </mat-grid-tile>
-  <mat-grid-tile [colspan]="4"
-                 [rowspan]="activity.customGrid?.speaker || 1">
+                 [rowspan]="2">
+    <div class="title">{{activity.shortTitle ? activity.shortTitle : activity.title}}
+    </div><br>
     <div class="author">{{activity.speaker}}</div>
   </mat-grid-tile>
 </mat-grid-list>

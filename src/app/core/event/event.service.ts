@@ -263,12 +263,6 @@ export class EventService {
   }
 
   private getFridayAgenda(): Activity[] {
-    const customGrid = {
-      rowHeight: '20px',
-      time: 3,
-      title: 2,
-      speaker: 1,
-    };
     return [
       {
         title: GeneralActivity.Registration,
@@ -292,7 +286,7 @@ export class EventService {
         description: ActivityDescription.FirebaseAndNgRx,
         time: '8:55 AM',
         speaker: SpeakerName.Andres,
-        customGrid,
+        shortTitle: 'Firebase + NgRx',
       },
       {
         title: TalkTitle.ServiceWorkersAndCows,
@@ -316,14 +310,14 @@ export class EventService {
         description: ActivityDescription.SafelyBreakingCode,
         time: '10:45 AM',
         speaker: SpeakerName.Jeremy,
-        customGrid,
+        shortTitle: 'Safely Breaking Code',
       },
       {
         title: TalkTitle.DontWorryBeHappy,
         description: ActivityDescription.DontWorryBeHappy,
         time: '11:20 AM',
         speaker: SpeakerName.Laura,
-        customGrid,
+        shortTitle: 'The best of Angular in Node',
       },
       {
         title: TalkTitle.SchematicsInAngular,
@@ -341,7 +335,7 @@ export class EventService {
         description: ActivityDescription.TurnYourSmartphone,
         time: '1:30 PM',
         speaker: SpeakerName.Bartosz,
-        customGrid,
+        shortTitle: 'RxJS and Tensorflow.js',
       },
       {
         title: TalkTitle.AngularArt,
@@ -354,14 +348,13 @@ export class EventService {
         description: ActivityDescription.HowToImplement,
         time: '2:25 PM',
         speaker: SpeakerName.Vanessa,
-        customGrid,
+        shortTitle: 'A mystical art in Angular',
       },
       {
         title: TalkTitle.RealTimeInteractions,
         description: ActivityDescription.RealTimeInteractions,
         time: '3:00 PM',
         speaker: SpeakerName.Katerina,
-        customGrid,
       },
       {
         title: TalkTitle.AngularTestbed,
@@ -391,14 +384,14 @@ export class EventService {
         description: ActivityDescription.YourBrowserIs,
         time: '5:00 PM',
         speaker: SpeakerName.Miguel,
-        customGrid,
+        shortTitle: 'Your browser is your best friend',
       },
       {
         title: TalkTitle.AnIntroductionToHardware,
         description: ActivityDescription.AnIntroductionToHardware,
         time: '5:20 PM',
         speaker: SpeakerName.SherryAndKenneth,
-        customGrid,
+        shortTitle: 'Hardware connectivity in the web',
       },
       {
         title: GeneralActivity.Panel,

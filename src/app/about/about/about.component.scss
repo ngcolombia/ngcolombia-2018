@@ -22,20 +22,35 @@
   }
 }
 
+@media (max-width: 1150px) {
+  .section {
+    &.title {
+      padding: 0rem 2.3rem;
+      text-align: left;
+      width: 95vw;
+    }
+  }
+}
+
 @media (min-width: 500px) {
-  .section.title > h2 {
-    font-size: 7rem;
-    line-height: 7rem;
-    &.smaller {
-      font-size: 5rem;
-      line-height: 5rem;
+  .section {
+    &.title {
+      padding: 0rem 2.5rem;
+      h2 {
+        font-size: 7rem;
+        line-height: 7rem;
+        &.smaller {
+          font-size: 5rem;
+          line-height: 5rem;
+        }
+      }
     }
   }
 }
 
 @media (min-width: 750px) {
   .section {
-    padding: 0rem 4rem;
+    padding: 0rem 4rem; // padding: 0rem 3rem;
     &.title > h2 {
       font-size: 8rem;
       line-height: 10rem;
