@@ -16,9 +16,10 @@ export enum SpeakerName {
   Mike = 'Mike Ryan',
   Miguel = 'Miguel Useche',
   Sherry = 'Sherry List',
-  Kenneth = 'Kenneth Rohde',
-  SherryAndKenneth = 'Sherry List - Kenneth Rohde',
+  Kenneth = 'Kenneth Christiansen',
+  SherryAndKenneth = 'Sherry List - Kenneth Christiansen',
   All = 'All Speakers',
+  Free = 'Free Choice',
 }
 
 export enum ShortSpeakerBio {
@@ -88,7 +89,7 @@ export enum Country {
 
 export enum GeneralActivity {
   Registration = 'Registration',
-  Opening = 'Opening',
+  Opening = 'Opening Keynote',
   Break = 'Break',
   Lunch = 'Lunch',
   Panel = 'Speaker Panel',
@@ -109,7 +110,7 @@ export enum GeneralActivityDescription {
 }
 
 export enum WorkshopTitle {
-  RxJSFromTrainee = 'RxJS: from trainee to BOSS',
+  RxJSFromTrainee = 'RxJS: From trainee to BOSS',
   WritePowerful = 'Write powerful Unit Tests with Angular Test Bed',
   BuildingConversational = 'Building Conversational Experiences',
   AccessibleAngular = 'Accessible Angular Applications',

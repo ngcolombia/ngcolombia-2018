@@ -1,3 +1,4 @@
+@import '~style/_variables.scss';
 @mixin mat-icon-size($size: 24px) {
   font-size: $size;
   height: $size;
@@ -5,11 +6,10 @@
   line-height: $size;
 }
 
-$primary-color: #211056;
 .toolbar {
   position: fixed;
   background-color: transparent;
-  color: $primary-color;
+  color: $dark-violet;
   font-weight: 600;
   z-index: 10;
   .title {
@@ -58,7 +58,7 @@ $primary-color: #211056;
 
 .sidenav {
   width: 100%;
-  box-shadow: 3px 0 6px rgba(0, 0, 0, .24);
+  box-shadow: 3px 0 6px rgba(0, 0, 0, 0.24);
   display: flex;
   flex-direction: column;
   @media (min-width: 680px) {
@@ -74,7 +74,7 @@ $primary-color: #211056;
     .menu-link {
       font-size: 2.5rem;
       font-weight: 700;
-      color: $primary-color;
+      color: $dark-violet;
       margin: 0;
       padding-left: 30px;
       &.active-link {
@@ -97,7 +97,7 @@ $primary-color: #211056;
     .menu-link {
       font-size: 1rem;
       font-weight: 700;
-      color: $primary-color;
+      color: $dark-violet;
       margin: 0;
       padding-left: 30px;
       &.active-link {

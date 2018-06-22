@@ -1,5 +1,12 @@
 <app-fullscreen class="start">
   <div class="section title">
+    <h2 class="inline">Thursday<span class="roboto">.</span></h2>
+  </div>
+  <div class="section agenda">
+    <app-activity *ngFor="let activity of thursday"
+                  [activity]="activity"></app-activity>
+  </div>
+  <div class="section title">
     <h2 class="inline">Friday<span class="roboto">.</span></h2>
   </div>
   <div class="section agenda">

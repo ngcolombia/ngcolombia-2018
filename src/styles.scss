@@ -1,4 +1,3 @@
-@import 'style/palette';
 @import 'style/variables';
 * {
   font-family: Poppins, Roboto, sans-serif;
@@ -26,7 +25,7 @@ body {
 
 .bold {
   font-weight: bold;
-  color: $primary-color;
+  color: $dark-violet;
 }
 
 .roboto {

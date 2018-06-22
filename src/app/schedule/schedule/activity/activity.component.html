@@ -1,4 +1,5 @@
-<mat-grid-list cols="5"
+<mat-grid-list (click)="openDetails(activity)"
+               cols="5"
                [rowHeight]="'30px'">
   <mat-grid-tile [colspan]="1"
                  [rowspan]="2">
@@ -6,8 +7,10 @@
   </mat-grid-tile>
   <mat-grid-tile [colspan]="4"
                  [rowspan]="2">
-    <div class="title">{{activity.shortTitle ? activity.shortTitle : activity.title}}
+    <div class="title"
+         [class.general-activity]="isGeneralActivity(activity)">{{activity.shortTitle ? activity.shortTitle : activity.title}}
     </div><br>
-    <div class="author">{{activity.speaker}}</div>
+    <div class="author"
+         [class.general-activity]="isGeneralActivity(activity)">{{activity.speaker}}</div>
   </mat-grid-tile>
 </mat-grid-list>

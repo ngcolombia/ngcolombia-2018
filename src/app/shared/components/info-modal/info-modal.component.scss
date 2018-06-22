@@ -13,24 +13,11 @@
   }
 }
 
-:host {
-  display: block;
-  max-width: 600px;
-}
-
 // Toolbar styles
 mat-toolbar {
-  padding: 0 30px;
+  padding: 0 8px;
   display: flex;
-  align-items: center;
-  justify-content: space-between;
-  .big-icon {
-    font-size: 22px;
-    height: 40px;
-    width: 40px;
-    line-height: 40px;
-    vertical-align: bottom;
-  }
+  justify-content: flex-end;
   .close-btn mat-icon {
     font-size: 30px;
     height: 40px;
@@ -46,46 +33,37 @@ mat-toolbar {
   @media (min-width: $desktop-min-size) {
     padding: 0 50px;
   }
-  .speaker-dialog-title {
+  .head {
     display: flex;
     justify-content: space-between;
     align-items: center;
     color: $dark-violet;
     .text {
       flex: 1 1 auto;
-      .speaker-name {
-        font-size: 36px;
-        line-height: 42px;
+      .title {
+        font-size: 25px;
+        line-height: 30px;
         font-weight: bold;
         letter-spacing: -0.02em;
+        &.small {
+          font-size: 22px;
+        }
         @media (min-width: $desktop-min-size) {
           font-size: 50px;
           line-height: 56px;
         }
       }
-      .speaker-title {
+      .subtitle {
+        margin-top: 10px;
         font-size: 16px;
-        line-height: 22px;
         @media (min-width: $desktop-min-size) {
           font-size: 20px;
           line-height: 26px;
         }
       }
     }
-    .photo-container {
-      flex-basis: 96px;
-      height: 96px;
-      img {
-        width: 130%;
-        -webkit-clip-path: circle(38% at 50% 50%);
-        clip-path: circle(38% at 50% 50%);
-        object-fit: cover;
-        position: relative;
-        left: -15%;
-      }
-    }
   }
-  .speaker-bio {
+  .info {
     margin-top: 30px;
     text-align: left;
     font-size: 13px;

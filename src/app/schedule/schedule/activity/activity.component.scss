@@ -4,14 +4,14 @@
 }
 
 .sphere {
-  background-image: url("assets/img/schedule/new-sphere.png");
+  background-image: url('assets/img/schedule/new-sphere.png');
   color: white;
   font-weight: 600;
   font-size: 0.7rem;
   width: 4rem;
   height: 4rem;
   background-size: cover;
-  padding: 1rem;
+  padding: 1rem 1rem 1rem 1.1rem;
   text-align: center;
   line-height: 15px;
 }
@@ -25,6 +25,9 @@
   left: 7px;
   top: 15px;
   font-size: 11px;
+  &.general-activity {
+    color: $dark-blue;
+  }
 }
 
 .author {
@@ -35,4 +38,42 @@
   font-weight: 500;
   left: 7px;
   bottom: 12px;
+  &.general-activity {
+    color: $dark-blue;
+  }
 }
+
+@media (max-width: 350px) {
+  .sphere {
+    padding: 1rem 1rem 1rem 1.2rem;
+    width: 3.8rem;
+    height: 3.8rem;
+  }
+  .title {
+    font-size: 10px;
+  }
+}
+
+@media (min-width: 450px) {
+  .title {
+    font-size: 14px;
+    top: 9px;
+    left: 0px;
+  }
+  .author {
+    font-size: 12px;
+    left: 0px;
+  }
+}
+
+// @media (min-width: 600px) {
+//   .title {
+//     font-size: 14px;
+//     top: 9px;
+//     left: 0px;
+//   }
+//   .author {
+//     font-size: 12px;
+//     left: 0px;
+//   }
+// }

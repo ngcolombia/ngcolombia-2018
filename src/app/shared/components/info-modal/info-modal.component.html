@@ -1,0 +1,23 @@
+<mat-toolbar mat-dialog-title
+             color="primary"
+             tabindex="0">
+  <button class="close-btn"
+          mat-icon-button
+          (click)='dialogRef.close()'>
+    <mat-icon>highlight_off</mat-icon>
+  </button>
+</mat-toolbar>
+
+<mat-dialog-content>
+
+  <div class='content-wrapper'>
+    <div class='head'>
+      <div class="text">
+        <div class='title'
+             [class.small]="activity.shortTitle">{{activity.title}}</div>
+        <div class='subtitle'>{{activity.speaker}}</div>
+      </div>
+    </div>
+    <div class='info'>{{activity.description}}</div>
+  </div>
+</mat-dialog-content>

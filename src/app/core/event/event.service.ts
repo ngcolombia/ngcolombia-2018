@@ -236,11 +236,13 @@ export class EventService {
         description: WorkshopDescription.WritePowerful,
         time: '8:00 AM',
         speaker: SpeakerName.Sebastian,
+        shortTitle: 'Write Powerful Unit Tests',
       },
       {
         title: GeneralActivity.Lunch,
         description: GeneralActivityDescription.Lunch,
         time: '12:00 PM',
+        speaker: SpeakerName.Free,
       },
       {
         title: WorkshopTitle.BuildingConversational,
@@ -253,11 +255,6 @@ export class EventService {
         description: WorkshopDescription.AccessibleAngular,
         time: '2:00 PM',
         speaker: SpeakerName.Susie,
-      },
-      {
-        title: GeneralActivity.ConferenceClosure,
-        description: GeneralActivityDescription.WorkshopClosure,
-        time: '12:00 PM',
       },
     ];
   }
@@ -329,6 +326,7 @@ export class EventService {
         title: GeneralActivity.Lunch,
         description: ActivityDescription.Lunch,
         time: '12:00 PM',
+        speaker: SpeakerName.Free,
       },
       {
         title: TalkTitle.TurnYourSmartphone,
