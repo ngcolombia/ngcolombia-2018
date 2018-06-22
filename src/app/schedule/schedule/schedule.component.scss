@@ -4,7 +4,7 @@
     width: 97vw;
     padding: 0 1rem;
     &.title {
-      text-align: left;
+      text-align: start;
       margin-bottom: 2rem;
       h2 {
         font-size: 3rem;
@@ -15,6 +15,9 @@
         &.smaller {
           font-size: 3rem;
           line-height: 3rem;
+        }
+        .line-break {
+          display: none;
         }
       }
     }
@@ -32,16 +35,34 @@
     .section {
       display: inline-block;
       &.agenda {
-        width: 54vw;
+        width: 57vw;
       }
       &.title {
-        width: 42vw;
-        text-align: right;
+        width: 39vw;
+        text-align: center;
         vertical-align: top;
+        h2 {
+          line-height: 4rem;
+          font-size: 5rem;
+          text-align: start;
+          .line-break {
+            display: initial;
+          }
+        }
       }
-      // .title {
-      //   width: 54vw;
-      // }
+    }
+  }
+}
+
+@media (min-width: 1050px) {
+  .container {
+    .section {
+      &.title {
+        h2 {
+          line-height: 6rem;
+          font-size: 6.5rem;
+        }
+      }
     }
   }
 }
