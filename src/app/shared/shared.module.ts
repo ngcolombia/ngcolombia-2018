@@ -1,5 +1,5 @@
 import { CommonModule } from '@angular/common';
-import { FullscreenComponent } from './fullscreen/fullscreen.component';
+import { FullscreenComponent } from './components/fullscreen/fullscreen.component';
 import { InfoModalComponent } from './components/info-modal/info-modal.component';
 import { MadnessDirective } from './directives/madness.directive';
 import { MaterialModule } from '../material/material.module';
