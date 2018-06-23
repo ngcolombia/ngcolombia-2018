@@ -3,10 +3,10 @@
 :host {
   width: 80%;
   display: block;
+  position: relative;
 }
 
 h4{
-  margin-top:100px;
   font-size: 40px;
   margin-bottom: 7px;
   font-weight: bold;
@@ -37,20 +37,36 @@ h4{
 
 .ticket-card {
   .discount {
-    position: absolute;
-    right: 0;
-    top: 0;
-    background: $dark-violet;
-    font-weight: bold;
-    font-size: 14px;
-    width: 50px;
-    height: 50px;
     display: flex;
-    flex-direction: column;
-    align-items: center;
+    flex-direction: row;
+    text-align: center;
+    margin-top: 10px;
     justify-content: center;
-    .discount-value{
+    align-items: center;
+
+    .discount-value {
       font-size: 16px;
+      margin-left: 10px;
+      font-weight: bold;
+    }
+
+    @media (min-width: 840px) {
+      position: absolute;
+      text-align: left;
+      right: 0;
+      top: 0;
+      background: $dark-violet;
+      font-weight: bold;
+      font-size: 14px;
+      width: 50px;
+      height: 50px;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      margin: 0px;
+      .discount-value {
+        margin: 0px;
+      }
     }
   }
 }

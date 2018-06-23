@@ -1,8 +1,10 @@
 <app-banner title="Tickets"></app-banner>
 <main>
-<mat-grid-list cols="3" rowHeight="300px" gutterSize="20px">
-  <mat-grid-tile *ngFor="let ticket of tickets">
-    <app-ticket-card [ticket]="ticket"></app-ticket-card>
-  </mat-grid-tile>
-</mat-grid-list>
+  <div class="ticket-options">
+      <app-ticket-card
+        class="ticket-tile"
+        *ngFor="let ticket of tickets"
+        [ticket]="ticket">
+      </app-ticket-card>
+  </div>
 </main>
