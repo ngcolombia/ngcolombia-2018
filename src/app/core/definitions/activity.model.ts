@@ -11,8 +11,5 @@ export interface Activity {
   title: TalkTitle | GeneralActivity | WorkshopTitle;
   description?: ActivityDescription | GeneralActivityDescription | WorkshopDescription;
   time: string;
-  shortTitle?: string;
-  fontSize?: string;
-  adjustSphere?: boolean;
   speaker?: SpeakerName;
 }
