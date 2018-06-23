@@ -28,9 +28,9 @@ import { BannerComponent } from './banner/banner.component';
     ParallaxHoverDirective,
     ParallaxScrollDirective,
     FullscreenComponent,
-	InfoModalComponent,
-	BannerComponent,
+    InfoModalComponent,
+    BannerComponent,
   ],
   entryComponents: [InfoModalComponent],
 })
-export class SharedModule {}
+export class SharedModule { }
