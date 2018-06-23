@@ -2,10 +2,7 @@
 #firstScreen {
   display: flex;
   flex-direction: column;
-  min-height: 250px;
-  @media (min-width: 680px) {
-    height: calc(100vh - #{$page-padding});
-  }
+  height: 100vh;
 }
 
 #title,
@@ -32,8 +29,4 @@
 #scrollDown {
   height: 85px;
   padding: 20px;
-  display: none;
-  @media (min-width: 680px) {
-    display: flex;
-  }
 }

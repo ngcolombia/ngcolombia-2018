@@ -33,7 +33,11 @@ export class ActivityComponent implements OnInit {
 
   openDetails(activity: Activity) {
     if (!this.isGeneralActivity(activity)) {
-      this.dialog.open(InfoModalComponent, { data: activity });
+      this.dialog.open(InfoModalComponent, {
+        width: '80vw',
+        maxWidth: '800px',
+        data: activity,
+      });
     }
   }
 }
