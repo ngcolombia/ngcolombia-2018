@@ -7,7 +7,7 @@ export enum SpeakerName {
   Jeremy = 'Jeremy Wilken',
   Laura = 'Laura Ciro',
   Jorge = 'Jorge Cano',
-  Bartosz = 'Bartosz Prietrucha',
+  Bartosz = 'Bartosz Pietrucha',
   Josue = 'Josue Gutierrez',
   Vanessa = 'Vanessa Aristizabal',
   Katerina = 'Katerina Skroumpelou',
