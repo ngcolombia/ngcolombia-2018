@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component } from '@angular/core';
 import { ITicketCategory } from '../definitions/iticket.model';
 import { Tickets } from './ticket-data.cons';
 
@@ -7,14 +7,12 @@ import { Tickets } from './ticket-data.cons';
   templateUrl: './tickets.component.html',
   styleUrls: ['./tickets.component.scss'],
 })
-export class TicketsComponent implements OnInit {
+export class TicketsComponent {
 
   tickets: ITicketCategory[];
+  
   constructor() {
     this.tickets = Tickets;
-  }
-
-  ngOnInit() {
   }
 
 }

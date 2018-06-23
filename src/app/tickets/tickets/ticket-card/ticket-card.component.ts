@@ -1,4 +1,4 @@
-import { Component, OnInit, Input, ChangeDetectionStrategy } from '@angular/core';
+import { Component, Input, ChangeDetectionStrategy } from '@angular/core';
 import { ITicketCategory } from '../../definitions/iticket.model';
 
 @Component({
@@ -7,12 +7,8 @@ import { ITicketCategory } from '../../definitions/iticket.model';
   styleUrls: ['./ticket-card.component.scss'],
   changeDetection: ChangeDetectionStrategy.OnPush,
 })
-export class TicketCardComponent implements OnInit {
+export class TicketCardComponent {
 
   @Input() ticket: ITicketCategory;
-  constructor() { }
-
-  ngOnInit() {
-  }
-
+  
 }
