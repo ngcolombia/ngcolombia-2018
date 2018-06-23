@@ -1,21 +1,22 @@
 <div [class.clickable]="activity.description">
   <mat-grid-list (click)="openDetails(activity)"
                  cols="5"
-                 [rowHeight]="'35px'">
+                 [rowHeight]="gridHeight">
     <mat-grid-tile [colspan]="1"
                    [rowspan]="2">
-      <div class="sphere inline"
-           [class.general-activity]="isGeneralActivity(activity)"
-           [class.adjust]="activity.adjustSphere">{{activity.time}}</div>
+      <figure class="sphere"
+              [class.general-activity]="isGeneralActivity(activity)">{{activity.time}}</figure>
     </mat-grid-tile>
     <mat-grid-tile [colspan]="4"
                    [rowspan]="2">
       <div class="title"
            [class.general-activity]="isGeneralActivity(activity)"
-           [style.fontSize]="isSmallScreen ? activity.fontSize : null">{{activity.shortTitle ? activity.shortTitle : activity.title}}
+           [style.fontSize]="isGeneralActivity(activity) ? null : titleFontSize">{{activity.title}}
       </div><br>
+
       <div class="author"
-           [class.general-activity]="isGeneralActivity(activity)">{{activity.speaker}}</div>
+           [class.general-activity]="isGeneralActivity(activity)"
+           [style.fontSize]="isGeneralActivity(activity) ? null : speakerFontSize">{{activity.speaker}}</div>
     </mat-grid-tile>
   </mat-grid-list>
 </div>

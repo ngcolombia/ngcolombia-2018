@@ -11,13 +11,18 @@ import { MatDialog } from '@angular/material';
 })
 export class ActivityComponent implements OnInit {
   @Input() activity: Activity;
-  isSmallScreen;
+  titleFontSize = '12px';
+  speakerFontSize = '10px';
+  gridHeight = '35px';
   constructor(private dialog: MatDialog, breakpointObserver: BreakpointObserver) {
-    breakpointObserver
-      .observe([Breakpoints.HandsetLandscape, Breakpoints.HandsetPortrait])
-      .subscribe((result) => {
-        this.isSmallScreen = result.matches;
-      });
+    breakpointObserver.observe(['(max-width: 350px)']).subscribe((result) => {
+      this.titleFontSize = '12px';
+      this.speakerFontSize = '10px';
+    });
+    breakpointObserver.observe(['(max-width: 370px)']).subscribe((result) => {
+      this.titleFontSize = '14px';
+      this.speakerFontSize = '11px';
+    });
   }
 
   ngOnInit() {}
