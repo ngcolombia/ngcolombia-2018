@@ -4,8 +4,13 @@
     <div class="ticket-info" *ngFor="let price of ticket.tickets">
       <div class="price">{{price.value | currency:'COP':'symbol-narrow':'2.2-2'}}</div>
       <div class="ticket-name">{{price.name}}</div>
-      <div class="add-to-card">
-        <button class="mat-squared" mat-raised-button color="primary">BUY NOW</button>
+      <div class="add-to-cart">
+        <button mat-button class="add-to-cart-small">
+          <mat-icon class="material-icons">
+              control_point
+          </mat-icon>
+        </button>
+        <button class="mat-squared mat-light-button add-to-cart-big" mat-raised-button color="primary">BUY NOW</button>
       </div>
       <div class="discount" *ngIf="ticket.discountPercent">
         <div class="discount-label">SAVE</div>

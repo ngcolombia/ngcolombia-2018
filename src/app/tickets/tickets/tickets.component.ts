@@ -10,7 +10,7 @@ import { Tickets } from './ticket-data.cons';
 export class TicketsComponent {
 
   tickets: ITicketCategory[];
-  
+
   constructor() {
     this.tickets = Tickets;
   }

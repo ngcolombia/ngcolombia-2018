@@ -34,12 +34,21 @@
 
 .ticket-tile {
   background: $dark-violet;
+  background: rgba(210,156,252,1);
+  margin-bottom: $page-padding;
+  background: -moz-linear-gradient(left, rgba(26,74,219,1) 0%, rgba(180,143,252,1) 100%);
+  background: -webkit-gradient(left top, right top, color-stop(0%, rgba(26,74,219,1)), color-stop(100%, rgba(180,143,252,1)));
+  background: -webkit-linear-gradient(left, rgba(26,74,219,1) 0%, rgba(180,143,252,1) 100%);
+  background: -o-linear-gradient(left, rgba(26,74,219,1) 0%, rgba(180,143,252,1) 100%);
+  background: -ms-linear-gradient(left, rgba(26,74,219,1) 0%, rgba(180,143,252,1) 100%);
+  background: linear-gradient(to right, rgba(26,74,219,1) 0%, rgba(180,143,252,1) 100%);
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#1a4adb', endColorstr='#b48ffc', GradientType=1 );
   color: white;
-  text-align: center;
+  text-align: left;
 
   @media (min-width: 840px) {
     text-align: left;
-
+    margin-bottom: $page-padding;
     background: -moz-radial-gradient(center, ellipse cover, rgba(210,156,252,1) 0%, rgba(192,136,235,1) 15%, rgba(92,63,201,1) 46%, rgba(26,74,219,1) 100%);
     background: -webkit-gradient(radial, center center, 0px, center center, 100%, color-stop(0%, rgba(210,156,252,1)), color-stop(15%, rgba(192,136,235,1)), color-stop(46%, rgba(92,63,201,1)), color-stop(100%, rgba(26,74,219,1)));
     background: -webkit-radial-gradient(center, ellipse cover, rgba(210,156,252,1) 0%, rgba(192,136,235,1) 15%, rgba(92,63,201,1) 46%, rgba(26,74,219,1) 100%);
