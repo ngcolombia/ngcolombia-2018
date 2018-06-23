@@ -1,0 +1,39 @@
+@import '~style/_variables.scss';
+#firstScreen {
+  display: flex;
+  flex-direction: column;
+  min-height: 250px;
+  @media (min-width: 680px) {
+    height: calc(100vh - #{$page-padding});
+  }
+}
+
+#title,
+#scrollDown {
+  color: $dark-violet;
+  text-align: center;
+  font-weight: bold;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  justify-content: center;
+}
+
+#title {
+  flex: 1; // Font-size fallback just in case
+  font-size: 4rem;
+  font-size: 14vw;
+  @media (min-width: 680px) {
+    font-size: 6rem;
+    font-size: 10vw;
+  }
+}
+
+#scrollDown {
+  height: 85px;
+  padding: 20px;
+  display: none;
+  @media (min-width: 680px) {
+    display: flex;
+  }
+}

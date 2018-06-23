@@ -6,7 +6,7 @@ $primary: mat-palette($md-ngcolombiablue);
 $accent: mat-palette($md-ngcolombia);
 $warn: mat-palette($mat-red, 600, 100, 800);
 $dark-violet: mat-color($accent, 900);
-$temporaryprimary: mat-palette($md-ngcolombiabluetest);
+$temporaryprimary: mat-palette($md-ngcolombiablue);
 $ngcolombia-app-theme: mat-light-theme($temporaryprimary, $accent, $warn);
 
 @include angular-material-theme($ngcolombia-app-theme);
@@ -95,6 +95,10 @@ mat-icon.md-accent {
 
   &.mat-primary {
     color: map-get($md-ngcolombia, 900);
+  }
+
+  &.mat-squared {
+    border-radius: 0 !important;
   }
 }
 
