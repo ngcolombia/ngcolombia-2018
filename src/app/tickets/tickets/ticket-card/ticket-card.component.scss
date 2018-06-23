@@ -1,7 +1,9 @@
 @import '~style/_variables.scss';
 
 :host {
-  width: 80%;
+  @media (min-width: 840px) {
+    width: 80%;
+  }
   display: block;
   position: relative;
 }
