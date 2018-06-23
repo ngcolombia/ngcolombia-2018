@@ -245,7 +245,7 @@ export class EventService {
         title: GeneralActivity.Lunch,
         // description: GeneralActivityDescription.Lunch,
         time: '12:00',
-        speaker: SpeakerName.Free,
+        // speaker: SpeakerName.Free,
       },
       {
         title: WorkshopTitle.BuildingConversational,
@@ -342,7 +342,7 @@ export class EventService {
         title: GeneralActivity.Lunch,
         // description: ActivityDescription.Lunch,
         time: '12:00',
-        speaker: SpeakerName.Free,
+        // speaker: SpeakerName.Free,
       },
       {
         title: TalkTitle.TurnYourSmartphone,

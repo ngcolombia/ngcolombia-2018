@@ -26,6 +26,7 @@
 
 .menu-button {
   &:before {
+    font-family: Poppins, Roboto, sans-serif;
     content: 'Menu';
     position: absolute;
     font-size: 24px;
@@ -37,7 +38,7 @@
   }
   &:hover:before {
     width: 70px;
-    left: -65px;
+    left: -70px;
     transition: all 0.4s;
   }
 }

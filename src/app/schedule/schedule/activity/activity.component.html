@@ -4,9 +4,8 @@
                  [rowHeight]="'35px'">
     <mat-grid-tile [colspan]="1"
                    [rowspan]="2">
-      <div class="sphere inline"
-           [class.general-activity]="isGeneralActivity(activity)"
-           [class.adjust]="activity.adjustSphere">{{activity.time}}</div>
+      <figure class="sphere"
+              [class.general-activity]="isGeneralActivity(activity)">{{activity.time}}</figure>
     </mat-grid-tile>
     <mat-grid-tile [colspan]="4"
                    [rowspan]="2">
