@@ -8,6 +8,7 @@ import { ParallaxBigBangDirective } from './directives/parallax-bigbang.directiv
 import { ParallaxHoverDirective } from './directives/parallax-hover.directive';
 import { ParallaxScrollDirective } from './directives/parallax-scroll.directive';
 import { RouterModule } from '@angular/router';
+import { BannerComponent } from './banner/banner.component';
 
 @NgModule({
   imports: [CommonModule, MaterialModule, RouterModule],
@@ -18,6 +19,7 @@ import { RouterModule } from '@angular/router';
     ParallaxHoverDirective,
     FullscreenComponent,
     InfoModalComponent,
+    BannerComponent,
   ],
   exports: [
     MadnessDirective,
@@ -27,7 +29,8 @@ import { RouterModule } from '@angular/router';
     ParallaxScrollDirective,
     FullscreenComponent,
     InfoModalComponent,
+    BannerComponent,
   ],
   entryComponents: [InfoModalComponent],
 })
-export class SharedModule {}
+export class SharedModule { }

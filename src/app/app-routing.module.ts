@@ -15,6 +15,10 @@ const routes: Routes = [
     loadChildren: 'app/speakers/speakers.module#SpeakersModule',
   },
   {
+    path: 'tickets',
+    loadChildren: 'app/tickets/tickets.module#TicketsModule',
+  },
+  {
     path: '**',
     redirectTo: '/',
   },
