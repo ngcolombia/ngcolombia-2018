@@ -30,3 +30,12 @@
     <p>While most websites are built with code and tests, NgColombia's is built with <span class="bold">passion and hard work.</span> The website committee is responsible for creating this <span class="bold">pixel-perfect</span> experience.</p>
   </div>
 </app-fullscreen>
+<app-fullscreen>  
+  <div id="map">
+      <agm-map [latitude]="lat" [longitude]="lng" [scrollwheel]="scrollwheel" [zoom]="zoom">
+          <agm-marker [latitude]="lat" [longitude]="lng">
+              <agm-info-window>testLeo</agm-info-window>
+          </agm-marker>
+        </agm-map>
+  </div>
+</app-fullscreen>

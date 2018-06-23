@@ -22,6 +22,11 @@
   }
 }
 
+agm-map {
+  height: 80vh;
+  width: 80vw;
+}
+
 @media (max-width: 1150px) {
   .section {
     &.title {

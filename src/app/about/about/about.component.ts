@@ -7,9 +7,15 @@ import { Component, OnInit } from '@angular/core';
 })
 export class AboutComponent implements OnInit {
 
+  lat = 6.242607;
+  lng = -75.576072;
+  zoom = 18;
+  scrollwheel = true;
+
   constructor() { }
 
   ngOnInit() {
   }
+
 
 }
