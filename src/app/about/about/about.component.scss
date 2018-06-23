@@ -1,3 +1,4 @@
+@import '~style/_variables.scss';
 .section {
   padding: 0 3rem;
   &.title {
@@ -5,7 +6,7 @@
     h2 {
       font-size: 5rem;
       line-height: 5rem;
-      color: #211056;
+      color: $dark-violet;
       margin: 0;
       letter-spacing: -0.025em;
       &.smaller {
@@ -16,7 +17,7 @@
   }
   &.paragraph {
     p {
-      text-align: justify;
+      text-align: left;
       font-size: 1rem;
     }
   }
@@ -53,14 +54,15 @@
     padding: 0rem 4rem; // padding: 0rem 3rem;
     &.title > h2 {
       font-size: 8rem;
-      line-height: 10rem;
+      line-height: 8rem;
       &.smaller {
         font-size: 7rem;
-        line-height: 7rem;
+        line-height: 6rem;
       }
     }
     &.paragraph {
       p {
+        text-align: justify;
         font-size: 1.3rem;
       }
     }
@@ -71,7 +73,6 @@
   .section {
     width: 50vw;
     &.title {
-      text-align: center;
       h2.smaller {
         font-size: 6rem;
       }

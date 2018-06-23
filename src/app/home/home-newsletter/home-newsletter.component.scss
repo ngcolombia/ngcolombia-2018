@@ -1,3 +1,4 @@
+@import '~style/_variables.scss';
 .wrapper-news-letter {
   background: #ffffff;
   position: relative;
@@ -5,7 +6,6 @@
   align-items: center;
   justify-content: center;
   min-height: 100vh;
-
   .middle-container {
     display: flex;
     flex-direction: row;
@@ -13,11 +13,10 @@
     align-content: center;
     justify-content: center;
     margin: 0 15px;
-
     .big-text {
       text-align: left;
       font-weight: bold;
-      color: #211056;
+      color: $dark-violet;
       font-size: 20.6vw;
       line-height: 21vw;
       order: -1;
@@ -31,16 +30,14 @@
         line-height: 0rem;
       }
     }
-
     .signup {
       text-align: center;
       font-weight: 400;
-      color: #211056;
+      color: $dark-violet;
       line-height: 1.95rem;
       margin-top: 4vh;
       justify-content: center;
       position: relative;
-      
       p.text {
         font-size: 1.2rem;
         text-align: right;
@@ -48,16 +45,12 @@
       }
     }
   }
-
   br.desktop {
     display: none;
   }
-
   @media (min-width: 680px) and (min-height: 551px) {
-
     padding: 150px 0 200px;
     min-height: initial;
-
     .middle-container {
       display: flex;
       flex-direction: row;
@@ -67,7 +60,6 @@
       position: relative;
       z-index: 1;
       justify-content: center;
-
       .big-text {
         flex-grow: 1;
         font-size: 110px;
@@ -75,7 +67,6 @@
         padding-left: 30px;
         order: 0;
       }
-
       .signup {
         flex-grow: 1;
         display: flex;
@@ -84,27 +75,22 @@
         text-align: right;
       }
     }
-
     br.mobile {
       display: none;
     }
-
-    br.desktop { 
+    br.desktop {
       display: inline;
     }
   }
-
   @media (orientation: landscape) and (max-height: 550px) {
     .middle-container {
       margin: 0;
       width: 100%;
       justify-content: space-around;
-
       .big-text {
         font-size: 10vw;
         line-height: 10vw;
       }
-      
       .signup {
         p.text {
           text-align: center
@@ -121,12 +107,11 @@
     font-family: Muli;
     letter-spacing: 0.05em;
     font-weight: 200;
-
     @media (min-width: 600px) {
       text-align: right;
     }
   }
   .mat-form-field-underline {
-    background-color: #0a5afe;
+    background-color: $dark-blue;
   }
 }

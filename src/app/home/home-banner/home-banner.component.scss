@@ -1,3 +1,4 @@
+@import '~style/_variables.scss';
 :host {
   display: block;
 }
@@ -20,7 +21,7 @@
   h2 {
     font-size: 30vw;
     line-height: 30vw;
-    color: #211056;
+    color: $dark-violet;
     margin: 0;
     text-align: center;
     letter-spacing: -0.025em;
@@ -31,6 +32,7 @@
     }
   }
   h4 {
+    color: $dark-violet;
     font-size: 28px;
     line-height: 29px;
     font-weight: normal;

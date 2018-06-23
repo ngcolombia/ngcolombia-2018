@@ -1,45 +1,58 @@
 @import '~style/variables';
+.clickable {
+  cursor: pointer;
+}
+
 .activity-container {
   margin-bottom: 1rem;
 }
 
 .sphere {
-  background-image: url('assets/img/schedule/new-sphere.png');
   color: white;
   font-weight: 600;
-  font-size: 0.7rem;
+  font-size: 1.1rem;
+  padding: 25px 12px;
   width: 4rem;
   height: 4rem;
   background-size: cover;
   position: absolute;
   right: 5px;
-  padding: 1rem 1rem 1rem 1.1rem;
   text-align: center;
   line-height: 15px;
+  background-image: url('assets/img/schedule/new-sphere.png');
+  &.general-activity {
+    background-image: url('assets/img/schedule/new-sphere2.png');
+  }
+  &.adjust {
+    padding: 26px 15px;
+  }
 }
 
 .title {
-  color: #211056;
+  color: $dark-violet;
   width: 90%;
   border-bottom: 1px solid;
   font-weight: 600; // font-size: 0.7rem;
   position: absolute;
-  left: 7px;
+  left: 0px;
   top: 15px;
-  font-size: 11px;
+  font-size: 14px;
   &.general-activity {
     color: $dark-blue;
+  }
+  &.smaller {
+    font-size: 11px;
   }
 }
 
 .author {
   position: absolute;
-  font-size: 9px;
+  font-size: 11px;
   width: 100%;
-  color: #211056;
+  color: $dark-violet;
   font-weight: 500;
-  left: 7px;
-  bottom: 12px;
+  left: 0px;
+  bottom: 16px;
   &.general-activity {
     color: $dark-blue;
   }
@@ -58,9 +71,12 @@
 
 @media (min-width: 450px) {
   .title {
-    font-size: 14px;
-    top: 9px;
+    font-size: 16px;
+    top: 11px;
     left: 0px;
+    &.smaller {
+      font-size: 16px;
+    }
   }
   .author {
     font-size: 12px;

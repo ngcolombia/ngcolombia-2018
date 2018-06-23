@@ -1,6 +1,7 @@
+@import '~style/_variables.scss';
 .wrapper,
 .test {
-  background-color: #0a5afe;
+  background-color: $dark-blue;
   width: 100%;
   text-align: center;
   .coc {

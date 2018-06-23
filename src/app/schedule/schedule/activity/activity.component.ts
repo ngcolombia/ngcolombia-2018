@@ -1,4 +1,5 @@
 import { Activity } from '@core/definitions/activity.model';
+import { BreakpointObserver, Breakpoints } from '@angular/cdk/layout';
 import { Component, Input, OnInit } from '@angular/core';
 import { GeneralActivity } from '@core/event/event-data';
 import { InfoModalComponent } from '@shared/components/info-modal/info-modal.component';
@@ -10,7 +11,14 @@ import { MatDialog } from '@angular/material';
 })
 export class ActivityComponent implements OnInit {
   @Input() activity: Activity;
-  constructor(private dialog: MatDialog) {}
+  isSmallScreen;
+  constructor(private dialog: MatDialog, breakpointObserver: BreakpointObserver) {
+    breakpointObserver
+      .observe([Breakpoints.HandsetLandscape, Breakpoints.HandsetPortrait])
+      .subscribe((result) => {
+        this.isSmallScreen = result.matches;
+      });
+  }
 
   ngOnInit() {}
 
@@ -19,6 +27,8 @@ export class ActivityComponent implements OnInit {
   }
 
   openDetails(activity: Activity) {
-    this.dialog.open(InfoModalComponent, { data: activity });
+    if (!this.isGeneralActivity(activity)) {
+      this.dialog.open(InfoModalComponent, { data: activity });
+    }
   }
 }
