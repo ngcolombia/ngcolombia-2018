@@ -1,4 +1,4 @@
-import { Component, OnInit, Input, ChangeDetectionStrategy } from '@angular/core';
+import { Component, Input, ChangeDetectionStrategy } from '@angular/core';
 
 @Component({
   selector: 'app-banner',
@@ -6,12 +6,6 @@ import { Component, OnInit, Input, ChangeDetectionStrategy } from '@angular/core
   styleUrls: ['./banner.component.scss'],
   changeDetection: ChangeDetectionStrategy.OnPush,
 })
-export class BannerComponent implements OnInit {
+export class BannerComponent {
   @Input() title;
-
-  constructor() { }
-
-  ngOnInit() {
-  }
-
 }
