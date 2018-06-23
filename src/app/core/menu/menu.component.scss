@@ -78,7 +78,9 @@
       margin: 0;
       padding-left: 30px;
       &.active-link {
-        background-color: rgba(181, 162, 246, 0.6);
+        //background-color: rgba(181, 162, 246, 0.6);
+        background-color: $dark-blue;
+        color: white;
       }
     }
   }
@@ -101,7 +103,9 @@
       margin: 0;
       padding-left: 30px;
       &.active-link {
-        background-color: rgba(181, 162, 246, 0.6);
+        //background-color: rgba(181, 162, 246, 0.6);
+        background-color: $dark-blue;
+        color: white;
       }
     }
   }
