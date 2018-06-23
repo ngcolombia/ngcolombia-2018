@@ -1,0 +1,7 @@
+<app-banner title="Tickets"></app-banner>
+<div class="ticket-options">
+  <app-ticket-card class="ticket-tile"
+                   *ngFor="let ticket of tickets"
+                   [ticket]="ticket">
+  </app-ticket-card>
+</div>

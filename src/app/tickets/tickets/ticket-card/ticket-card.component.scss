@@ -1,0 +1,97 @@
+@import '~style/_variables.scss';
+
+:host {
+  @media (min-width: 840px) {
+    width: 80%;
+  }
+  display: block;
+  position: relative;
+}
+
+h4{
+  font-size: 40px;
+  margin-bottom: 7px;
+  font-weight: bold;
+  line-height: 1;
+}
+
+
+.tickets-container {
+  display: flex;
+  flex-direction: row;
+  align-items: stretch;
+  > div {
+    flex-grow: 1;
+    font-weight: 100;
+    line-height: 1;
+    .price {
+      color: $blue;
+      font-size: 24px;
+      margin-bottom: 3px;
+    }
+
+    .add-to-cart {
+      margin-top: 10px;
+
+      .add-to-cart-big {
+        display: none;
+      }
+
+      .add-to-cart-small {
+        padding: 0px;
+        min-width: 0px;
+        .mat-icon {
+          font-size: 50px;
+          height: 50px;
+          width: 50px;
+          font-weight: 100;
+        }
+      }
+
+      @media (min-width: 840px) {
+        .add-to-cart-small {
+          display: none;
+        }
+
+        .add-to-cart-big {
+          display: inline-block;
+        }
+      }
+    }
+  }
+}
+
+
+.ticket-card {
+  .discount {
+    display: flex;
+    flex-direction: row;
+    text-align: left;
+    margin-top: 10px;
+
+    .discount-value {
+      font-size: 16px;
+      margin-left: 10px;
+      font-weight: bold;
+    }
+
+    @media (min-width: 840px) {
+      position: absolute;
+      text-align: left;
+      right: 0;
+      top: 0;
+      background: $dark-violet;
+      font-weight: bold;
+      font-size: 14px;
+      width: 50px;
+      height: 50px;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      margin: 0px;
+      .discount-value {
+        margin: 0px;
+      }
+    }
+  }
+}

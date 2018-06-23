@@ -1,47 +1,4 @@
 @import '~style/_variables.scss';
-:host {
-  padding: $page-padding;
-}
-
-#firstScreen {
-  display: flex;
-  flex-direction: column;
-  min-height: 250px;
-  @media (min-width: 680px) {
-    height: calc(100vh - #{$page-padding});
-  }
-}
-
-#title,
-#scrollDown {
-  color: $dark-violet;
-  text-align: center;
-  font-weight: bold;
-  display: flex;
-  align-items: center;
-  flex-direction: column;
-  justify-content: center;
-}
-
-#title {
-  flex: 1; // Font-size fallback just in case
-  font-size: 4rem;
-  font-size: 14vw;
-  @media (min-width: 680px) {
-    font-size: 6rem;
-    font-size: 10vw;
-  }
-}
-
-#scrollDown {
-  height: 85px;
-  padding: 20px;
-  display: none;
-  @media (min-width: 680px) {
-    display: flex;
-  }
-}
-
 // Speakers Grid style start here
 .grid-container {
   display: grid;
@@ -143,12 +100,7 @@
     bottom: 0;
     right: 0;
     height: 100%;
-    background: linear-gradient(
-      to bottom,
-      transparent 0%,
-      rgba(0, 0, 0, 0.1) 15%,
-      rgba(0, 0, 0, 0.3) 53%
-    );
+    background: linear-gradient( to bottom, transparent 0%, rgba(0, 0, 0, 0.1) 15%, rgba(0, 0, 0, 0.3) 53%);
     z-index: -1;
     opacity: 1;
     transition: opacity 0.6s;

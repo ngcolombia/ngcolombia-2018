@@ -96,6 +96,14 @@ mat-icon.md-accent {
   &.mat-primary {
     color: map-get($md-ngcolombia, 900);
   }
+
+  &.mat-light-button {
+    background: map-get($md-ngcolombiablue, 900);
+  }
+
+  &.mat-squared {
+    border-radius: 0 !important;
+  }
 }
 
 .mat-raised-button.toogle-side-bar {
