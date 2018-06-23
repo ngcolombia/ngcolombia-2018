@@ -1,16 +1,21 @@
-<app-fullscreen class="start">
+<!-- <app-fullscreen class="start"> -->
+<div class="container">
   <div class="section title">
-    <h2 class="inline">Thursday<span class="roboto">.</span></h2>
+    <h2 class="inline">Thurs<br class="line-break">day<span class="roboto">.</span></h2>
   </div>
   <div class="section agenda">
-    <app-activity *ngFor="let activity of thursday"
+    <app-activity class="clickable"
+                  *ngFor="let activity of thursday"
                   [activity]="activity"></app-activity>
   </div>
+  <br><br><br>
   <div class="section title">
-    <h2 class="inline">Friday<span class="roboto">.</span></h2>
+    <h2 class="inline">Fri<br class="line-break">day<span class="roboto">.</span></h2>
   </div>
   <div class="section agenda">
-    <app-activity *ngFor="let activity of friday"
+    <app-activity class="clickable"
+                  *ngFor="let activity of friday"
                   [activity]="activity"></app-activity>
   </div>
-</app-fullscreen>
+</div>
+<!-- </app-fullscreen> -->

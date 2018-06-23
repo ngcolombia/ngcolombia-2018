@@ -1,24 +1,68 @@
-.section {
-  width: 100vw;
-  padding: 0 1rem;
-  &:first-child {
-    margin-top: 4rem;
-  }
-  &.title {
-    text-align: left;
-    h2 {
-      font-size: 3rem;
-      line-height: 3rem;
-      color: #211056;
-      margin: 0;
-      letter-spacing: -0.025em;
-      &.smaller {
+.container {
+  margin: 5rem 0;
+  .section {
+    width: 97vw;
+    padding: 0 1rem;
+    &.title {
+      text-align: start;
+      margin-bottom: 2rem;
+      h2 {
         font-size: 3rem;
         line-height: 3rem;
+        color: #211056;
+        margin: 0;
+        letter-spacing: -0.025em;
+        &.smaller {
+          font-size: 3rem;
+          line-height: 3rem;
+        }
+        .line-break {
+          display: none;
+        }
+      }
+    }
+    &.agenda {
+      app-activity.clickable {
+        cursor: pointer;
       }
     }
   }
-  &.agenda {
-    margin: 2rem 0;
+}
+
+@media (min-width: 750px) {
+  .container {
+    margin-top: 6rem;
+    .section {
+      display: inline-block;
+      &.agenda {
+        width: 57vw;
+      }
+      &.title {
+        width: 39vw;
+        text-align: center;
+        vertical-align: top;
+        h2 {
+          line-height: 4rem;
+          font-size: 5rem;
+          text-align: start;
+          .line-break {
+            display: initial;
+          }
+        }
+      }
+    }
+  }
+}
+
+@media (min-width: 1050px) {
+  .container {
+    .section {
+      &.title {
+        h2 {
+          line-height: 6rem;
+          font-size: 6.5rem;
+        }
+      }
+    }
   }
 }
