@@ -1,0 +1,56 @@
+@import '~style/_variables.scss';
+
+:host {
+  width: 80%;
+  display: block;
+}
+
+h4{
+  margin-top:100px;
+  font-size: 40px;
+  margin-bottom: 7px;
+  font-weight: bold;
+  line-height: 1;
+}
+
+
+.tickets-container {
+  display: flex;
+  flex-direction: row;
+  align-items: stretch;
+  > div {
+    flex-grow: 1;
+    font-weight: 100;
+    line-height: 1;
+    .price {
+      color: $blue;
+      font-size: 24px;
+      margin-bottom: 3px;
+    }
+
+    .add-to-card {
+      margin-top: 10px;
+    }
+  }
+}
+
+
+.ticket-card {
+  .discount {
+    position: absolute;
+    right: 0;
+    top: 0;
+    background: $dark-violet;
+    font-weight: bold;
+    font-size: 14px;
+    width: 50px;
+    height: 50px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    .discount-value{
+      font-size: 16px;
+    }
+  }
+}
