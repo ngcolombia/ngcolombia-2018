@@ -19,6 +19,12 @@
     p {
       text-align: left;
       font-size: 1rem;
+      a:link,
+      a:visited,
+      a:hover,
+      a:active {
+        color: $dark-blue;
+      }
     }
   }
 }
