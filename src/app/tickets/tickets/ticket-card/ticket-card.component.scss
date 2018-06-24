@@ -1,97 +1,87 @@
 @import '~style/_variables.scss';
-
 :host {
-  @media (min-width: 840px) {
-    width: 80%;
-  }
-  display: block;
   position: relative;
-}
-
-h4{
-  font-size: 40px;
-  margin-bottom: 7px;
-  font-weight: bold;
-  line-height: 1;
-}
-
-
-.tickets-container {
-  display: flex;
-  flex-direction: row;
-  align-items: stretch;
-  > div {
-    flex-grow: 1;
-    font-weight: 100;
-    line-height: 1;
-    .price {
-      color: $blue;
-      font-size: 24px;
-      margin-bottom: 3px;
+  width: 100vw;
+  height: 100vw;
+  color: white;
+  margin-bottom: 1rem;
+  text-align: left;
+  &.first {
+    background: linear-gradient(-70deg, #be73f5, #3e00ff, #3e00ff)
+  }
+  &.second {
+    background: linear-gradient(-90deg, #be73f5, #3e00ffcc, #3e00ff)
+  }
+  &.third {
+    background: linear-gradient(-108deg, #be73f5, #3e00ff, #3e00ff)
+  }
+  h4 {
+    font-size: 40px;
+    margin: 0;
+    font-weight: bold;
+    position: absolute;
+    bottom: 8rem;
+    left: 2rem;
+  }
+  .tickets-container {
+    position: absolute;
+    bottom: 2rem;
+    left: 2rem;
+    display: flex;
+    width: 95%;
+    div {
+      flex-grow: 1;
+      font-weight: 100;
+      line-height: 1;
+      .price {
+        color: $blue;
+        font-size: 24px;
+        margin-bottom: 3px;
+      }
+      button.mat-squared {
+        margin-top: 1rem;
+      }
     }
-
-    .add-to-cart {
-      margin-top: 10px;
-
-      .add-to-cart-big {
-        display: none;
-      }
-
-      .add-to-cart-small {
-        padding: 0px;
-        min-width: 0px;
-        .mat-icon {
-          font-size: 50px;
-          height: 50px;
-          width: 50px;
-          font-weight: 100;
-        }
-      }
-
-      @media (min-width: 840px) {
-        .add-to-cart-small {
-          display: none;
-        }
-
-        .add-to-cart-big {
-          display: inline-block;
-        }
-      }
+  }
+  .discount {
+    background: $dark-violet;
+    width: 16vw;
+    height: 16vw;
+    position: absolute;
+    right: 0;
+    top: 0;
+    font-weight: bold;
+    display: flex;
+    text-align: center;
+    flex-direction: column;
+    justify-content: center;
+    .discount-label {
+      font-size: 15px;
+      margin-bottom: -6px;
+    }
+    .discount-value {
+      font-size: 19px;
+      font-weight: bold;
     }
   }
 }
 
-
-.ticket-card {
-  .discount {
-    display: flex;
-    flex-direction: row;
-    text-align: left;
-    margin-top: 10px;
-
-    .discount-value {
-      font-size: 16px;
-      margin-left: 10px;
-      font-weight: bold;
+@media (min-width: 600px) {
+  :host {
+    width: 32vw;
+    height: 32vw;
+    &.first {
+      background: linear-gradient(201deg, #be73f5, #3e00ff, #3e00ff)
     }
-
-    @media (min-width: 840px) {
-      position: absolute;
-      text-align: left;
-      right: 0;
-      top: 0;
-      background: $dark-violet;
-      font-weight: bold;
-      font-size: 14px;
-      width: 50px;
-      height: 50px;
-      flex-direction: column;
-      align-items: center;
-      justify-content: center;
-      margin: 0px;
-      .discount-value {
-        margin: 0px;
-      }
+    &.second {
+      background: linear-gradient(179deg, #be73f5, #3e00ffcc, #3e00ff)
+    }
+    &.third {
+      background: linear-gradient(172deg, #be73f5, #3e00ff, #3e00ff)
+    }
+    .discount {
+      width: 6vw;
+      height: 6vw;
     }
   }
 }

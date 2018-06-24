@@ -6,31 +6,31 @@ export const Tickets: ITicketCategory[] = [
     tickets: [
       {
         name: 'Conference',
-        value: 50,
+        value: 55,
       },
       {
         name: 'Workshop',
-        value: 80,
+        value: 90,
       },
     ],
   },
   {
-	category: 'Premium',
-	discountPercent: .15,
+    category: 'Premium',
+    discountPercent: 0.14,
     tickets: [
       {
         name: 'Conference + 1 Workshop',
-        value: 110,
+        value: 125,
       },
     ],
   },
   {
-	category: 'Enterprise',
-	discountPercent: .25,
+    category: 'Enterprise',
+    discountPercent: 0.19,
     tickets: [
       {
         name: 'Conference + 2 Workshops',
-        value: 158,
+        value: 190,
       },
     ],
   },

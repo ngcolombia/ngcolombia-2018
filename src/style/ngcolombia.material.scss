@@ -1,23 +1,21 @@
 @import '~@angular/material/theming';
 @import 'palette';
 @include mat-core();
-
 $primary: mat-palette($md-ngcolombiablue);
 $accent: mat-palette($md-ngcolombia);
 $warn: mat-palette($mat-red, 600, 100, 800);
 $dark-violet: mat-color($accent, 900);
 $temporaryprimary: mat-palette($md-ngcolombiabluetest);
 $ngcolombia-app-theme: mat-light-theme($temporaryprimary, $accent, $warn);
-
 @include angular-material-theme($ngcolombia-app-theme);
-
 // Custom NgColombia Material Theme styles
 mat-icon,
 .material-icons {
   font-family: 'Material Icons';
   font-weight: normal;
   font-style: normal;
-  font-size: 24px; /* Preferred icon size */
+  font-size: 24px;
+  /* Preferred icon size */
   display: inline-block;
   line-height: 1;
   text-transform: none;
@@ -25,45 +23,50 @@ mat-icon,
   word-wrap: normal;
   white-space: nowrap;
   direction: ltr;
-
   /* Support for all WebKit browsers. */
   -webkit-font-smoothing: antialiased;
   /* Support for Safari and Chrome. */
   text-rendering: optimizeLegibility;
-
   /* Support for Firefox. */
   -moz-osx-font-smoothing: grayscale;
-
   /* Support for IE. */
   font-feature-settings: 'liga';
 }
 
 /* Rules for sizing the icon. */
+
 mat-icon.md-18 {
   font-size: 18px;
 }
+
 mat-icon.md-24 {
   font-size: 24px;
 }
+
 mat-icon.md-36 {
   font-size: 36px;
 }
+
 mat-icon.md-48 {
   font-size: 48px;
 }
 
 /* Rules for using icons as black on a light background. */
+
 mat-icon.md-dark {
   color: rgba(0, 0, 0, 0.54);
 }
+
 mat-icon.md-dark.md-inactive {
   color: rgba(0, 0, 0, 0.26);
 }
 
 /* Rules for using icons as white on a dark background. */
+
 mat-icon.md-light {
   color: rgba(255, 255, 255, 1);
 }
+
 mat-icon.md-light.md-inactive {
   color: rgba(255, 255, 255, 0.3);
 }
@@ -71,9 +74,11 @@ mat-icon.md-light.md-inactive {
 mat-icon.md-primary {
   color: map-get($primary, 900);
 }
+
 mat-icon.md-warn {
   font-size: map-get($warn, 900);
 }
+
 mat-icon.md-accent {
   font-size: map-get($accent, 900);
 }
@@ -87,20 +92,17 @@ mat-icon.md-accent {
   padding: 3px 28px !important;
   font-weight: 700;
   font-family: Poppins, Roboto, sans-serif;
-
   &.md-big-button {
     font-size: 18px;
     padding: 6px 40px !important;
   }
-
   &.mat-primary {
     color: map-get($md-ngcolombia, 900);
   }
-
   &.mat-light-button {
     background: map-get($md-ngcolombiablue, 900);
+    color: $dark-violet;
   }
-
   &.mat-squared {
     border-radius: 0 !important;
   }
