@@ -1,5 +1,5 @@
-import { Component, OnInit } from '@angular/core';
 import { BALL_IMAGES_LIST } from './ball-images-list';
+import { Component, OnInit } from '@angular/core';
 import { ImageInfo } from './image-info.model';
 
 @Component({

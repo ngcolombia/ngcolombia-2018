@@ -1,11 +1,21 @@
+<div class="top-bar"
+     *ngIf="showToBar">
+  <p class="inline">Tickets available now!</p>
+  <a class="mat-squared mat-light-button"
+     [routerLink]="['/tickets']"
+     mat-raised-button
+     color="accent">GET YOURS</a>
+</div>
 <div class="wrapper">
   <div class="logos">
     <img src="assets/img/logo-ng-footer.svg"
          alt="">
     <div class="divider"></div>
-    <img src="assets/img/logo_yuxi_footer.svg"
-         alt="">
+    <a href="http://yuxiglobal.com/"
+       target="_blank">
+       <img src="assets/img/logo_yuxi_footer.svg" alt="">
+      </a>
   </div>
-  <div class="coc">We adhere to JSConf <a href="http://jsconf.com/codeofconduct.html">Code of Conduct</a></div>
+  <div class="coc">We adhere to our <a [routerLink]="['/coc']">Code of Conduct</a></div>
   <div class="copyright">&copy; All rights reserved to Yuxi Global 2018</div>
 </div>

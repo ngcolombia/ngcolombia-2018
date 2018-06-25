@@ -1,0 +1,13 @@
+@import '~style/_variables.scss';
+.ticket-options {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 1rem;
+}
+
+@media (min-width: 725px) {
+  .ticket-options {
+    flex-direction: row;
+    justify-content: space-evenly;
+  }
+}

@@ -3,7 +3,7 @@
   "prettier.singleQuote": true,
   "prettier.trailingComma": "all",
   // BEAUTIFY
-  "beautify.ignore": ["**/**.js", "**/**.ts"],
+  "beautify.ignore": ["**/**.js", "**/**.ts", "**/_**.scss"],
   "beautify.language": {
     "css": ["css", "scss"]
   },

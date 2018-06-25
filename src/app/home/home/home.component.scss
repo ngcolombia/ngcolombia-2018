@@ -1,5 +1,4 @@
 @import '~style/_variables.scss';
-
 :host {
   position: relative;
   display: block;
@@ -9,16 +8,20 @@
     top: 43px;
     left: 16px;
     z-index: 10;
-    font-size: 30px;
+    font-size: 19px;
     font-weight: bold;
     display: flex;
     @media (min-width: 680px) {
+      font-size: 23px;
       top: 55px;
       left: calc(16px + 2rem);
     }
     > div {
-      padding: 2px 20px;
-      background-color: #211056;
+      padding: 2px 11px;
+      @media (min-width: 680px) {
+        padding: 2px 14px;
+      }
+      background-color: $dark-violet;
       margin: 10px 3px;
       color: #fff;
       box-shadow: 0px 0px 0px 1px #63a5cb;
@@ -44,48 +47,46 @@
     transition: transform 1.5s cubic-bezier(0.25, 0.46, 0.45, 0.94);
     &.mobile {
       display: block;
-
-      &:nth-of-type(4){
+      &:nth-of-type(4) {
         width: 262px;
         height: 262px;
       }
-      &:nth-of-type(5){
+      &:nth-of-type(5) {
         width: 173px;
         height: 173px;
       }
-      &:nth-of-type(6){
+      &:nth-of-type(6) {
         width: 109px;
         height: 109px;
       }
-      &:nth-of-type(10){
+      &:nth-of-type(10) {
         width: 252px;
         height: 257px;
       }
-      &:nth-of-type(11){
+      &:nth-of-type(11) {
         width: 126px;
         height: 128px;
       }
-      &:nth-of-type(12){
+      &:nth-of-type(12) {
         width: 252px;
         height: 257px;
       }
-      &:nth-of-type(17){
+      &:nth-of-type(17) {
         width: 273px;
         height: 273px;
       }
-      &:nth-of-type(18){
+      &:nth-of-type(18) {
         width: 253px;
         height: 253px;
       }
-      &:nth-of-type(19){
+      &:nth-of-type(19) {
         width: 143px;
         height: 143px;
       }
-      &:nth-of-type(20){
+      &:nth-of-type(20) {
         width: 87px;
         height: 87px;
       }
-
     }
     &.front {
       z-index: 3;
@@ -101,6 +102,122 @@
       &.desktop {
         display: block;
       }
+    }
+  }
+}
+
+// MEET THE SPEAKERS
+.section {
+  padding: 0 3rem;
+  br {
+    display: none;
+  }
+  &.title {
+    text-align: left;
+    &.down {
+      display: none;
+    }
+    &.up {
+      display: initial;
+    }
+    h2 {
+      font-size: 5rem;
+      line-height: 5rem;
+      color: $dark-violet;
+      margin: 0;
+      letter-spacing: -0.025em;
+      &.smaller {
+        font-size: 3rem;
+        line-height: 3rem;
+      }
+    }
+  }
+  &.paragraph {
+    p {
+      text-align: left;
+      font-size: 1rem;
+      a:link,
+      a:visited,
+      a:hover,
+      a:active {
+        color: $dark-blue;
+      }
+    }
+  }
+}
+
+@media (max-width: 1150px) {
+  .section {
+    &.title {
+      padding: 0rem 2.3rem;
+      text-align: left;
+      width: 95vw;
+    }
+  }
+}
+
+@media (min-width: 500px) {
+  .section {
+    &.title {
+      padding: 0rem 2.5rem;
+      h2 {
+        font-size: 7rem;
+        line-height: 7rem;
+        &.smaller {
+          font-size: 5rem;
+          line-height: 5rem;
+        }
+      }
+    }
+  }
+}
+
+@media (min-width: 750px) {
+  .section {
+    padding: 0rem 4rem; // padding: 0rem 3rem;
+    &.title > h2 {
+      font-size: 8rem;
+      line-height: 8rem;
+      &.smaller {
+        font-size: 7rem;
+        line-height: 6rem;
+      }
+    }
+    &.paragraph {
+      p {
+        text-align: justify;
+        font-size: 1.3rem;
+      }
+    }
+  }
+}
+
+@media (min-width: 1150px) {
+  .section {
+    text-align: right;
+    &.paragraph {
+      p {
+        text-align: right;
+        font-size: 1.3rem;
+      }
+    }
+    width: 50vw;
+    br {
+      display: initial;
+    }
+    &.title {
+      &.down {
+        display: initial;
+      }
+      &.up {
+        display: none;
+      }
+      h2.smaller {
+        font-size: 6rem;
+      }
+    }
+    &.paragraph {
+      padding: 0rem 2rem 0rem 6rem;
     }
   }
 }

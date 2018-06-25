@@ -1,0 +1,135 @@
+@import '~style/_variables.scss';
+:host {
+  position: relative;
+  height: 80vw;
+  color: white;
+  margin-bottom: 1rem;
+  text-align: left;
+  &.first {
+    background: linear-gradient(-70deg, #be73f5, #3e00ff, #3e00ff)
+  }
+  &.second {
+    background: linear-gradient(-90deg, #be73f5, #3e00ffcc, #3e00ff)
+  }
+  &.third {
+    background: linear-gradient(-108deg, #be73f5, #3e00ff, #3e00ff)
+  }
+  h4 {
+    font-size: 40px;
+    margin: 0;
+    font-weight: bold;
+    position: absolute;
+    bottom: 8rem;
+    left: 2rem;
+  }
+  .tickets-container {
+    position: absolute;
+    bottom: 2rem;
+    left: 2rem;
+    display: flex;
+    .ticket-info {
+      margin-right: 2rem;
+    }
+    div {
+      font-weight: 100;
+      line-height: 1;
+      .price {
+        font-size: 24px;
+        color: $blue;
+        margin-bottom: 3px;
+      }
+      .ticket-name {
+        font-size: 14px;
+      }
+      a.mat-squared {
+        margin-top: 1rem;
+      }
+    }
+  }
+  .discount {
+    width: 16vw;
+    height: 16vw;
+    background: $dark-violet;
+    position: absolute;
+    right: 0;
+    top: 0;
+    font-weight: bold;
+    display: flex;
+    text-align: center;
+    flex-direction: column;
+    justify-content: center;
+    .discount-label {
+      font-size: 15px;
+      margin-bottom: -6px;
+    }
+    .discount-value {
+      font-size: 19px;
+      font-weight: bold;
+    }
+  }
+}
+
+@media (min-width: 500px) {
+  :host {
+    height: 50vw;
+    .discount {
+      width: 10vw;
+      height: 10vw;
+    }
+  }
+}
+
+@media (min-width: 725px) {
+  :host {
+    width: 32vw;
+    height: 28vw;
+    &.first {
+      background: linear-gradient(190deg, #be73f5, #3e00ff, #3e00ff)
+    }
+    &.second {
+      background: linear-gradient(179deg, #be73f5, #3e00ffcc, #3e00ff)
+    }
+    &.third {
+      background: linear-gradient(172deg, #be73f5, #3e00ff, #3e00ff)
+    }
+    @media (max-width: 1025px) {
+      h4 {
+        font-size: 20px;
+        left: 1.5rem;
+        bottom: 8.5rem;
+      }
+      .discount {
+        width: 6vw;
+        height: 6vw;
+      }
+      .tickets-container {
+        left: 1.5rem;
+        bottom: 2.5rem;
+        div.ticket-info {
+          left: 1rem;
+          margin-right: 1rem;
+          div.price {
+            font-size: 17px;
+          }
+          div.ticket-name {
+            font-size: 11px;
+          }
+          a.mat-squared.mat-light-button.mat-raised-button.mat-accent {
+            padding: 0 !important;
+            font-size: 13px;
+          }
+        }
+      }
+    }
+  }
+}
+
+@media (min-width: 1025px) {
+  :host {
+    height: 25vw;
+    .discount {
+      width: 6vw;
+      height: 6vw;
+    }
+  }
+}

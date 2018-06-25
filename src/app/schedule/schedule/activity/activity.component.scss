@@ -1,81 +1,81 @@
 @import '~style/variables';
-.activity-container {
-  margin-bottom: 1rem;
+.clickable {
+  cursor: pointer;
 }
 
 .sphere {
-  background-image: url('assets/img/schedule/new-sphere.png');
-  color: white;
+  margin: 0;
+  border-radius: 50%;
+  height: 45px;
+  width: 45px;
+  padding: 12px 0px;
   font-weight: 600;
-  font-size: 0.7rem;
-  width: 4rem;
-  height: 4rem;
-  background-size: cover;
-  position: absolute;
-  right: 5px;
-  padding: 1rem 1rem 1rem 1.1rem;
+  font-size: 0.9rem;
   text-align: center;
-  line-height: 15px;
+  color: white;
+  position: absolute;
+  right: 10px;
+  background: radial-gradient(farthest-corner at 17px 11px, #deb2ff, #3200cccf, #110046);
+  &.general-activity {
+    background: radial-gradient(farthest-corner at 17px 11px, #adcdff, #0a5afe, #110046);
+  }
 }
 
 .title {
-  color: #211056;
+  color: $dark-violet;
   width: 90%;
   border-bottom: 1px solid;
-  font-weight: 600; // font-size: 0.7rem;
+  font-weight: 600;
   position: absolute;
-  left: 7px;
+  left: 0px;
   top: 15px;
-  font-size: 11px;
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
   &.general-activity {
     color: $dark-blue;
+    font-weight: 700;
+    font-size: 1.5rem;
+    border: none;
+    top: 16px;
   }
 }
 
 .author {
   position: absolute;
-  font-size: 9px;
+  font-size: 11px;
   width: 100%;
-  color: #211056;
+  color: $dark-violet;
   font-weight: 500;
-  left: 7px;
-  bottom: 12px;
+  left: 0px;
+  bottom: 20px;
   &.general-activity {
     color: $dark-blue;
   }
 }
 
-@media (max-width: 350px) {
-  .sphere {
-    padding: 1rem 1rem 1rem 1.2rem;
-    width: 3.8rem;
-    height: 3.8rem;
-  }
-  .title {
-    font-size: 10px;
+@media (min-width: 360px) {
+  .author {
+    bottom: 16px;
   }
 }
 
 @media (min-width: 450px) {
+  .sphere {
+    font-size: 1.1rem;
+    height: 55px;
+    width: 55px;
+    padding: 14px 0px;
+  }
   .title {
-    font-size: 14px;
-    top: 9px;
-    left: 0px;
+    font-size: 16px;
+    top: 11px;
+    &.smaller {
+      font-size: 16px;
+    }
   }
   .author {
     font-size: 12px;
-    left: 0px;
+    bottom: 19px;
   }
 }
-
-// @media (min-width: 600px) {
-//   .title {
-//     font-size: 14px;
-//     top: 9px;
-//     left: 0px;
-//   }
-//   .author {
-//     font-size: 12px;
-//     left: 0px;
-//   }
-// }

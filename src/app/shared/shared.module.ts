@@ -1,3 +1,4 @@
+import { BannerComponent } from './banner/banner.component';
 import { CommonModule } from '@angular/common';
 import { FullscreenComponent } from './components/fullscreen/fullscreen.component';
 import { InfoModalComponent } from './components/info-modal/info-modal.component';
@@ -18,6 +19,7 @@ import { RouterModule } from '@angular/router';
     ParallaxHoverDirective,
     FullscreenComponent,
     InfoModalComponent,
+    BannerComponent,
   ],
   exports: [
     MadnessDirective,
@@ -27,6 +29,7 @@ import { RouterModule } from '@angular/router';
     ParallaxScrollDirective,
     FullscreenComponent,
     InfoModalComponent,
+    BannerComponent,
   ],
   entryComponents: [InfoModalComponent],
 })

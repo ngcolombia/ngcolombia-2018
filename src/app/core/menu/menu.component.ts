@@ -1,14 +1,20 @@
-import { animate, state, style, transition, trigger } from '@angular/animations';
+import {
+  animate,
+  state,
+  style,
+  transition,
+  trigger
+  } from '@angular/animations';
 import { BreakpointObserver, Breakpoints, BreakpointState } from '@angular/cdk/layout';
 import { Component, ViewChild } from '@angular/core';
 import { delay, map, pairwise } from 'rxjs/operators';
 import { ElementRef } from '@angular/core';
 import { HostListener } from '@angular/core';
-import { Observable, Subject } from 'rxjs';
-import { OnInit } from '@angular/core';
-import { Router, NavigationEnd } from '@angular/router';
 import { MatSidenav } from '@angular/material';
 import { MenuLinks } from './menu-links';
+import { NavigationEnd, Router } from '@angular/router';
+import { Observable, Subject } from 'rxjs';
+import { OnInit } from '@angular/core';
 
 @Component({
   selector: 'app-menu',
@@ -19,7 +25,9 @@ import { MenuLinks } from './menu-links';
       state(
         'show',
         style({
-          backgroundColor: 'rgba(255, 255, 255, 0.6)',
+          // backgroundColor: 'rgba(255, 255, 255, 0.6)',
+          backgroundColor: '#0a5afe',
+          color: 'white',
         }),
       ),
       state(
@@ -31,6 +39,7 @@ import { MenuLinks } from './menu-links';
       transition('show => hide', animate('700ms ease-out')),
       transition('hide => show', animate('700ms ease-in')),
       transition('* => hide', animate('700ms ease-in')),
+      transition('* => show', animate('700ms ease-in')),
     ]),
   ],
 })
@@ -38,7 +47,6 @@ export class MenuComponent implements OnInit {
   isHandset: Observable<BreakpointState>;
   toolbarState: string;
   scrolling = new Subject();
-  private canUpdatedMenuItems = true;
   readonly TOOLBAR_DEBOUNCE_TIME = 100;
   showedMenuLinks: any[];
   @ViewChild('drawer') sideNav: MatSidenav;

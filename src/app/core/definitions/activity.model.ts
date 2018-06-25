@@ -9,9 +9,7 @@ import {
 } from '../event/event-data';
 export interface Activity {
   title: TalkTitle | GeneralActivity | WorkshopTitle;
-  description: ActivityDescription | GeneralActivityDescription | WorkshopDescription;
+  description?: ActivityDescription | GeneralActivityDescription | WorkshopDescription;
   time: string;
-  shortTitle?: string;
   speaker?: SpeakerName;
-  url?: string;
 }

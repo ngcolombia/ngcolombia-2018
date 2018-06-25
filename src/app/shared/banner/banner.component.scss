@@ -1,0 +1,32 @@
+@import '~style/_variables.scss';
+#firstScreen {
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+}
+
+#title,
+#scrollDown {
+  color: $dark-violet;
+  text-align: center;
+  font-weight: bold;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  justify-content: center;
+}
+
+#title {
+  flex: 1;
+  font-size: 14vw;
+  @media (min-width: 680px) {
+    font-size: 10vw;
+  }
+}
+
+#scrollDown {
+  padding: 20px;
+  @media (max-width: 680px) {
+    margin-bottom: 4rem;
+  }
+}

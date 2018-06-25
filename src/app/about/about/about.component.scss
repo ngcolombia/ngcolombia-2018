@@ -1,3 +1,4 @@
+@import '~style/_variables.scss';
 .section {
   padding: 0 3rem;
   &.title {
@@ -5,7 +6,7 @@
     h2 {
       font-size: 5rem;
       line-height: 5rem;
-      color: #211056;
+      color: $dark-violet;
       margin: 0;
       letter-spacing: -0.025em;
       &.smaller {
@@ -16,8 +17,31 @@
   }
   &.paragraph {
     p {
-      text-align: justify;
+      text-align: left;
       font-size: 1rem;
+      a:link,
+      a:visited,
+      a:hover,
+      a:active {
+        color: $dark-blue;
+      }
+    }
+    .heroe {
+      width: 5rem;
+      height: 5rem;
+      filter: grayscale(1.0);
+      border-radius: 4rem;
+      margin-right: 0.5rem;
+      margin-left: 0.5rem;
+      margin-bottom: 0.5rem;
+    }
+    #bram {
+      width: 5rem;
+      height: 5rem;
+      background: url('assets/img/heroes/bram.jpg');
+    }
+    .heroe:hover {
+      filter: none;
     }
   }
 }
@@ -58,14 +82,15 @@ agm-map {
     padding: 0rem 4rem; // padding: 0rem 3rem;
     &.title > h2 {
       font-size: 8rem;
-      line-height: 10rem;
+      line-height: 8rem;
       &.smaller {
         font-size: 7rem;
-        line-height: 7rem;
+        line-height: 6rem;
       }
     }
     &.paragraph {
       p {
+        text-align: justify;
         font-size: 1.3rem;
       }
     }
@@ -76,7 +101,6 @@ agm-map {
   .section {
     width: 50vw;
     &.title {
-      text-align: center;
       h2.smaller {
         font-size: 6rem;
       }
