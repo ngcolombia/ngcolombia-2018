@@ -1,9 +1,13 @@
 <app-banner title="Speakers"></app-banner>
 
 <div class='grid-container'>
-  <div class='grid-item' *ngFor="let speaker of speakers" (click)='showBio(speaker)'>
-    <div class="speaker-info-container" [style.background-image]='speaker.photo | photoUrl'>
-      <mat-icon class="more-info" aria-label="icon">add_circle_outline</mat-icon>
+  <div class='grid-item'
+       *ngFor="let speaker of speakers"
+       (click)='showBio(speaker)'>
+    <div class="speaker-info-container"
+         [style.background-image]='speaker.photo | photoUrl'>
+      <mat-icon class="more-info"
+                aria-label="icon">add_circle_outline</mat-icon>
       <div class='speakerData'>
         <div class="background"></div>
         <h3>{{ speaker.name }}</h3>
