@@ -25,32 +25,36 @@ export const QUESTIONS = [
       'You can only purchase 1 ticket per transaction since it is required that every attendee fill in additional information.',
   },
   {
-    title: '6. Can I participate of two workshops?',
+    title: '6. What information do I need to present?',
+    description: 'You only need to present your ticket (digital or printed) and your ID.',
+  },
+  {
+    title: '7. Can I participate of two workshops?',
     description:
       'Yes. Two workshops will be carried out in the morning and the other two in the afternoon. You have to pick a combination that does not collide.',
   },
   {
-    title: '7. Is lunch included?',
+    title: '8. Is lunch included?',
     description:
       'No. Lunch is free choice. Yet, during the event we will provide snacks constantly.',
   },
   {
-    title: '8. What is the language of the conference?',
+    title: '9. What is the language of the conference?',
     description:
       'The event will be held in English. We will provide translation devices for both, the workshops and the conference.',
   },
   {
-    title: '9. Are there any discounts in the tickets?',
+    title: '10. Are there any discounts in the tickets?',
     description:
       'Ticket prices are fixed, nonetheless, Premium and Enterprise bundles have discounts of 14% and 19% respectively',
   },
   {
-    title: '10. Do you have diversity scholarships?',
+    title: '11. Do you have diversity scholarships?',
     description:
       'Yes. We will have a diversity program to provide underrepresented people the opportunity to join us. More information coming soon.',
   },
   {
-    title: '11. Will there be an afterparty?',
+    title: '12. Will there be an afterparty?',
     description:
       'We will have a cocktail at the end of the conference for you to meet other attendees and speakers.',
   },
