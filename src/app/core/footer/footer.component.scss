@@ -1,4 +1,29 @@
 @import '~style/_variables.scss';
+.top-bar {
+  width: 100vw;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 5rem;
+  background-color: $dark-violet;
+  p {
+    margin: 0;
+    color: white;
+    font-size: 1.2rem;
+    font-weight: 600;
+    margin-right: 1rem;
+  }
+}
+
+@media (max-width: 400px) {
+  .top-bar {
+    height: 4rem;
+    p {
+      font-size: 0.8rem;
+    }
+  }
+}
+
 .wrapper,
 .test {
   background-color: $dark-blue;

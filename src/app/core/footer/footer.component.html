@@ -1,3 +1,11 @@
+<div class="top-bar"
+     *ngIf="showToBar">
+  <p class="inline">Tickets available now!</p>
+  <a class="mat-squared mat-light-button"
+     [routerLink]="['/tickets']"
+     mat-raised-button
+     color="accent">GET YOURS</a>
+</div>
 <div class="wrapper">
   <div class="logos">
     <img src="assets/img/logo-ng-footer.svg"
