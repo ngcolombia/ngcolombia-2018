@@ -17,16 +17,16 @@
 }
 
 #title {
-  flex: 1; // Font-size fallback just in case
-  font-size: 4rem;
+  flex: 1;
   font-size: 14vw;
   @media (min-width: 680px) {
-    font-size: 6rem;
     font-size: 10vw;
   }
 }
 
 #scrollDown {
-  height: 85px;
   padding: 20px;
+  @media (max-width: 680px) {
+    margin-bottom: 4rem;
+  }
 }
