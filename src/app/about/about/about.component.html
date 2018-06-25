@@ -23,8 +23,7 @@
     <p>These are the people behind the curtain.<span class="bold"> They are completely devoted</span> to make NgColombia an amazing event using their experience, skills and knowledge. <span class="bold">They are responsible for the general execution</span> by constantly facing the boldest decisions.</p>
     <a href="https://twitter.com/FedericoGuaya"
        target="_blank"><img class="heroe"
-         matTooltip="Federico Jimenez"
-         src="assets/img/heroes/federico.png"
+         src="assets/img/heroes/federico.jpg"
          alt=""></a>
     <img class="heroe"
          matTooltip="Maria Camila Cardenas"
@@ -146,29 +145,30 @@
     </form>
   </div>
 </app-fullscreen>
-<app-fullscreen>  
+<app-fullscreen>
   <div id="map">
     <div class="message-overlay">
       <h2>Our<br>Spot<span class="roboto-font">.</span></h2>
       <a class="mat-squared mat-light-button"
-      mat-raised-button
-      color="accent"
-      href="https://www.google.com/maps/place/Palacio+de+Exposiciones+Y+Convenciones+de+Medelln/@6.241807,-75.576072,18z/data=!4m5!3m4!1s0x8e4429acff294367:0x6ea5e3894ada792c!8m2!3d6.2416183!4d-75.5763117"
-      target="_blank">GOOGLE MAPS</a>
+         mat-raised-button
+         color="accent"
+         href="https://www.google.com/maps/place/Palacio+de+Exposiciones+Y+Convenciones+de+Medelln/@6.241807,-75.576072,18z/data=!4m5!3m4!1s0x8e4429acff294367:0x6ea5e3894ada792c!8m2!3d6.2416183!4d-75.5763117"
+         target="_blank">GOOGLE MAPS</a>
     </div>
-      <agm-map #agmMap
-      [gestureHandling]="gestureHandling"
-      [latitude]="lat"
-      [longitude]="lng"
-      [zoom]="zoom"
-      [scaleControl]="panControl"
-      [styles]="mapStyles">
-        <agm-marker [latitude]="latMarker" [longitude]="lngMarker">
-            <agm-info-window>
-              <h2 class="no-margins text-center">NG-COLOMBIA</h2>
-              <h3 class="no-margins text-center">Sept 6 & 7 2018 </h3>
-            </agm-info-window>
-        </agm-marker>
-      </agm-map>
+    <agm-map #agmMap
+             [gestureHandling]="gestureHandling"
+             [latitude]="lat"
+             [longitude]="lng"
+             [zoom]="zoom"
+             [scaleControl]="panControl"
+             [styles]="mapStyles">
+      <agm-marker [latitude]="latMarker"
+                  [longitude]="lngMarker">
+        <agm-info-window>
+          <h2 class="no-margins text-center">NG-COLOMBIA</h2>
+          <h3 class="no-margins text-center">Sept 6 & 7 2018 </h3>
+        </agm-info-window>
+      </agm-marker>
+    </agm-map>
   </div>
 </app-fullscreen>
