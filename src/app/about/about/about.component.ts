@@ -6,10 +6,13 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./about.component.scss'],
 })
 export class AboutComponent implements OnInit {
+  newsletterTitle = ['Get the', 'latest', 'news'];
+  newsletterDescription = [
+    'Sign up to our newsletter and be',
+    'be the first to know about dates for',
+    'tickets releasing and more!',
+  ];
+  constructor() {}
 
-  constructor() { }
-
-  ngOnInit() {
-  }
-
+  ngOnInit() {}
 }

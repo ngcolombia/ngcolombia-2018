@@ -1,3 +1,4 @@
+import { BannerComponent } from './banner/banner.component';
 import { CommonModule } from '@angular/common';
 import { FullscreenComponent } from './components/fullscreen/fullscreen.component';
 import { InfoModalComponent } from './components/info-modal/info-modal.component';
@@ -8,7 +9,6 @@ import { ParallaxBigBangDirective } from './directives/parallax-bigbang.directiv
 import { ParallaxHoverDirective } from './directives/parallax-hover.directive';
 import { ParallaxScrollDirective } from './directives/parallax-scroll.directive';
 import { RouterModule } from '@angular/router';
-import { BannerComponent } from './banner/banner.component';
 
 @NgModule({
   imports: [CommonModule, MaterialModule, RouterModule],
@@ -33,4 +33,4 @@ import { BannerComponent } from './banner/banner.component';
   ],
   entryComponents: [InfoModalComponent],
 })
-export class SharedModule { }
+export class SharedModule {}

@@ -31,3 +31,39 @@
     <p>While most websites are built with code and tests, NgColombia's is built with <span class="bold">passion and hard work.</span> The website committee is responsible for creating this <span class="bold">pixel-perfect</span> experience.</p>
   </div>
 </app-fullscreen>
+<app-fullscreen>
+  <div class="section title">
+    <h2>Get the latest news<span class="roboto">.</span></h2>
+  </div>
+  <div class="section paragraph ">
+    <p>Sign up to our newsletter and be be the first to know about dates for tickets releasing and more!</p>
+    <form action="https://ng-colombia.us11.list-manage.com/subscribe/post?u=6b41dea739df1ec2b457d32dd&amp;id=ab82bece5b"
+          method="post"
+          target="_blank">
+      <div>
+        <mat-form-field>
+          <input #input
+                 type="email"
+                 name="EMAIL"
+                 matInput
+                 placeholder="E-mail address"
+                 required>
+        </mat-form-field>
+      </div>
+      <!-- real people should not fill this in and expect good things - do not remove this or risk form bot signups-->
+      <div style="position: absolute; left: -5000px;"
+           aria-hidden="true">
+        <input type="text"
+               name="b_6b41dea739df1ec2b457d32dd_ab82bece5b"
+               tabindex="-1"
+               value="">
+      </div>
+      <div>
+        <button class="mat-squared mat-light-button"
+                type="submit"
+                mat-raised-button
+                color="accent">SIGN UP</button>
+      </div>
+    </form>
+  </div>
+</app-fullscreen>

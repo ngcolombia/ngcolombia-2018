@@ -105,3 +105,119 @@
     }
   }
 }
+
+// MEET THE SPEAKERS
+.section {
+  padding: 0 3rem;
+  br {
+    display: none;
+  }
+  &.title {
+    text-align: left;
+    &.down {
+      display: none;
+    }
+    &.up {
+      display: initial;
+    }
+    h2 {
+      font-size: 5rem;
+      line-height: 5rem;
+      color: $dark-violet;
+      margin: 0;
+      letter-spacing: -0.025em;
+      &.smaller {
+        font-size: 3rem;
+        line-height: 3rem;
+      }
+    }
+  }
+  &.paragraph {
+    p {
+      text-align: left;
+      font-size: 1rem;
+      a:link,
+      a:visited,
+      a:hover,
+      a:active {
+        color: $dark-blue;
+      }
+    }
+  }
+}
+
+@media (max-width: 1150px) {
+  .section {
+    &.title {
+      padding: 0rem 2.3rem;
+      text-align: left;
+      width: 95vw;
+    }
+  }
+}
+
+@media (min-width: 500px) {
+  .section {
+    &.title {
+      padding: 0rem 2.5rem;
+      h2 {
+        font-size: 7rem;
+        line-height: 7rem;
+        &.smaller {
+          font-size: 5rem;
+          line-height: 5rem;
+        }
+      }
+    }
+  }
+}
+
+@media (min-width: 750px) {
+  .section {
+    padding: 0rem 4rem; // padding: 0rem 3rem;
+    &.title > h2 {
+      font-size: 8rem;
+      line-height: 8rem;
+      &.smaller {
+        font-size: 7rem;
+        line-height: 6rem;
+      }
+    }
+    &.paragraph {
+      p {
+        text-align: justify;
+        font-size: 1.3rem;
+      }
+    }
+  }
+}
+
+@media (min-width: 1150px) {
+  .section {
+    text-align: right;
+    &.paragraph {
+      p {
+        text-align: right;
+        font-size: 1.3rem;
+      }
+    }
+    width: 50vw;
+    br {
+      display: initial;
+    }
+    &.title {
+      &.down {
+        display: initial;
+      }
+      &.up {
+        display: none;
+      }
+      h2.smaller {
+        font-size: 6rem;
+      }
+    }
+    &.paragraph {
+      padding: 0rem 2rem 0rem 6rem;
+    }
+  }
+}
