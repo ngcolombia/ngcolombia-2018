@@ -13,6 +13,10 @@
   font-weight: 600;
   z-index: 10;
   .title {
+    .link {
+      color: inherit;
+      text-decoration: none;
+    }
     font-size: 25px;
     @media (min-width: 680px) {
       padding-left: 2rem;

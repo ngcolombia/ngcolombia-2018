@@ -23,6 +23,10 @@ const routes: Routes = [
     loadChildren: 'app/coc/coc.module#CocModule',
   },
   {
+    path: 'faq',
+    loadChildren: 'app/faq/faq.module#FaqModule',
+  },
+  {
     path: '**',
     redirectTo: '/',
   },

@@ -1,0 +1,8 @@
+<app-banner title="FAQ"></app-banner>
+<div class="questions">
+  <div class="question"
+       *ngFor="let question of questions">
+    <h2>{{question.title}}</h2>
+    <p>{{question.description}}</p>
+  </div>
+</div>

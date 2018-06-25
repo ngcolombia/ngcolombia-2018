@@ -41,7 +41,11 @@
     <mat-toolbar color="primary"
                  class="toolbar"
                  [@scrollAnimation]="toolbarState">
-      <span class="title">NG-COLOMBIA</span>
+      <span class="title">
+        <a class=link [routerLink]="['/']">
+          NG-COLOMBIA
+        </a>
+      </span>
       <span class="fill-space"></span>
       <button type="button"
               class="menu-button"
