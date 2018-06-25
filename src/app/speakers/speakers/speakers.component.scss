@@ -8,8 +8,14 @@
   justify-content: stretch;
   flex-wrap: wrap;
   margin-bottom: 20px;
+
+  > .grid-item {
+    width: 100%;
+  }
+
   @media (min-width: $desktop-min-size) {
     flex-direction: row;
+
     > .grid-item {
       width: 50%;
       margin-bottom: 15px;
