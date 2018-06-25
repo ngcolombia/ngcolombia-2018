@@ -2,7 +2,7 @@
 .section {
   padding: 0 3rem;
   &.title {
-    text-align: left;
+    text-align: center;
     h2 {
       font-size: 5rem;
       line-height: 5rem;
@@ -115,7 +115,7 @@
 @media (min-width: 500px) {
   .section {
     &.title {
-      padding: 0rem 2.5rem;
+      padding: 0rem 2rem;
       h2 {
         font-size: 7rem;
         line-height: 7rem;
@@ -131,12 +131,14 @@
 @media (min-width: 750px) {
   .section {
     padding: 0rem 4rem; // padding: 0rem 3rem;
-    &.title > h2 {
-      font-size: 8rem;
-      line-height: 8rem;
-      &.smaller {
-        font-size: 7rem;
-        line-height: 6rem;
+    &.title {
+      h2 {
+        font-size: 8rem;
+        line-height: 8rem;
+        &.smaller {
+          font-size: 7rem;
+          line-height: 6rem;
+        }
       }
     }
     &.paragraph {
