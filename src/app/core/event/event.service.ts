@@ -156,7 +156,7 @@ export class EventService {
         shortBio: ShortSpeakerBio.Sebastian,
         bio: SpeakerBio.Sebastian,
         talk: TalkTitle.AngularTestbed,
-        photo: this.basePath + 'sebastian.jpg',
+        photo: this.basePath + 'sebastian.jpeg',
         country: Country.Colombia,
         twitter: 'https://twitter.com/sebasgojs',
         github: 'https://github.com/seagomezar',

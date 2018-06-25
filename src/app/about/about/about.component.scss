@@ -2,7 +2,7 @@
 .section {
   padding: 0 3rem;
   &.title {
-    text-align: left;
+    text-align: center;
     h2 {
       font-size: 5rem;
       line-height: 5rem;
@@ -35,19 +35,14 @@
       margin-left: 0.5rem;
       margin-bottom: 0.5rem;
     }
-    #bram {
-      width: 5rem;
-      height: 5rem;
-      background: url('assets/img/heroes/bram.jpg');
-    }
     .heroe:hover {
       filter: none;
     }
   }
 }
+
 #map {
   position: relative;
-
   .message-overlay {
     position: absolute;
     display: flex;
@@ -58,60 +53,49 @@
     left: 0;
     right: 0;
     height: 60%;
-    background:linear-gradient(to bottom, rgba(0, 8, 251, 0.7) 0%, rgba(10, 90, 254, 0.6) 50%, rgba(10, 90, 254, 0.1) 88%, transparent 100%); 
+    background: linear-gradient(to bottom, rgba(0, 8, 251, 0.7) 0%, rgba(10, 90, 254, 0.6) 50%, rgba(10, 90, 254, 0.1) 88%, transparent 100%);
     z-index: 2;
-
     @media (max-width: 500px) and (orientation: landscape) {
       height: 50%;
     }
-    
     @media (min-width: 750px) {
       right: auto;
       height: auto;
       bottom: 0;
       width: 55%;
-      background:linear-gradient(to right, rgba(0, 8, 251, 0.7) 0%, rgba(10, 90, 254, 0.6) 50%, rgba(10, 90, 254, 0.1) 88%, transparent 100%); 
+      background: linear-gradient(to right, rgba(0, 8, 251, 0.7) 0%, rgba(10, 90, 254, 0.6) 50%, rgba(10, 90, 254, 0.1) 88%, transparent 100%);
       justify-content: center;
       flex-direction: column;
     }
-    
     h2 {
       color: #FFFFFF;
       font-size: 6rem;
       line-height: 5rem;
       margin: -8% 0 0;
-      
       @media (min-width: 750px) {
         font-size: 7rem;
         line-height: 6rem;
         margin: 0 0 6rem -8%;
       }
-      
       @media (max-height: 500px) and (orientation: landscape) {
         margin-top: 1%;
       }
-      
     }
-    
     a {
       font-size: 1.2rem;
       margin-top: -8%;
-      
       @media (min-width: 750px) {
         margin-left: -8%;
         margin-top: -3rem;
       }
-
       @media (max-height: 500px) and (orientation: landscape) {
         margin-top: 1%;
       }
-      
       @media (max-width: 480px) and (orientation: portrait) {
         margin-top: -25%;
       }
     }
   }
-
   agm-map {
     height: 100vh;
     width: 100vw;
@@ -131,7 +115,7 @@
 @media (min-width: 500px) {
   .section {
     &.title {
-      padding: 0rem 2.5rem;
+      padding: 0rem 2rem;
       h2 {
         font-size: 7rem;
         line-height: 7rem;
@@ -147,12 +131,14 @@
 @media (min-width: 750px) {
   .section {
     padding: 0rem 4rem; // padding: 0rem 3rem;
-    &.title > h2 {
-      font-size: 8rem;
-      line-height: 8rem;
-      &.smaller {
-        font-size: 7rem;
-        line-height: 6rem;
+    &.title {
+      h2 {
+        font-size: 8rem;
+        line-height: 8rem;
+        &.smaller {
+          font-size: 7rem;
+          line-height: 6rem;
+        }
       }
     }
     &.paragraph {
