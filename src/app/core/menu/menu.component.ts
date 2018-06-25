@@ -47,7 +47,6 @@ export class MenuComponent implements OnInit {
   isHandset: Observable<BreakpointState>;
   toolbarState: string;
   scrolling = new Subject();
-  private canUpdatedMenuItems = true;
   readonly TOOLBAR_DEBOUNCE_TIME = 100;
   showedMenuLinks: any[];
   @ViewChild('drawer') sideNav: MatSidenav;
