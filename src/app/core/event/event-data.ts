@@ -39,7 +39,7 @@ export enum ShortSpeakerBio {
   Sebastian = 'Front-end Architect',
   Tatiana = 'Front-end Developer',
   Mike = 'Angular GDE and NgRx Core member',
-  Miguel = 'University Professor and Web Developer',
+  Miguel = 'Mozilla Tech Speaker',
   Sherry = 'Senior IT developer, ngVikings Organizer',
   Kenneth = 'Web Platform Architect. W3C TAG Member',
 }
