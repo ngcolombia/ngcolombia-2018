@@ -3,14 +3,16 @@
 <div class="container">
   <div class="section title">
     <h2 class="inline">Thurs<br class="line-break">day<span class="roboto">.</span></h2>
+    <h3>Workshops</h3>
   </div>
   <div class="section agenda">
     <app-activity *ngFor="let activity of thursday"
-                  [activity]="activity"></app-activity>
+    [activity]="activity"></app-activity>
   </div>
   <br><br><br>
   <div class="section title">
     <h2 class="inline blue">Fri<br class="line-break">day<span class="roboto">.</span></h2>
+    <h3>Conference</h3>
   </div>
   <div class="section agenda">
     <app-activity *ngFor="let activity of friday"
