@@ -34,7 +34,7 @@
     }
   }
   .wrapper {
-    background: linear-gradient( to bottom, $violet 0%, $violet 28%, $light-violet 38%, $light-violet 61%, #adcdff8a 71%, #adcdff8a 89%, #ffffff 100%);
+    background-color: #A296F7;
     padding-bottom: 100px;
     position: relative;
   }
@@ -144,6 +144,10 @@
       }
     }
   }
+}
+
+::ng-deep .newsletter-wrapper app-fullscreen {
+  background-color: transparent;
 }
 
 @media (max-width: 1150px) {

@@ -25,18 +25,20 @@
          [ngStyle]="{left: image.position.x, top: image.position.y}">
   </ng-container>
 </div>
-<app-fullscreen>
-  <div class="section paragraph ">
-    <div class="section title up">
+<div class="newsletter-wrapper" #newsletter>
+  <app-fullscreen class="newsletter">
+    <div class="section paragraph" >
+      <div class="section title up">
+        <h2 class="smaller">Meet <br> the <br> speakers<span class="roboto">.</span></h2>
+      </div>
+      <p>A diverse mix of Google Developer Experts,<br> experienced developers and engineers, <br>are joining us from all over the world!</p>
+      <a class="mat-squared mat-light-button"
+         mat-raised-button
+         [routerLink]="['/speakers']"
+         color="accent">SPEAKERS</a>
+    </div>
+    <div class="section title down">
       <h2 class="smaller">Meet <br> the <br> speakers<span class="roboto">.</span></h2>
     </div>
-    <p>A diverse mix of Google Developer Experts,<br> experienced developers and engineers, <br>are joining us from all over the world!</p>
-    <a class="mat-squared mat-light-button"
-       mat-raised-button
-       [routerLink]="['/speakers']"
-       color="accent">SPEAKERS</a>
-  </div>
-  <div class="section title down">
-    <h2 class="smaller">Meet <br> the <br> speakers<span class="roboto">.</span></h2>
-  </div>
-</app-fullscreen>
+  </app-fullscreen>
+</div>
