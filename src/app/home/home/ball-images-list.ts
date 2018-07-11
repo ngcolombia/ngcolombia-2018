@@ -2,8 +2,8 @@ export const BALL_IMAGES_LIST = [
   {
     path: 'learn/BOLITA1_desktop.png',
     position: {
-      x: '-415px',
-      y: '0',
+      x: '-291px',
+      y: '125px',
     },
     layer: 'bottom',
     device: 'desktop',
@@ -11,8 +11,8 @@ export const BALL_IMAGES_LIST = [
   {
     path: 'learn/BOLITA2_desktop.png',
     position: {
-      x: '-4%',
-      y: '13%',
+      x: '0.75%',
+      y: '16.6%',
     },
     layer: 'front',
     device: 'desktop',
@@ -20,8 +20,8 @@ export const BALL_IMAGES_LIST = [
   {
     path: 'learn/BOLITA3_desktop.png',
     position: {
-      x: '65%',
-      y: '6%',
+      x: '67.1%',
+      y: '7.6%',
     },
     layer: 'front',
     device: 'desktop',
@@ -56,8 +56,8 @@ export const BALL_IMAGES_LIST = [
   {
     path: 'meet/BOLITA1_desktop.png',
     position: {
-      x: '76%',
-      y: '30%',
+      x: '82.7%',
+      y: '36.5%',
     },
     layer: 'front',
     device: 'desktop',
@@ -65,8 +65,8 @@ export const BALL_IMAGES_LIST = [
   {
     path: 'meet/BOLITA3_desktop.png',
     position: {
-      x: '14%',
-      y: '37%',
+      x: '17.1%',
+      y: '41%',
     },
     layer: 'bottom',
     device: 'desktop',
@@ -74,8 +74,8 @@ export const BALL_IMAGES_LIST = [
   {
     path: 'meet/BOLITA2_desktop.png',
     position: {
-      x: '-11%',
-      y: '44%',
+      x: '-5.2%',
+      y: '49.9%',
     },
     layer: 'bottom',
     device: 'desktop',
@@ -110,8 +110,8 @@ export const BALL_IMAGES_LIST = [
   {
     path: 'share/BOLITA1_desktop.png',
     position: {
-      x: '-19%',
-      y: '70%',
+      x: '-12.5%',
+      y: '81.5%',
     },
     layer: 'bottom',
     device: 'desktop',
@@ -119,8 +119,8 @@ export const BALL_IMAGES_LIST = [
   {
     path: 'share/BOLITA2_desktop.png',
     position: {
-      x: '80%',
-      y: '68%',
+      x: '85.6%',
+      y: '78.8%',
     },
     layer: 'bottom',
     device: 'desktop',
@@ -128,8 +128,8 @@ export const BALL_IMAGES_LIST = [
   {
     path: 'share/BOLITA3_desktop.png',
     position: {
-      x: '77%',
-      y: '64%',
+      x: '80.2%',
+      y: '74%',
     },
     layer: 'front',
     device: 'desktop',
@@ -137,8 +137,8 @@ export const BALL_IMAGES_LIST = [
   {
     path: 'share/BOLITA4_desktop.png',
     position: {
-      x: '5%',
-      y: '88%',
+      x: '8%',
+      y: '98%',
     },
     layer: 'front',
     device: 'desktop',

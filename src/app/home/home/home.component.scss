@@ -35,7 +35,6 @@
   }
   .wrapper {
     background-color: #A296F7;
-    padding-bottom: 100px;
     position: relative;
   }
   app-home-banner {
@@ -95,7 +94,6 @@
       z-index: 1;
     }
     @media (min-width: 680px) {
-      transform: scale(0.7);
       &.mobile {
         display: none;
       }
