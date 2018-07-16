@@ -83,7 +83,7 @@
 
 .speakerData {
   color: #fff;
-  font-size: 6vw;
+  font-size: 5.5vw;
   position: absolute;
   z-index: 5;
   padding: 25px 15px 10px;
@@ -93,6 +93,9 @@
   right: 0;
   > h5 {
     font-size: 0.6em;
+  }
+  > h6 {
+    font-size: 0.55em;
   }
   .background {
     position: absolute;
@@ -107,6 +110,13 @@
   }
   @media (min-width: $desktop-min-size) {
     font-size: 2vw;
+
+    > h5 {
+      font-size: 0.65em;
+    }
+    > h6 {
+      font-size: 0.6em;
+    }
   }
   > * {
     margin: 0;
