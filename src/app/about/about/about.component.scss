@@ -1,6 +1,32 @@
 @import '~style/_variables.scss';
 
-@media (min-width: 750px) {
+:host{
+  background-color: #FFFFFF;
+  display: block; 
+}
+
+@media (min-width: 1150px) {
+  app-fullscreen{
+   
+    &:not(.map-container){
+      max-width: 1300px;
+      margin: 0 auto;
+    }
+
+    &:first-child{
+      min-height: 80vh;
+      padding-top: 20vh;
+    }
+
+    &.newsletter {
+      padding-top: 5vh;
+      padding-bottom: 20vh;
+    }
+
+    &:not(:first-child){
+      min-height: 80vh;
+    }
+  }
   app-fullscreen:nth-of-type(-2n + 4){
     .section{
       &.title {
