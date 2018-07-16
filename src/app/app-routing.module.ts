@@ -23,6 +23,10 @@ const routes: Routes = [
     loadChildren: 'app/coc/coc.module#CocModule',
   },
   {
+    path: 'community',
+    loadChildren: 'app/community/community.module#CommunityModule',
+  },
+  {
     path: 'faq',
     loadChildren: 'app/faq/faq.module#FaqModule',
   },
