@@ -1,0 +1,35 @@
+@import '~style/_variables.scss';
+.questions {
+  margin: 3rem;
+  .question {
+    margin-bottom: 2rem;
+    h2 {
+      margin: 1rem 0rem;
+      font-size: 2rem;
+      line-height: 2.4rem;
+      color: $dark-violet;
+    }
+    p {
+      font-size: 1.1rem;
+    }
+  }
+}
+
+@media (max-width: 550px) {
+  .questions {
+    margin: 2rem;
+    .question {
+      margin-bottom: 2rem;
+      h2 {
+        margin: 0rem;
+        font-size: 1.5rem;
+        line-height: 2rem;
+        color: $dark-violet;
+      }
+      p {
+        font-size: 1rem;
+        margin-top: 5px;
+      }
+    }
+  }
+}

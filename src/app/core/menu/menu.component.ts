@@ -25,7 +25,6 @@ import { OnInit } from '@angular/core';
       state(
         'show',
         style({
-          // backgroundColor: 'rgba(255, 255, 255, 0.6)',
           backgroundColor: '#0a5afe',
           color: 'white',
         }),

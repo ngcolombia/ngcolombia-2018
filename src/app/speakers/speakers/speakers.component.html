@@ -3,16 +3,17 @@
 <div class='grid-container'>
   <div class='grid-item'
        *ngFor="let speaker of speakers"
-       [style.background-image]='speaker.photo | photoUrl'
        (click)='showBio(speaker)'>
-
-    <mat-icon class="more-info"
-              aria-label="icon">add_circle_outline</mat-icon>
-    <div class='speakerData'>
-      <div class="background"></div>
-      <h3>{{ speaker.name }}</h3>
-      <h5>{{ speaker.shortBio }}</h5>
+    <div class="speaker-info-container"
+         [style.background-image]='speaker.photo | photoUrl'>
+      <mat-icon class="more-info"
+                aria-label="icon">add_circle_outline</mat-icon>
+      <div class='speakerData'>
+        <div class="background"></div>
+        <h3>{{ speaker.name }}</h3>
+        <h5>{{ speaker.shortBio }}</h5>
       <h6>{{ speaker.country }}</h6>
+      </div>
     </div>
   </div>
 </div>

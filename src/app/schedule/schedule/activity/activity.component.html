@@ -8,12 +8,13 @@
               [class.general-activity]="isGeneralActivity(activity)">{{activity.time}}</figure>
     </mat-grid-tile>
     <mat-grid-tile [colspan]="4"
-                   [rowspan]="2">
+                   [rowspan]="2"
+                   class="activity-text">
       <div class="title"
            [class.general-activity]="isGeneralActivity(activity)"
            [style.fontSize]="isGeneralActivity(activity) ? null : titleFontSize">{{activity.title}}
       </div><br>
-
+      <div class="open-icon" *ngIf="activity.description"><i class="material-icons">open_in_new</i></div>
       <div class="author"
            [class.general-activity]="isGeneralActivity(activity)"
            [style.fontSize]="isGeneralActivity(activity) ? null : speakerFontSize">{{activity.speaker}}</div>

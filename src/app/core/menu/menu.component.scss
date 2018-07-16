@@ -13,6 +13,10 @@
   font-weight: 600;
   z-index: 10;
   .title {
+    .link {
+      color: inherit;
+      text-decoration: none;
+    }
     font-size: 25px;
     @media (min-width: 680px) {
       padding-left: 2rem;
@@ -113,7 +117,7 @@
   ::ng-deep .other-info-list.mat-nav-list .menu-link.mat-list-item {
     height: 35px;
     @media (min-width: 680px) {
-      height: 48px;
+      // height: 48px;
     }
   }
 }

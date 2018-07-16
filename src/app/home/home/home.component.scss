@@ -34,8 +34,7 @@
     }
   }
   .wrapper {
-    background: linear-gradient( to bottom, $violet 0%, $violet 28%, $light-violet 38%, $light-violet 61%, #adcdff8a 71%, #adcdff8a 89%, #ffffff 100%);
-    padding-bottom: 100px;
+    background-color: #A296F7;
     position: relative;
   }
   app-home-banner {
@@ -95,7 +94,6 @@
       z-index: 1;
     }
     @media (min-width: 680px) {
-      transform: scale(0.7);
       &.mobile {
         display: none;
       }
@@ -144,6 +142,10 @@
       }
     }
   }
+}
+
+::ng-deep .newsletter-wrapper app-fullscreen {
+  background-color: transparent;
 }
 
 @media (max-width: 1150px) {

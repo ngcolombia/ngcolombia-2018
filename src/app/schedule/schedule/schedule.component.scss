@@ -13,9 +13,6 @@
         color: $dark-violet;
         margin: 0;
         letter-spacing: -0.025em;
-        &.blue {
-          // color: $dark-blue;
-        }
         &.smaller {
           font-size: 3rem;
           line-height: 3rem;
@@ -23,6 +20,11 @@
         .line-break {
           display: none;
         }
+      }
+      h3 {
+        color: $dark-violet;
+        font-size: 1.4rem;
+        line-height: 1.8rem;
       }
     }
   }
@@ -48,6 +50,11 @@
           .line-break {
             display: initial;
           }
+        }
+        h3 {
+          font-size: 1.8rem;
+          line-height: 2rem;
+          padding-left: 0.3rem;
         }
       }
     }
