@@ -1,4 +1,18 @@
 @import '~style/_variables.scss';
+
+@media (min-width: 750px) {
+  app-fullscreen:nth-of-type(-2n + 4){
+    .section{
+      &.title {
+        order:2;
+      }
+      &.paragraph {
+        order:1;
+      }
+    }
+  }
+}
+
 .section {
   padding: 0 3rem;
   &.title {
