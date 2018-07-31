@@ -19,8 +19,8 @@ export const MenuLinks = [
     text: 'Tickets',
     route: '/tickets',
   },
-  // {
-  //   text: 'Community',
-  //   route: '/community',
-  // },
+  {
+    text: 'Community',
+    route: '/community',
+  },
 ];

@@ -31,6 +31,10 @@ const routes: Routes = [
     loadChildren: 'app/faq/faq.module#FaqModule',
   },
   {
+    path: 'ng-girls',
+    loadChildren: 'app/ng-girls/ng-girls.module#NgGirlsModule',
+  },
+  {
     path: '**',
     redirectTo: '/',
   },
