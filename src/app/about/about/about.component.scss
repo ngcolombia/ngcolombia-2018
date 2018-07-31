@@ -1,39 +1,34 @@
 @import '~style/_variables.scss';
-
-:host{
+:host {
   background-color: #FFFFFF;
-  display: block; 
+  display: block;
 }
 
 @media (min-width: 1150px) {
-  app-fullscreen{
-   
-    &:not(.map-container){
+  app-fullscreen {
+    &:not(.map-container) {
       max-width: 1300px;
       margin: 0 auto;
     }
-
-    &:first-child{
+    &:first-child {
       min-height: 80vh;
       padding-top: 20vh;
     }
-
     &.newsletter {
       padding-top: 5vh;
       padding-bottom: 20vh;
     }
-
-    &:not(:first-child){
+    &:not(:first-child) {
       min-height: 80vh;
     }
   }
-  app-fullscreen:nth-of-type(-2n + 4){
-    .section{
+  app-fullscreen:nth-of-type(-2n + 6) {
+    .section {
       &.title {
-        order:2;
+        order: 2;
       }
       &.paragraph {
-        order:1;
+        order: 1;
       }
     }
   }
