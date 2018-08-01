@@ -26,21 +26,26 @@
       <a mat-list-item
          (click)="drawer.toggle()"
          class="menu-link"
+         [routerLink]="['/faq']">FAQ</a>
+      <a mat-list-item
+         (click)="drawer.toggle()"
+         class="menu-link"
          [routerLink]="['/ng-girls']">NgGirls</a>
       <a mat-list-item
          (click)="drawer.toggle()"
          class="menu-link"
-         [routerLink]="['/faq']">FAQ</a>
-      <!-- <a mat-list-item
-         (click)="drawer.toggle()"
-         class="menu-link"
-         [routerLink]="['/diversity']">Diversity</a> -->
+         [routerLink]="['/coc']">Code of Conduct</a>
       <a mat-list-item
          (click)="drawer.toggle()"
          class="menu-link"
-         [routerLink]="['/coc']">Code of Conduct</a>
-      <!-- <a mat-list-item
-         class="menu-link">Contact</a> -->
+         [routerLink]="['/community']">Community Partners</a>
+      <a mat-list-item
+         (click)="drawer.toggle()"
+         class="menu-link"
+         [routerLink]="['/diversity']">Diversity Scholarships</a>
+      <a mat-list-item
+         class="menu-link small"
+         href="mailto:info@ngcolombia.com">Contact us: info@ngcolombia.com</a>
     </mat-nav-list>
   </mat-sidenav>
   <mat-sidenav-content>

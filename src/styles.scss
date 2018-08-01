@@ -61,3 +61,8 @@ body {
 ::-webkit-scrollbar-thumb:window-inactive {
   background: rgba(210, 210, 210, 0.4);
 }
+
+a.menu-link.small.mat-list-item .mat-list-item-content {
+  font-size: 13px;
+  font-weight: 500;
+}

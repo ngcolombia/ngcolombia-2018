@@ -35,6 +35,10 @@ const routes: Routes = [
     loadChildren: 'app/ng-girls/ng-girls.module#NgGirlsModule',
   },
   {
+    path: 'diversity',
+    loadChildren: 'app/diversity/diversity.module#DiversityModule',
+  },
+  {
     path: '**',
     redirectTo: '/',
   },
