@@ -81,17 +81,6 @@ export class EventService {
         website: 'http://susiesahim.com/',
       },
       {
-        name: SpeakerName.Jeremy,
-        shortBio: ShortSpeakerBio.Jeremy,
-        bio: SpeakerBio.Jeremy,
-        talk: TalkTitle.SafelyBreakingCode,
-        photo: this.basePath + 'jeremy.jpg',
-        country: Country.UnitedStates,
-        twitter: 'https://twitter.com/gnomeontherun',
-        github: 'https://github.com/gnomeontherun',
-        website: 'https://gnomeontherun.com',
-      },
-      {
         name: SpeakerName.Laura,
         shortBio: ShortSpeakerBio.Laura,
         bio: SpeakerBio.Laura,
@@ -241,10 +230,10 @@ export class EventService {
         time: '12:00',
       },
       {
-        title: WorkshopTitle.BuildingConversational,
-        description: WorkshopDescription.BuildingConversational,
+        title: WorkshopTitle.Firebase,
+        description: WorkshopDescription.Firebase,
         time: '14:00',
-        speaker: SpeakerName.Jeremy,
+        speaker: SpeakerName.Katerina,
       },
       {
         title: WorkshopTitle.AccessibleAngular,
@@ -294,12 +283,6 @@ export class EventService {
         description: ActivityDescription.AccessibleAngularApps,
         time: '10:10',
         speaker: SpeakerName.Susie,
-      },
-      {
-        title: TalkTitle.SafelyBreakingCode,
-        description: ActivityDescription.SafelyBreakingCode,
-        time: '10:45',
-        speaker: SpeakerName.Jeremy,
       },
       {
         title: TalkTitle.DontWorryBeHappy,

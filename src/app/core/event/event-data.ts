@@ -4,7 +4,6 @@ export enum SpeakerName {
   Andres = 'Andrés Villanueva',
   Alyssa = 'Alyssa Nicoll',
   Susie = 'Susie Sahim',
-  Jeremy = 'Jeremy Wilken',
   Laura = 'Laura Ciro',
   Jorge = 'Jorge Cano',
   Bartosz = 'Bartosz Pietrucha',
@@ -29,7 +28,6 @@ export enum ShortSpeakerBio {
   Andres = 'Google Developer Expert in Firebase',
   Alyssa = 'Google Developer Expert in Angular',
   Susie = 'Senior Creative Engineer. Tech Lead at Google',
-  Jeremy = 'GDE in Angular and the Google Assistant',
   Laura = 'Software Developer at Yuxi Global',
   Jorge = 'Google Developer Expert in Angular',
   Bartosz = 'Angular-Academy.com Founder',
@@ -53,8 +51,6 @@ export enum SpeakerBio {
   Alyssa = "I'm an Angular Developer Advocate & GDE. My two degrees (Web Design & Development and Psychology) feed my speaking career. I'm a weekly panelist on Adventures in Angular and Angular Air, which have a combined following of over 16,000 listeners. I enjoy gaming, scuba diving, and have a toothless dog named Gummy. My DM is always open, come talk sometime.",
   // tslint:disable-next-line:quotemark
   Susie = "Tech lead for Google marketing's component libraries. Founder of PaperDemon.com, a community helping artists to become more awesome.",
-  // tslint:disable-next-line:quotemark
-  Jeremy = "Software engineer and Google Developer Expert for Angular and the Google Assistant. He is the author of Angular in Action and Ionic in Action, as well as a regular speaker at events around the world. Lives in Austin, Texas, with his wife and daughters. When he isn't coding, you can find him brewing beer.",
   // tslint:disable-next-line:quotemark
   Laura = "I'm @pionerasdev Co-Organizer and Software Developer at @YuxiGlobal. Apps developer in Node, Ruby, Arduino for IoT as stand-alone applications with Angular. Passionate about Code, Music, Poetry, and Inclusion; volunteer in events for minorities or people with hardships economy/social",
   Jorge = 'After more than 9 years working in the tech industry, I am a full stack developer with focus on JavaScript technologies. Today, I work at Byte Default using Angular / RxJS / Firebase / Nativescript as well as other technologies. He delivered several courses and talks as well as write some tech articles on these subjects. Because of that, he was recognised as a Google Developer Expert in Angular & web technologies and Nativescript Developer Expert.',
@@ -112,7 +108,7 @@ export enum GeneralActivityDescription {
 export enum WorkshopTitle {
   RxJSFromTrainee = 'RxJS: From trainee to BOSS',
   WritePowerful = 'Write powerful Unit Tests with Angular Test Bed',
-  BuildingConversational = 'Building Conversational Experiences',
+  Firebase = 'Getting Real-Time with Firebase and Angular',
   AccessibleAngular = 'Accessible Angular Applications',
 }
 
@@ -120,7 +116,7 @@ export enum WorkshopDescription {
   RxJSFromTrainee = 'in the workshop we will see from the foundations, how to work and understand the operation of RxJS, the only previous knowledge you need is to understand a bit of JS...',
   WritePowerful = 'In this workshop we will learn and practice how to write effective unit tests, covering the fundamentals of the Angular TestBed API and see how writing unit tests in Angular can change our development life. We also will understand the deploy process of a typical Angular application and what is the part of the unit tests over there. The plan for the workshop is, we will cover what is a unit test how to bring them into Angular, then we will see what is the Angular TestBed and how never forget the how to write a test in Angular. Also, we will see how to test providers and components and We will meet the "Do-it-yourself Angular Test framework to facilitate your development life. Next, we will introduce TDD and we can deep into Karma Jasmine and Protractor to definitely you be on the road. A little bit of sugar with e2e tests and finally We will introduce the Angular TestBed (ATB) repository and We will see how to contribute using unit tests to the Angular / Angular TestBed projects.',
   // tslint:disable-next-line:quotemark
-  BuildingConversational = "With the rise of voice assistants, voice is becoming another surface area for users to interact with your product or service. We can now start to blend this new technology with our existing offerings to improve user experience, engagement, and satisfaction. Using technologies like newer browser APIs, Google Actions, Dialogflow, and Angular, you can improve the user experience of your applications. Also including AI, you can craft intelligent voice driven experiences quickly that integrate with your services and drives your interfaces. We'll look at how to design and the tools you can use to build your own conversational interfaces for the web.",
+  Firebase = 'The participants of this workshop will work hands on with Firebase in an Angular application. They will walk along a journey of developing an app with Angular and the real-time magic of Firebase, using the angularfire2 library. Firebase acts as a backend as a service and takes care of real-time synchronization across apps and platforms. The participants will learn about and use the main Firebase modules needed to develop a simple social application. They will use Authentication, cloud storage and the Real-Time database. Best practices about application planning will be discussed, like structuring the data in the API and decisions that need to be made in advance. At the end of this workshop, each participant will have created and deployed a simple web application.   The workshop needs prior knowledge of web development. Some basic Angular experience is preferable, but not essential. No prior knowledge of Firebase is needed. The users will need a web-development-friendly laptop (preferably a Unix-based system, or Windows with nodejs and npm installed).',
   // tslint:disable-next-line:quotemark
   AccessibleAngular = "In total, almost 12% of the Latin American and Caribbean population is thought to live with at least one disability (~66 million people). 83% of us who don't currently have a disability, will age into one. And as the aging population increases, it is ever more important that we make our apps inclusive to this population.I'll demonstrate how you can use Angular to make your applications more accessible to people with visual and motor impairments so we can build a web that's accessible to everyone!",
 }
@@ -160,8 +156,6 @@ export enum ActivityDescription {
   ServiceWorkersAndCows = "(In deep-theatre-guy voice) In a world, where Internet speeds can reach up to 6 megabits per second and cows reign supreme, one developer stands alone to discover the simplest way to cache EVERYTHING! Join her on this epic journey fraught with lag and peril where she'll battle config files and caching external assets, all the while dealing with the conflict of freshness vs cache-first styles looming ominously over her every move! Will her love for cows be forever destroyed by slow network? Or will she embrace the challenge and overcome the lag with service worker power?! Find out, during “Service Workers & Cows — a love story.",
   // tslint:disable-next-line:quotemark
   AccessibleAngularApps = "In total, almost 12% of the Latin American and Caribbean population is thought to live with at least one disability (~66 million people). 83% of us who don't currently have a disability, will age into one. And as the aging population increases, it is ever more important that we make our apps inclusive to this population. I'll demonstrate how you can use Angular to make your applications more accessible to people with visual and motor mpairments so we can build a web that's accessible to everyone!",
-  // tslint:disable-next-line:quotemark
-  SafelyBreakingCode = "With the rise of voice assistants, voice is becoming another surface area for users to interact with your product or service. We can now start to blend this new technology with our existing offerings to improve user experience, engagement, and satisfaction. Using technologies like newer browser APIs, Google Actions, Dialogflow, and Angular, you can improve the user experience of your applications. Also including AI, you can craft intelligent voice driven experiences quickly that integrate with your services and drives your interfaces. We'll look at how to design and the tools you can use to build your own conversational interfaces for the web.",
   // tslint:disable-next-line:quotemark
   DontWorryBeHappy = "We have experienced a revolution in the Front-End with innovative ideas from Frameworks and libraries, however, how can our Back-End learn and benefit from this?, The architecture in Node can be a headache, Do not lose your mind!. Let's increase our technical skills and level of happiness, building robust applications in a simple, consistent and fast way, without losing the simplicity of Node with Nest.js; a framework based on the Angular design that provides the best concepts for scalable systems. Additionally, Nest.js is a short route for the approach of Angular developers to Node.js",
   SchematicsInAngular = 'Have you ever wondered how work the angular cli? You never thought how good it would be if I did more things for you? Schematics is the little gem that you were waiting',
