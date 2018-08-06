@@ -131,7 +131,7 @@ export enum TalkTitle {
   // tslint:disable-next-line:quotemark
   DontWorryBeHappy = "Don't worry, be happy: The best of Angular in Node",
   SchematicsInAngular = 'Schematics in Angular',
-  TurnYourSmartphone = 'Turn your smartphone into Nintendo Wii-like controller with RxJS and TensorFlow.js',
+  TurnYourSmartphone = 'Turn your smartphone into Nintendo Wii-like controller with JavaScript and TensorFlow.js',
   AngularArt = 'Angular Art',
   HowToImplement = 'How to implement a Mystical Art in Angular: beyond the code',
   RealTimeInteractions = 'Real-time interactions with WebSockets',
