@@ -2,7 +2,6 @@ export enum SpeakerName {
   CarlosAndJuan = 'Carlos Angulo - Juan Herrera',
   Sani = 'Sani Yusuf',
   Andres = 'Andrés Villanueva',
-  Alyssa = 'Alyssa Nicoll',
   Susie = 'Susie Sahim',
   Laura = 'Laura Ciro',
   Jorge = 'Jorge Cano',
@@ -26,7 +25,6 @@ export enum ShortSpeakerBio {
   Carlos = 'Senior Developer at Yuxi Global',
   Sani = 'Google Developer Expert in Angular',
   Andres = 'Google Developer Expert in Firebase',
-  Alyssa = 'Google Developer Expert in Angular',
   Susie = 'Senior Creative Engineer. Tech Lead at Google',
   Laura = 'Software Developer at Yuxi Global',
   Jorge = 'Google Developer Expert in Angular',
@@ -47,8 +45,6 @@ export enum SpeakerBio {
   Carlos = 'Senior Developer at Yuxi Global',
   Sani = 'Google Developer Expert for Web & the founder of Haibrid, a London-based consultancy that offers Ionic training & consultancy. He is also the co-organiser of Ionic UK & has spoken about Ionic on 4 continents. A published book author, he also recently created the first Ionic 3.0 course online VIA Lynda.COM. When he is not doing geeky stuff, he enjoys food tourism & paddle boarding on the ocean.',
   Andres = 'Venezuelan, Frontend Engineer, founder @ngVenezuela and @FirebaseVe, Community Lead, Google Developer Expert for @firebase.',
-  // tslint:disable-next-line:quotemark
-  Alyssa = "I'm an Angular Developer Advocate & GDE. My two degrees (Web Design & Development and Psychology) feed my speaking career. I'm a weekly panelist on Adventures in Angular and Angular Air, which have a combined following of over 16,000 listeners. I enjoy gaming, scuba diving, and have a toothless dog named Gummy. My DM is always open, come talk sometime.",
   // tslint:disable-next-line:quotemark
   Susie = "Tech lead for Google marketing's component libraries. Founder of PaperDemon.com, a community helping artists to become more awesome.",
   // tslint:disable-next-line:quotemark
@@ -130,7 +126,7 @@ export enum TalkTitle {
   SafelyBreakingCode = 'Safely Breaking Code - Practical Refactoring and Deprecation Strategies',
   // tslint:disable-next-line:quotemark
   DontWorryBeHappy = "Don't worry, be happy: The best of Angular in Node",
-  SchematicsInAngular = 'Schematics in Angular',
+  AbcTheNewAlphabet = 'ABC, The new Alphabet for Angular',
   TurnYourSmartphone = 'Turn your smartphone into Nintendo Wii-like controller with JavaScript and TensorFlow.js',
   AngularArt = 'Angular Art',
   HowToImplement = 'How to implement a Mystical Art in Angular: beyond the code',
@@ -158,7 +154,7 @@ export enum ActivityDescription {
   AccessibleAngularApps = "In total, almost 12% of the Latin American and Caribbean population is thought to live with at least one disability (~66 million people). 83% of us who don't currently have a disability, will age into one. And as the aging population increases, it is ever more important that we make our apps inclusive to this population. I'll demonstrate how you can use Angular to make your applications more accessible to people with visual and motor mpairments so we can build a web that's accessible to everyone!",
   // tslint:disable-next-line:quotemark
   DontWorryBeHappy = "We have experienced a revolution in the Front-End with innovative ideas from Frameworks and libraries, however, how can our Back-End learn and benefit from this?, The architecture in Node can be a headache, Do not lose your mind!. Let's increase our technical skills and level of happiness, building robust applications in a simple, consistent and fast way, without losing the simplicity of Node with Nest.js; a framework based on the Angular design that provides the best concepts for scalable systems. Additionally, Nest.js is a short route for the approach of Angular developers to Node.js",
-  SchematicsInAngular = 'Have you ever wondered how work the angular cli? You never thought how good it would be if I did more things for you? Schematics is the little gem that you were waiting',
+  AbcTheNewAlphabet = 'Monorepos, Blazingly-fast localized builds, and highly optimized output bundles are no longer a dream reserved just for the dream teams - they are now a big time reality in Angular. You are prepared for what is coming: Angular Bazel & Closure!',
   TurnYourSmartphone = 'In this talk I will show you how to utilize machine learning algorithms and RxJS stream processing to recognize gestures made by hand movements. You hold your smartphone in your hands and make a meaningful gesture. Smartphone generates accelerometer signal that is fetched by the web application. RxJS processes this stream of data points and executes machine learning algorithm on TensorFlow.js to recognize your intention! This is later used to control an application or even a game! You will learn how to apply all the pieces together to turn your smartphone into Nintendo Wii-like controller. Come and join me in this journey full of fun and science!',
   AngularArt = 'When the people think in web they always imagine sites like Facebook or multiple forms to save information, you can do art, mixing some native APIs in the browsers and Angular.',
   HowToImplement = 'UX (User Experience) is like a mystical art: when you are creating a Web App centered on UX, you create a space that’s easy for the reader to access, understand, and navigate and that is the idea when building UIs (User Interfaces) in Angular. To meet the goal there are a set of elements and techniques that UX provides to help you make a difference. The idea it’s not just to make a pretty App, is giving the user a better experience taking in consideration the new social needs for websites -like being accessible, for example- and how can we manage and improve it to fulfill different needs and requirements.',

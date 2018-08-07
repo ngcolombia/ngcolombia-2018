@@ -30,7 +30,7 @@
 }
 
 .container {
-  height: 100vh;
+  padding-bottom: 3rem;
   display: flex;
   flex-direction: column;
   flex-wrap: nowrap;
@@ -38,18 +38,36 @@
   align-items: center;
   align-content: stretch;
   background: white;
+  div {
+    text-align: center;
+  }
   img {
-    width: 70%;
-    margin: 3rem;
+    width: 55%;
+    height: auto;
+    &.smaller {
+      width: 40%;
+    }
+  }
+}
+
+@media (min-width: 350px) {
+  .container {
+    // height: 150vh;
   }
 }
 
 @media (min-width: 680px) {
   .container {
+    height: 70vh;
     flex-direction: row;
     justify-content: space-around;
     img {
-      width: 25%;
+      width: 70%;
+      height: calc(70% *9/16);
+      &.smaller {
+        width: 50%;
+        height: calc(50% *9/16);
+      }
     }
   }
 }
