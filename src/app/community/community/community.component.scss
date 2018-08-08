@@ -37,15 +37,31 @@
   align-items: center;
   align-content: stretch;
   background: white;
+  padding-bottom: 1rem;
   div {
     margin-bottom: 5rem;
     text-align: center;
+    &:first-child {
+      margin-bottom: 3rem;
+      &#gdg {
+        margin-bottom: 1rem;
+      }
+    }
   }
   img {
     width: 55%;
     height: auto;
     &.smaller {
+      // width: 40%;
+    }
+    &.small {
       width: 40%;
+    }
+    &.larger {
+      width: 80%;
+    }
+    &.large {
+      width: 90%;
     }
   }
 }
@@ -54,6 +70,25 @@
   .container {
     flex-direction: row;
     justify-content: space-around;
+    div {
+      width: 30vw;
+    }
+    img {
+      width: 55%;
+      height: auto;
+      &.smaller {
+        width: 50%;
+      }
+      &.small {
+        width: 40%;
+      }
+      &.larger {
+        width: 80%;
+      }
+      &.large {
+        width: 110%;
+      }
+    }
   }
 }
 
