@@ -42,9 +42,9 @@
     margin-bottom: 5rem;
     text-align: center;
     &:first-child {
-      margin-bottom: 3rem;
+      margin-bottom: 4rem;
       &#gdg {
-        margin-bottom: 1rem;
+        margin-bottom: 2rem;
       }
     }
   }
@@ -52,7 +52,7 @@
     width: 55%;
     height: auto;
     &.smaller {
-      // width: 40%;
+      width: 50%;
     }
     &.small {
       width: 40%;
