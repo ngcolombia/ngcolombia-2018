@@ -253,29 +253,41 @@ export class EventService {
       {
         title: TalkTitle.FirebaseAndNgRx,
         description: ActivityDescription.FirebaseAndNgRx,
-        time: '8:55',
+        time: '8:50',
         speaker: SpeakerName.Andres,
       },
       {
+        title: TalkTitle.ThisIsWhatPWA,
+        description: ActivityDescription.ThisIsWhatPWA,
+        time: '9:10',
+        speaker: SpeakerName.Tatiana,
+      },
+      {
         title: GeneralActivity.Break,
-        time: '9:45',
+        time: '9:30',
       },
       {
         title: TalkTitle.AccessibleAngularApps,
         description: ActivityDescription.AccessibleAngularApps,
-        time: '10:10',
+        time: '10:00',
         speaker: SpeakerName.Susie,
       },
       {
         title: TalkTitle.DontWorryBeHappy,
         description: ActivityDescription.DontWorryBeHappy,
-        time: '11:20',
+        time: '10:35',
         speaker: SpeakerName.Laura,
+      },
+      {
+        title: TalkTitle.YourBrowserIs,
+        description: ActivityDescription.YourBrowserIs,
+        time: '10:55',
+        speaker: SpeakerName.Miguel,
       },
       {
         title: TalkTitle.AbcTheNewAlphabet,
         description: ActivityDescription.AbcTheNewAlphabet,
-        time: '11:40',
+        time: '11:15',
         speaker: SpeakerName.Jorge,
       },
       {
@@ -285,54 +297,46 @@ export class EventService {
       {
         title: TalkTitle.TurnYourSmartphone,
         description: ActivityDescription.TurnYourSmartphone,
-        time: '13:30',
+        time: '13:35',
         speaker: SpeakerName.Bartosz,
       },
       {
         title: TalkTitle.AngularArt,
         description: ActivityDescription.AngularArt,
-        time: '14:05',
+        time: '14:10',
         speaker: SpeakerName.Josue,
       },
       {
         title: TalkTitle.HowToImplement,
         description: ActivityDescription.HowToImplement,
-        time: '14:25',
+        time: '14:30',
         speaker: SpeakerName.Vanessa,
+      },
+      {
+        title: GeneralActivity.Break,
+        time: '15:05',
       },
       {
         title: TalkTitle.RealTimeInteractions,
         description: ActivityDescription.RealTimeInteractions,
-        time: '15:00',
+        time: '15:35',
         speaker: SpeakerName.Katerina,
       },
       {
         title: TalkTitle.AngularTestbed,
         description: ActivityDescription.AngularTestbed,
-        time: '15:35',
-        speaker: SpeakerName.Sebastian,
-      },
-      {
-        title: TalkTitle.ThisIsWhatPWA,
-        description: ActivityDescription.ThisIsWhatPWA,
-        time: '15:55',
-        speaker: SpeakerName.Tatiana,
-      },
-      {
-        title: GeneralActivity.Break,
         time: '16:10',
+        speaker: SpeakerName.Sebastian,
       },
       {
         title: TalkTitle.YouMightNotNeedNgRx,
         description: ActivityDescription.YouMightNotNeedNgRx,
-        time: '16:35',
+        time: '16:30',
         speaker: SpeakerName.Mike,
       },
       {
-        title: TalkTitle.YourBrowserIs,
-        description: ActivityDescription.YourBrowserIs,
+        title: GeneralActivity.Break,
         time: '17:00',
-        speaker: SpeakerName.Miguel,
       },
       {
         title: TalkTitle.AnIntroductionToHardware,
@@ -343,12 +347,12 @@ export class EventService {
       {
         title: GeneralActivity.Panel,
         // description: ActivityDescription.Panel,
-        time: '17:50',
+        time: '17:55',
         speaker: SpeakerName.All,
       },
       {
         title: GeneralActivity.ConferenceClosure,
-        time: '18:10',
+        time: '18:15',
         speaker: SpeakerName.CarlosAndJuan,
       },
       {
