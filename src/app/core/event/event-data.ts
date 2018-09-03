@@ -4,7 +4,7 @@ export enum SpeakerName {
   Andres = 'Andrés Villanueva',
   Susie = 'Susie Sahim',
   Laura = 'Laura Ciro',
-  Jorge = 'Jorge Cano',
+  Bram = 'Bram Borggreve',
   Bartosz = 'Bartosz Pietrucha',
   Josue = 'Josue Gutierrez',
   Vanessa = 'Vanessa Aristizabal',
@@ -27,7 +27,7 @@ export enum ShortSpeakerBio {
   Andres = 'Google Developer Expert in Firebase',
   Susie = 'Senior Creative Engineer. Tech Lead at Google',
   Laura = 'Software Developer at Yuxi Global',
-  Jorge = 'Google Developer Expert in Angular',
+  Bram = 'Freelance software engineer, author, instructor',
   Bartosz = 'Angular-Academy.com Founder',
   Josue = 'Google Developer Expert in Angular',
   Vanessa = 'Web UI Developer',
@@ -49,7 +49,7 @@ export enum SpeakerBio {
   Susie = "Tech lead for Google marketing's component libraries. Founder of PaperDemon.com, a community helping artists to become more awesome.",
   // tslint:disable-next-line:quotemark
   Laura = "I'm @pionerasdev Co-Organizer and Software Developer at @YuxiGlobal. Apps developer in Node, Ruby, Arduino for IoT as stand-alone applications with Angular. Passionate about Code, Music, Poetry, and Inclusion; volunteer in events for minorities or people with hardships economy/social",
-  Jorge = 'After more than 9 years working in the tech industry, I am a full stack developer with focus on JavaScript technologies. Today, I work at Byte Default using Angular / RxJS / Firebase / Nativescript as well as other technologies. He delivered several courses and talks as well as write some tech articles on these subjects. Because of that, he was recognised as a Google Developer Expert in Angular & web technologies and Nativescript Developer Expert.',
+  Bram = 'In 1999 he started his professional IT career at the largest university of applied sciences in the east of the Netherlands, where he later graduated. Starting out as a Windows desktop admin, he quickly moved to Linux/Unix server administration and eventually found his calling in the area of software engineering in 2009 - and never looked back. He has a huge passion for open source software, education and communities. Since 2015 he has been traveling the world while working remote and spent time in over 15 countries, of which Colombia has definitely been the favorite!',
   Bartosz = 'Full-stack software engineer, software consultant and founder of Angular-Academy.com. For the last couple of years he has been working with clients from Great Britain, Switzerland, Poland and Finland. Having achieved OOP proficiency with Java, he delved into JavaScript programming and found front-end world extremely fascinating. He wants to share his knowledge via trainings and workshops as it gives him great dose of fulfillment. He speaks at international conferences and gives workshops across Europe. He was teaching advanced front-end technologies in Poland, Israel, Great Britain, Finland and Romania.',
   // tslint:disable-next-line:quotemark
   Josue = "Google Developer Expert at Web Technologies, I've been working doing web products from the past 12 years.",
@@ -67,7 +67,7 @@ export enum SpeakerBio {
 }
 
 export enum Country {
-  Argentina = 'Argentina',
+  Netherlands = 'Netherlands',
   Mexico = 'México',
   Chile = 'Chile',
   Colombia = 'Colombia',
@@ -136,16 +136,18 @@ export enum TalkTitle {
   YouMightNotNeedNgRx = 'You Might Not Need NgRx',
   YourBrowserIs = 'Your browser is your best friend to code with Angular',
   AnIntroductionToHardware = ' An introduction to hardware connectivity on the web',
+  TBD = 'Coming soon...',
 }
 
 export enum ActivityDescription {
   Registration = '',
-  Opening = '',
+  Opening = 'Let\'s get this conference started with a lot of major announcements! We will talk about our contests, code of conduct, prizes, and much more!',
   Break = '',
   Lunch = '',
-  Panel = '',
+  Panel = 'Now all speakers will come to stage and answer all the questions you have! Do not miss this unique opportunity!',
   Closure = '',
   Cocktail = '',
+  TBD = '',
   LetsBuildAForm = 'Reactive Forms are a mainstay in the Angular ecosystem yet a lot of developers limit their usage to just Login pages or traditional input collection. In this talk, I will showcase how you can take advantage of the full power of Reactive Forms to build some really powerful state-driven solutions. This talked will be based on a real-world personal experience of building complex data-driven healthcare solutions with Reactive Forms. I will also showcase some really common use cases in a Lot of angular applications that may not be obvious for the application of Reactive Forms. We will explore the hierarchy of Reactive Form Controls and showcase some smart ways to implement custom validation inside of your Angular application. The main aim of this talk is to enable users to be aware of what is at their disposal and how they can take advantage of the full power of Reactive Forms.',
   FirebaseAndNgRx = 'The correct management of  the state of our applications, has become  the new némesis that weigh down the modern developers. With the emergence of Redux as an alternative to handle state, it opens a path to the developers, and this is NgRx, the powerful state handler for Angular applications. But, ¿what would happen if we want to combine with Firebase?, ¿Is this possible?, ¿How would you handle the collections?, and most important..¿How to deal with a realtime database with NgRx?. In this talk let’s dive into how to integrate @ngrx/effects and @ngrx/entity to our application built in Angular and Firebase, and keep focus on other importants points, Font type…',
   // tslint:disable-next-line:quotemark
