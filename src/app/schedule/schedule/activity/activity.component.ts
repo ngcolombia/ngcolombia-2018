@@ -10,7 +10,8 @@ import { MatDialog } from '@angular/material';
   styleUrls: ['./activity.component.scss'],
 })
 export class ActivityComponent implements OnInit {
-  @Input() activity: Activity;
+  @Input()
+  activity: Activity;
   titleFontSize = '12px';
   speakerFontSize = '10px';
   gridHeight = '35px';
