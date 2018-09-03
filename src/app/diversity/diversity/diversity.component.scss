@@ -1,4 +1,24 @@
 @import '~style/_variables.scss';
+
+@media (min-width: 1150px) {
+  app-fullscreen {
+    &:not(.map-container) {
+      max-width: 1300px;
+      margin: 0 auto;
+    }
+    &:first-child {
+      min-height: 80vh;
+      padding-top: 20vh;
+    }
+    &.newsletter {
+      padding-top: 5vh;
+      padding-bottom: 20vh;
+    }
+    &:not(:first-child) {
+      min-height: 80vh;
+    }
+  }
+}
 .section {
   padding: 0 3rem;
   &.title {
@@ -89,4 +109,11 @@
 
 p.bullet {
   margin-bottom: 0.3rem;
+}
+
+@media (max-width: 500px) {
+  app-fullscreen {
+    min-height: auto;
+    padding: 4rem 0 1rem;
+  }
 }

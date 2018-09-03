@@ -1,0 +1,18 @@
+<app-banner title="Our Heroes"></app-banner>
+
+<div class="main-container">
+  <div class="custom-wrapper">
+    <mat-card class="heroe" *ngFor="let hero of heroes">
+      <div class="image-container">
+        <div class="wrapper">
+          <svg height="100%" width="100%" viewBox="0 0 100 100">
+            <polygon points="0.8 16.7, 50 0, 99.2 16.7, 92.4 78.197, 50 100, 7.6 78.197" style="fill:transparent;stroke:#211056; stroke-width: 2px;" />
+          </svg>
+          <img class="clip-angular-logo-polygon" [src]="hero.picture" [alt]="hero.name" no-image-placeholder>
+        </div>
+        <div class="name">{{hero.name}}</div>
+      </div>
+      <div class="phrase"> {{hero.phrase}} </div>
+    </mat-card>
+  </div>
+</div>

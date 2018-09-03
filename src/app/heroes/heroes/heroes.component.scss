@@ -1,0 +1,93 @@
+@import '~style/_variables.scss';
+.main-container{
+  padding: 0px 0 80px;;
+  font-family: Roboto, "Helvetica Neue", sans-serif;
+  text-align: center;
+  
+  @media (max-width: 480px) {
+    padding: 0px 0 40px;
+  }
+  
+}
+
+.custom-wrapper {
+  display: flex;
+  justify-content: space-evenly;
+  flex-wrap: wrap;
+  margin: 0 3%;
+}
+
+mat-card.heroe.mat-card.ng-star-inserted {
+  padding: 26px 20px 20px;
+  border-radius: 3px;
+  box-shadow: 0 3px 1px -2px rgba(0,0,0,.2), 0 -1px 2px 0 rgba(0,0,0,.14), 0 1px 5px 0 rgba(0,0,0,.12);
+
+  @media (max-width: 480px) {
+    padding: 16px 10px 10px;
+  }
+}
+
+.heroe {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  flex: 0 0 340px;
+  margin: 30px 10px 20px;
+
+  @media (max-width: 480px) {
+    flex-basis: 340px;
+  }
+
+  .image-container{
+    flex: 0 0 190px; 
+    padding: 0px;
+    // margin-right: 15px;
+
+    @media (max-width: 480px) {
+      flex-basis: 140px;
+      margin-right: 5px;
+    }
+    
+    .wrapper {
+      position: relative;
+      width: 65%;
+      margin: 0 auto;
+    }
+    
+    svg {
+      position: absolute;
+      z-index: 2;
+      top: -3.5px
+    }
+    
+    img { 
+      width: 100%;
+      // max-width: 165px;
+      
+      &.clip-angular-logo-polygon {
+        clip-path: polygon(0% 16.7%, 50% -1%, 100% 16.7%, 92.4% 78.197%, 50% 100%, 7.6% 78.197%);
+      }
+    }
+  }
+
+  .name {
+    background-color: #211056;
+    color: #FFF;
+    font-size: 18px;
+    padding: 13px 34px 15px;
+    clip-path: polygon(0% 0%, 50% 20%, 100% 0%, 89% 76%, 50% 90%, 11% 76%);
+    font-size: 20px;
+    margin: -8px auto 8px;
+    display: inline-block;
+  }
+
+  .phrase {
+    flex: 1 1 auto;
+    color: #211056;
+    font-size: 17px;
+  }
+
+}
+
+
+
