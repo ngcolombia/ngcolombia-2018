@@ -32,6 +32,10 @@
          class="menu-link"
          [routerLink]="['/ng-girls']">NgGirls</a>
       <a mat-list-item
+        (click)="drawer.toggle()"
+        class="menu-link"
+        [routerLink]="['/heroes']">Our Heroes</a>
+      <a mat-list-item
          (click)="drawer.toggle()"
          class="menu-link"
          [routerLink]="['/coc']">Code of Conduct</a>
@@ -43,10 +47,6 @@
          (click)="drawer.toggle()"
          class="menu-link"
          [routerLink]="['/diversity']">Diversity Scholarships</a>
-      <a mat-list-item
-      (click)="drawer.toggle()"
-      class="menu-link"
-      [routerLink]="['/heroes']">Our Heroes</a>
       <a mat-list-item
          class="menu-link small"
          href="mailto:info@ngcolombia.com">Contact us: info@ngcolombia.com</a>
