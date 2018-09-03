@@ -39,6 +39,10 @@ const routes: Routes = [
     loadChildren: 'app/diversity/diversity.module#DiversityModule',
   },
   {
+    path: 'heroes',
+    loadChildren: 'app/heroes/heroes.module#HeroesModule',
+  },
+  {
     path: '**',
     redirectTo: '/',
   },
