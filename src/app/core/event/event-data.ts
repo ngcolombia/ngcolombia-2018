@@ -67,6 +67,7 @@ export enum SpeakerBio {
 }
 
 export enum Country {
+  Argentina = 'Argentina',
   Netherlands = 'Netherlands',
   Mexico = 'México',
   Chile = 'Chile',
@@ -141,7 +142,7 @@ export enum TalkTitle {
 
 export enum ActivityDescription {
   Registration = '',
-  Opening = 'Let\'s get this conference started with a lot of major announcements! We will talk about our contests, code of conduct, prizes, and much more!',
+  Opening = "Let's get this conference started with a lot of major announcements! We will talk about our contests, code of conduct, prizes, and much more!",
   Break = '',
   Lunch = '',
   Panel = 'Now all speakers will come to stage and answer all the questions you have! Do not miss this unique opportunity!',

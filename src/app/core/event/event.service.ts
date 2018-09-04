@@ -53,7 +53,7 @@ export class EventService {
         bio: SpeakerBio.Andres,
         talk: TalkTitle.FirebaseAndNgRx,
         photo: this.basePath + 'andres.jpg',
-        country: Country.Netherlands,
+        country: Country.Argentina,
         twitter: 'https://twitter.com/villanuevand',
         github: 'https://github.com/villanuevand',
       },
