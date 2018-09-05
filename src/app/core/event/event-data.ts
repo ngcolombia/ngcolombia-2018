@@ -137,18 +137,18 @@ export enum TalkTitle {
   YouMightNotNeedNgRx = 'You Might Not Need NgRx',
   YourBrowserIs = 'Your browser is your best friend to code with Angular',
   AnIntroductionToHardware = ' An introduction to hardware connectivity on the web',
-  TBD = 'Coming soon...',
+  Formly = 'Take your Reactive forms out of your Templates!',
 }
 
 export enum ActivityDescription {
   Registration = '',
-  Opening = "Let's get this conference started with a lot of major announcements! We will talk about our contests, code of conduct, prizes, and much more!",
+  Opening = 'Let\'s get this conference started with a lot of major announcements! We will talk about our contests, code of conduct, prizes, and much more!',
   Break = '',
   Lunch = '',
   Panel = 'Now all speakers will come to stage and answer all the questions you have! Do not miss this unique opportunity!',
   Closure = '',
   Cocktail = '',
-  TBD = '',
+  Formly = 'Most seasoned Angular developers are using Reactive over Template driven forms because of the increased flexibility it brings. It does however still requires the developer to define their forms in multiple places: the Component class where the logic lives, and the Template where the markup lives. In this talk we will look at how you can to declare your forms in one place and re-use them in several. With Formly you can define them one time and run them anywhere!',
   LetsBuildAForm = 'Reactive Forms are a mainstay in the Angular ecosystem yet a lot of developers limit their usage to just Login pages or traditional input collection. In this talk, I will showcase how you can take advantage of the full power of Reactive Forms to build some really powerful state-driven solutions. This talked will be based on a real-world personal experience of building complex data-driven healthcare solutions with Reactive Forms. I will also showcase some really common use cases in a Lot of angular applications that may not be obvious for the application of Reactive Forms. We will explore the hierarchy of Reactive Form Controls and showcase some smart ways to implement custom validation inside of your Angular application. The main aim of this talk is to enable users to be aware of what is at their disposal and how they can take advantage of the full power of Reactive Forms.',
   FirebaseAndNgRx = 'The correct management of  the state of our applications, has become  the new némesis that weigh down the modern developers. With the emergence of Redux as an alternative to handle state, it opens a path to the developers, and this is NgRx, the powerful state handler for Angular applications. But, ¿what would happen if we want to combine with Firebase?, ¿Is this possible?, ¿How would you handle the collections?, and most important..¿How to deal with a realtime database with NgRx?. In this talk let’s dive into how to integrate @ngrx/effects and @ngrx/entity to our application built in Angular and Firebase, and keep focus on other importants points, Font type…',
   // tslint:disable-next-line:quotemark
