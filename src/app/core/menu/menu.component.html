@@ -10,8 +10,8 @@
             aria-label="Toggle sidenav"
             mat-icon-button
             (click)="drawer.toggle()">
-                <mat-icon aria-label="Side nav toggle icon">close</mat-icon>
-              </button>
+      <mat-icon aria-label="Side nav toggle icon">close</mat-icon>
+    </button>
     <mat-nav-list class="menu-link-list">
       <ng-container *ngFor="let link of showedMenuLinks">
         <a mat-list-item
@@ -31,10 +31,10 @@
          (click)="drawer.toggle()"
          class="menu-link"
          [routerLink]="['/ng-girls']">NgGirls</a>
-      <!-- <a mat-list-item
-        (click)="drawer.toggle()"
-        class="menu-link"
-        [routerLink]="['/heroes']">Our Heroes</a> -->
+      <a mat-list-item
+         (click)="drawer.toggle()"
+         class="menu-link"
+         [routerLink]="['/heroes']">Our Heroes</a>
       <a mat-list-item
          (click)="drawer.toggle()"
          class="menu-link"
@@ -53,7 +53,8 @@
                  class="toolbar"
                  [@scrollAnimation]="toolbarState">
       <span class="title">
-        <a class=link [routerLink]="['/']">
+        <a class=link
+           [routerLink]="['/']">
           NG-COLOMBIA
         </a>
       </span>
@@ -63,7 +64,8 @@
               aria-label="Toggle sidenav"
               mat-icon-button
               (click)="drawer.toggle()">
-        <mat-icon class="md-36" aria-label="Side nav toggle icon">menu</mat-icon>
+        <mat-icon class="md-36"
+                  aria-label="Side nav toggle icon">menu</mat-icon>
       </button>
     </mat-toolbar>
     <ng-content></ng-content>
